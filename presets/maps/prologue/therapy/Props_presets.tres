@@ -1,17 +1,31 @@
 [gd_resource type="TileSet" load_steps=59 format=3 uid="uid://cx7tjoori5htd"]
 
 [ext_resource type="Texture2D" uid="uid://dagm0l0c3dfda" path="res://presets/maps/prologue/therapy/props/machine1.png" id="1_4bdc4"]
+[ext_resource type="Texture2D" uid="uid://cg5hanouirju3" path="res://presets/maps/prologue/therapy/props/smallbookshelfvert.png" id="1_15ddd"]
+[ext_resource type="Texture2D" uid="uid://bskh2da5gxlh4" path="res://presets/maps/prologue/therapy/props/mysteryBlue.png" id="1_21n80"]
 [ext_resource type="Texture2D" uid="uid://wgrxy8xhupto" path="res://presets/maps/prologue/therapy/props/hallwaydecos.png" id="1_exo7k"]
+[ext_resource type="Texture2D" uid="uid://cundtwx7emw6i" path="res://presets/maps/prologue/therapy/props/mysteryGreen.png" id="2_ep5uo"]
+[ext_resource type="Texture2D" uid="uid://baxnvb8lmdldk" path="res://presets/maps/prologue/therapy/props/smallchair2.png" id="3_puik3"]
 [ext_resource type="Texture2D" uid="uid://dwsput7ulap1l" path="res://presets/maps/prologue/therapy/props/plant1.png" id="3_ughai"]
 [ext_resource type="Texture2D" uid="uid://c8j1jgb5g1ff4" path="res://presets/maps/prologue/therapy/props/table2.png" id="4_5soyl"]
+[ext_resource type="Texture2D" uid="uid://mgk1oxspe7ic" path="res://presets/maps/prologue/therapy/props/smallchair.png" id="4_riulj"]
 [ext_resource type="Texture2D" uid="uid://bdvluxsj3pmea" path="res://presets/maps/prologue/therapy/props/board_ak.png" id="4_unr31"]
+[ext_resource type="Texture2D" uid="uid://ccunryxbhma7" path="res://presets/maps/prologue/therapy/props/sofasmallchair1.png" id="5_lqtpe"]
+[ext_resource type="Texture2D" uid="uid://no3jt0l7spaf" path="res://presets/maps/prologue/therapy/props/plant2.png" id="6_7c38l"]
 [ext_resource type="Texture2D" uid="uid://raw2hv7lwrq0" path="res://presets/maps/prologue/therapy/props/rug.png" id="6_vdgn6"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ol8w6"]
-load_path = "res://.godot/imported/mysteryBlue.png-cdb5691834d5ea64fe34230c42c249bd.ctex"
+[ext_resource type="Texture2D" uid="uid://dhqlb3mjxgdmi" path="res://presets/maps/prologue/therapy/props/longchair.png" id="7_xy0mq"]
+[ext_resource type="Texture2D" uid="uid://dijlbnxxfvoc3" path="res://presets/maps/prologue/therapy/props/sofa2.png" id="8_yv0p7"]
+[ext_resource type="Texture2D" uid="uid://dqdhnef33t4kn" path="res://presets/maps/prologue/therapy/props/mysteryPurple.png" id="13_hjqwp"]
+[ext_resource type="Texture2D" uid="uid://cbolcloxvk5qn" path="res://presets/maps/prologue/therapy/props/mysteryRed.png" id="17_5w0bk"]
+[ext_resource type="Texture2D" uid="uid://b2umf54byuls8" path="res://presets/maps/prologue/therapy/props/mysteryYellow.png" id="18_1boyf"]
+[ext_resource type="Texture2D" uid="uid://oj4q7mfpp7ax" path="res://presets/maps/prologue/therapy/props/windows.png" id="19_mnhgp"]
+[ext_resource type="Texture2D" uid="uid://b2hxq1b81ujkl" path="res://presets/maps/prologue/therapy/props/bookshelfempty.png" id="20_v70lp"]
+[ext_resource type="Texture2D" uid="uid://bqgbjllone4vr" path="res://presets/maps/prologue/therapy/props/bookshelffull.png" id="21_3jibg"]
+[ext_resource type="Texture2D" uid="uid://5s3kv538ow2b" path="res://presets/maps/prologue/therapy/props/table.png" id="22_tdvyl"]
+[ext_resource type="Texture2D" uid="uid://cfb23iid7c621" path="res://presets/maps/prologue/therapy/props/tableempty.png" id="23_if8ks"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c3bsp"]
-texture = SubResource("CompressedTexture2D_ol8w6")
+texture = ExtResource("1_21n80")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -21,11 +35,8 @@ texture = SubResource("CompressedTexture2D_ol8w6")
 1:1/0 = 0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8shu3"]
-load_path = "res://.godot/imported/mysteryGreen.png-0e3367a073f3f0171b65afa9aad14d31.ctex"
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l3imx"]
-texture = SubResource("CompressedTexture2D_8shu3")
+texture = ExtResource("2_ep5uo")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -38,11 +49,8 @@ texture = SubResource("CompressedTexture2D_8shu3")
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_f7t6m"]
 polygon = PackedVector2Array(-22.6667, -21.3333, -21.3333, -22.6667, -18.6667, -24, 4, -24, 5.33333, -22.6667, 6.66667, -20, 6.66667, -16, 5.33333, -13.3333, 5.33333, -2.66667, 5.33333, -1.33333, 1.33333, -1.33333, 1.33333, 5.33333, -18.6667, 5.33333, -18.6667, -1.33333, -21.3333, -1.33333, -21.3333, -2.66667, -21.3333, -2.66667, -21.3333, -12, -22.6667, -14.6667, -22.6667, -18.6667)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_58kjo"]
-load_path = "res://.godot/imported/smallchair2.png-f001f05ac2d91fd2bfdb5d18abe3b3a9.ctex"
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0hji1"]
-texture = SubResource("CompressedTexture2D_58kjo")
+texture = ExtResource("3_puik3")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(8, 8)
@@ -53,11 +61,8 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_arnp1"]
 polygon = PackedVector2Array(-16, -22.4, -10.1333, -22.9333, -6.4, -17.6, 9.6, -17.6, 11.2, -16, 11.2, 3.2, -12.8, 3.2, -14.4, 1.6, -16, -1.6)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wvksl"]
-load_path = "res://.godot/imported/smallchair.png-2281e27264dbf862ae1077eff1b0c3fb.ctex"
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vwyiw"]
-texture = SubResource("CompressedTexture2D_wvksl")
+texture = ExtResource("4_riulj")
 texture_region_size = Vector2i(32, 32)
 0:0/animation_separation = Vector2i(0, 8)
 0:0/0 = 0
@@ -69,11 +74,8 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ut4y4"]
 polygon = PackedVector2Array(-24, -21.3333, -21.3333, -24, 5.33333, -24, 8, -21.3333, 8, 2.66667, -24, 2.66667)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c8q43"]
-load_path = "res://.godot/imported/sofasmallchair1.png-75876ae7b3d4f35db68f2d4ed5411397.ctex"
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a7oym"]
-texture = SubResource("CompressedTexture2D_c8q43")
+texture = ExtResource("5_lqtpe")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(8, 8)
@@ -84,22 +86,16 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_j8at5"]
 polygon = PackedVector2Array(-8, 14.4, -4.8, 11.2, 4.8, 11.2, 6.4, 12.8, 8, 14.4, 8, 16, 6.4, 20.8, -6.4, 20.8, -8, 16)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_loh7y"]
-load_path = "res://.godot/imported/plant2.png-0c5b3a6f6b778c536f462bd9696c7ad0.ctex"
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_msj5m"]
-texture = SubResource("CompressedTexture2D_loh7y")
+texture = ExtResource("6_7c38l")
 margins = Vector2i(0, 16)
 texture_region_size = Vector2i(32, 48)
 0:0/0 = 0
 0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_j8at5")
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.86667, 14.4, 5.86667, 14.4, 5.86667, 19.7333, -5.86667, 19.7333)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_aa0ur"]
-load_path = "res://.godot/imported/longchair.png-faafa4f0147916794655ff12397b98c2.ctex"
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nbgpb"]
-texture = SubResource("CompressedTexture2D_aa0ur")
+texture = ExtResource("7_xy0mq")
 texture_region_size = Vector2i(32, 128)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(8, 8)
@@ -109,11 +105,8 @@ texture_region_size = Vector2i(32, 128)
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4e82y"]
 polygon = PackedVector2Array(-24, -30.4, -22.4, -32, -20.8, -32, -20.8, -35.2, -19.2, -36.8, -17.6, -38.4, 0, -38.4, 1.6, -40, 8, -40, 8, 14.4, 6.4, 16, 4.8, 19.2, 1.6, 19.2, -24, 19.2)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kyd2l"]
-load_path = "res://.godot/imported/sofa2.png-e2902629ead4516d58c3d2728c5b4235.ctex"
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x2oqp"]
-texture = SubResource("CompressedTexture2D_kyd2l")
+texture = ExtResource("8_yv0p7")
 texture_region_size = Vector2i(32, 64)
 0:0/next_alternative_id = 2
 0:0/0 = 0
@@ -125,11 +118,8 @@ texture_region_size = Vector2i(32, 64)
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8gy1u"]
 polygon = PackedVector2Array(-12, -38.6667, -10.6667, -40, 8, -40, 8, 17.3333, -12, 17.3333)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5ggbv"]
-load_path = "res://.godot/imported/smallbookshelfvert.png-7c0a6681d88626f239bc47389cfca907.ctex"
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_limc7"]
-texture = SubResource("CompressedTexture2D_5ggbv")
+texture = ExtResource("1_15ddd")
 texture_region_size = Vector2i(32, 64)
 0:0/next_alternative_id = 2
 0:0/0 = 0
@@ -306,11 +296,8 @@ texture_region_size = Vector2i(32, 32)
 0:1/0/y_sort_origin = -24
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6, -2, 6, -2, 6, 4, -6, 4)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ew15b"]
-load_path = "res://.godot/imported/mysteryPurple.png-fa0662d70491124c36cddc42f8eb598a.ctex"
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3seuf"]
-texture = SubResource("CompressedTexture2D_ew15b")
+texture = ExtResource("13_hjqwp")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
@@ -353,21 +340,15 @@ texture_region_size = Vector2i(96, 64)
 0:0/0/modulate = Color(0.592157, 0.631373, 0.556863, 1)
 0:0/0/z_index = -1
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cq06u"]
-load_path = "res://.godot/imported/mysteryRed.png-c452bb78d6cc9a64338b1e6b6ff70f00.ctex"
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pqg78"]
-texture = SubResource("CompressedTexture2D_cq06u")
+texture = ExtResource("17_5w0bk")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mfvea"]
-load_path = "res://.godot/imported/mysteryYellow.png-a0649b9c56b9acc87f5ff1a5e52f8d06.ctex"
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eo8mt"]
-texture = SubResource("CompressedTexture2D_mfvea")
+texture = ExtResource("18_1boyf")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
@@ -376,33 +357,24 @@ texture = SubResource("CompressedTexture2D_mfvea")
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_2kkf6"]
 polygon = PackedVector2Array(-40, -74.6667, 24, -72, 24, -6.66667, -38.6667, -8)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_66uac"]
-load_path = "res://.godot/imported/windows.png-d02268bba59fea1eb6a4235f94bb4185.ctex"
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rdypd"]
-texture = SubResource("CompressedTexture2D_66uac")
+texture = ExtResource("19_mnhgp")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(8, 8)
 0:0/0/y_sort_origin = -72
 0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_2kkf6")
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_df4xc"]
-load_path = "res://.godot/imported/bookshelfempty.png-4aa5ea5e9aa9e491a3901fe7610570bf.ctex"
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qcn5b"]
-texture = SubResource("CompressedTexture2D_df4xc")
+texture = ExtResource("20_v70lp")
 0:0/size_in_atlas = Vector2i(6, 7)
 0:0/0 = 0
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_2rf1g"]
 polygon = PackedVector2Array(-56, -48, 41.3333, -48, 40, 56, -54.6667, 56)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uybgu"]
-load_path = "res://.godot/imported/bookshelffull.png-ac157a39bd835c4dda9223743f95ded6.ctex"
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5oqyk"]
-texture = SubResource("CompressedTexture2D_uybgu")
+texture = ExtResource("21_3jibg")
 texture_region_size = Vector2i(96, 112)
 0:0/next_alternative_id = 2
 0:0/0 = 0
@@ -414,11 +386,8 @@ texture_region_size = Vector2i(96, 112)
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ld65g"]
 polygon = PackedVector2Array(-56, -24, 40, -24, 40, 0, -56, 0)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ob0i7"]
-load_path = "res://.godot/imported/table.png-eb1a7c35ef68f711680fa574c067c699.ctex"
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n0vdi"]
-texture = SubResource("CompressedTexture2D_ob0i7")
+texture = ExtResource("22_tdvyl")
 texture_region_size = Vector2i(96, 32)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(8, 8)
@@ -426,11 +395,8 @@ texture_region_size = Vector2i(96, 32)
 0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_ld65g")
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-56, 0, 40, 0, 40, -16, -56, -16)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pdblf"]
-load_path = "res://.godot/imported/tableempty.png-8f12395bc383460d016230a2fd03c061.ctex"
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lih43"]
-texture = SubResource("CompressedTexture2D_pdblf")
+texture = ExtResource("23_if8ks")
 0:0/0 = 0
 0:1/0 = 0
 1:0/0 = 0
