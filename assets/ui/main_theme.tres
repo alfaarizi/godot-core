@@ -1,0 +1,105 @@
+[gd_resource type="Theme" load_steps=17 format=3 uid="uid://dkk0nnkkys24f"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_6dj00"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_b8h5p"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_v7wxh"]
+
+[sub_resource type="Gradient" id="Gradient_toyu4"]
+offsets = PackedFloat32Array(0.263328, 0.266559, 0.267876)
+colors = PackedColorArray(0.423529, 0.596078, 1, 1, 0.423529, 0.596078, 1, 1, 0.423529, 0.596078, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ii0ih"]
+gradient = SubResource("Gradient_toyu4")
+width = 3
+height = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ssd3i"]
+content_margin_top = 12.0
+content_margin_bottom = 12.0
+bg_color = Color(0.233926, 0.762419, 0.999998, 1)
+border_width_top = 2
+border_width_bottom = 2
+border_color = Color(4.13924e-06, 0.624791, 0.849279, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jj4s"]
+content_margin_top = 12.0
+content_margin_bottom = 12.0
+bg_color = Color(0.233926, 0.762419, 0.999998, 1)
+border_width_top = 2
+border_width_bottom = 2
+border_color = Color(4.13924e-06, 0.624791, 0.849279, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4axok"]
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(1.34766e-06, 0.274337, 0.383094, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(5.39064e-06, 0.665622, 0.907183, 1)
+
+[sub_resource type="ImageTexture" id="ImageTexture_j1s05"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_hjqvm"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_rjgwg"]
+
+[sub_resource type="Gradient" id="Gradient_43cc3"]
+offsets = PackedFloat32Array(0.261473, 0.265742, 0.267876)
+colors = PackedColorArray(0.423529, 0.596078, 0.203922, 1, 0.423529, 0.596078, 0.203922, 1, 0.423529, 0.596078, 0.203922, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wgl37"]
+gradient = SubResource("Gradient_43cc3")
+width = 3
+height = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ha1vs"]
+content_margin_top = 12.0
+content_margin_bottom = 12.0
+bg_color = Color(0.623529, 0.866667, 0.317647, 1)
+border_width_top = 2
+border_width_bottom = 2
+border_color = Color(0.423529, 0.596078, 0.203922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e8oon"]
+content_margin_top = 12.0
+content_margin_bottom = 12.0
+bg_color = Color(0.623529, 0.866667, 0.317647, 1)
+border_width_top = 2
+border_width_bottom = 2
+border_color = Color(0.423529, 0.596078, 0.203922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0yw0"]
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.203434, 0.299279, 0.0867439, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.423529, 0.596078, 0.203922, 1)
+
+[resource]
+EnergyBar/base_type = &"HSlider"
+EnergyBar/constants/center_grabber = 0
+EnergyBar/constants/grabber_offset = 0
+EnergyBar/icons/grabber = SubResource("ImageTexture_6dj00")
+EnergyBar/icons/grabber_disabled = SubResource("ImageTexture_b8h5p")
+EnergyBar/icons/grabber_highlight = SubResource("ImageTexture_v7wxh")
+EnergyBar/icons/tick = SubResource("GradientTexture2D_ii0ih")
+EnergyBar/styles/grabber_area = SubResource("StyleBoxFlat_ssd3i")
+EnergyBar/styles/grabber_area_highlight = SubResource("StyleBoxFlat_4jj4s")
+EnergyBar/styles/slider = SubResource("StyleBoxFlat_4axok")
+HealthBar/base_type = &"HSlider"
+HealthBar/constants/center_grabber = 0
+HealthBar/constants/grabber_offset = 0
+HealthBar/icons/grabber = SubResource("ImageTexture_j1s05")
+HealthBar/icons/grabber_disabled = SubResource("ImageTexture_hjqvm")
+HealthBar/icons/grabber_highlight = SubResource("ImageTexture_rjgwg")
+HealthBar/icons/tick = SubResource("GradientTexture2D_wgl37")
+HealthBar/styles/grabber_area = SubResource("StyleBoxFlat_ha1vs")
+HealthBar/styles/grabber_area_highlight = SubResource("StyleBoxFlat_e8oon")
+HealthBar/styles/slider = SubResource("StyleBoxFlat_d0yw0")

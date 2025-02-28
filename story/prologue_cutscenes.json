@@ -1,0 +1,577 @@
+{
+	"scene_id": "prologue",
+	"dialogues": [
+		{
+			"dialogue_id": "Small_cutscene_after_entering_lobby",
+			"dialogue": [
+				{
+					"name": "Hart",
+					"line": [
+						{"text": "I got called here again.","expression": "neutral"},
+						{"text": "I don't know exactly why.","expression": "neutral"},
+						{"text": "I need to talk to the receptionist to let them know I'm here.","expression": "neutral"}
+					],
+					"audio": "default",
+					"next_line_index": null,
+					"is_player": true,
+					"choices": []
+				}
+			]
+		},
+		{
+			"dialogue_id": "Entering the Therapist room 1",
+			"dialogue": [
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "Oh hi Hart, I've been expecting you.","expression": "neutral"},
+						{"text": "Come, have a seat here.","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": null,
+					"is_player": false,
+					"choices": []
+				}
+			]
+		},
+		{
+			"dialogue_id": "Entering the Therapist room 2",
+			"dialogue": [
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "So how have you been today?","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": "line_1",
+					"is_player": false,
+					"choices": []
+				},
+				{
+					"name": "Hart",
+					"line":[
+						{"text": "...", "expression": "neutral"}
+					],
+					"audio": "Hart_voice",
+					"next_line_index": "line_2",
+					"is_player": true,
+					"choices": []
+				},
+				{
+					"name": "Therapist",
+					"line":[
+						{"text": "I assume it's nothing much. Right, to the topic.", "expression": "neutral"},
+						{"text": "You forgot why you were here again, didn't you?", "expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": null,
+					"is_player": false,
+					"choices": []
+				}
+			]
+		},
+		{
+			"dialogue_id": "Entering the Therapist room 3",
+			"dialogue": [
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "So you are called here again because of your impulsive self-harm acts… again.","expression": "neutral"},
+						{"text": "You are lucky your friend was there or else things might have been worse.","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": "line_1",
+					"is_player": false,
+					"choices": []
+				},
+				{
+					"name": "Hart",
+					"line": [
+						{"text": "Maybe it's just better if I'm gone.","expression": "neutral"}
+					],
+					"audio": "Hart_voice",
+					"next_line_index": "line_2",
+					"is_player": true,
+					"choices": []
+				},
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "Look Hart, we've talked about this before.","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": null,
+					"is_player": false,
+					"choices": []
+				}
+			]
+		},
+		{
+			"dialogue_id": "Entering the Therapist room 4",
+			"dialogue": [
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "Also, have you tried the medication the psychiatrist prescribed to you?","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": "line_1",
+					"is_player": false,
+					"choices": []
+				},
+				{
+					"name": "Hart",
+					"line": [
+						{"text": "...Yeah...","expression": "neutral"}
+					],
+					"audio": "Hart_voice",
+					"next_line_index": "line_2",
+					"is_player": true,
+					"choices": []
+				},
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "Aren't there something you want to talk about? Something in your mind perhaps?","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": "line_3",
+					"is_player": false,
+					"choices": []
+				},
+				{
+					"name": "Hart",
+					"line": [
+						{"text": "Nothing in particular.","expression": "neutral"}
+					],
+					"audio": "Hart_voice",
+					"next_line_index": "line_4",
+					"is_player": true,
+					"choices": []
+				},
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "Even your brother?","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": "line_5",
+					"is_player": false,
+					"choices": []
+				},
+				{
+					"name": "Hart",
+					"line": [
+						{"text": "...!","expression": "neutral"}
+					],
+					"audio": "Hart_voice",
+					"next_line_index": "line_6",
+					"is_player": true,
+					"choices": []
+				},
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "...I'm sorry, I didn't mean to bring him up.","expression": "neutral"},
+						{"text": "If I recall, you said you had a pretty normal life after he’s gone, right?","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": "line_7",
+					"is_player": false,
+					"choices": []
+				},
+				{
+					"name": "Hart",
+					"line": [
+						{"text": "...Yes...","expression": "neutral"}
+					],
+					"audio": "Hart_voice",
+					"next_line_index": "line_8",
+					"is_player": true,
+					"choices": []
+				},
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "Aren’t there anything bothering you at all right now?","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": "line_9",
+					"is_player": false,
+					"choices": []
+				},
+				{
+					"name": "Hart",
+					"line": [
+						{"text": "No.","expression": "neutral"}
+					],
+					"audio": "Hart_voice",
+					"next_line_index": "line_10",
+					"is_player": true,
+					"choices": []
+				},
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "Are you sure there aren't things that you may have forgotten?","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": "line_11",
+					"is_player": false,
+					"choices": []
+				},
+				{
+					"name": "Hart",
+					"line": [
+						{"text": "...Maybe...I'm not sure...","expression": "neutral"}
+					],
+					"audio": "Hart_voice",
+					"next_line_index": "line_12",
+					"is_player": true,
+					"choices": []
+				},
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "Can you tell me what they are?","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": "line_13",
+					"is_player": false,
+					"choices": []
+				},
+				{
+					"name": "Hart",
+					"line": [
+						{"text": "I can't remember...","expression": "neutral"}
+					],
+					"audio": "Hart_voice",
+					"next_line_index": "line_14",
+					"is_player": true,
+					"choices": []
+				},
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "Are there anything to help make you remember?","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": "line_15",
+					"is_player": false,
+					"choices": []
+				},
+				{
+					"name": "Hart",
+					"line": [
+						{"text": "I don't know.","expression": "neutral"}
+					],
+					"audio": "Hart_voice",
+					"next_line_index": "line_16",
+					"is_player": true,
+					"choices": []
+				},
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "I see. You keep forgetting everything after gaining your consciousness back right?","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": "line_17",
+					"is_player": false,
+					"choices": []
+				},
+				{
+					"name": "Hart",
+					"line": [
+						{"text": "I guess so...yeah...","expression": "neutral"}
+					],
+					"audio": "Hart_voice",
+					"next_line_index": "line_18",
+					"is_player": true,
+					"choices": []
+				},
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "Well, this didn't really get us anywhere far.","expression": "neutral"},
+						{"text": "I know losing your brother must have been hard for you, but you have to accept that he's gone.","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": "line_19",
+					"is_player": false,
+					"choices": []
+				},
+				{
+					"name": "Hart",
+					"line": [
+						{"text": "I know that.","expression": "neutral"}
+					],
+					"audio": "Hart_voice",
+					"next_line_index": "line_20",
+					"is_player": true,
+					"choices": []
+				},
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "And I’ll do my best to help you.","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": "line_21",
+					"is_player": false,
+					"choices": []
+				},
+				{
+					"name": "Hart",
+					"line": [
+						{"text": "...Thanks.","expression": "neutral"}
+					],
+					"audio": "Hart_voice",
+					"next_line_index": "line_22",
+					"is_player": true,
+					"choices": []
+				},
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "You’ll have to trust me. I’m doing what I can for you.","expression": "neutral"},
+						{"text": "We need to get to the root of the problem. There's only one way to get to it if you cannot identify what’s causing it.","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": "line_23",
+					"is_player": false,
+					"choices": []
+				},
+				{
+					"name": "Hart",
+					"line": [
+						{"text": "There's a way?","expression": "neutral"}
+					],
+					"audio": "Hart_voice",
+					"next_line_index": "line_24",
+					"is_player": true,
+					"choices": []
+				},
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "Yes. There's a machine that our institute uses for diagnosing patients with hazy or distorted memories.","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": "line_25",
+					"is_player": false,
+					"choices": []
+				},
+				{
+					"name": "Hart",
+					"line": [
+						{"text": "How does it work?","expression": "neutral"}
+					],
+					"audio": "Hart_voice",
+					"next_line_index": "line_26",
+					"is_player": true,
+					"choices": []
+				},
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "Basically, the machine transfers your consciousness into your own mind. Like sending you straight to the root of all your problems.","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": "line_27",
+					"is_player": false,
+					"choices": []
+				},
+				{
+					"name": "Hart",
+					"line": [
+						{"text": "Machine like that exists!?","expression": "neutral"}
+					],
+					"audio": "Hart_voice",
+					"next_line_index": "line_28",
+					"is_player": true,
+					"choices": []
+				},
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "Yeah, it's recently built as well. So it’s still in good condition.","expression": "neutral"},
+						{"text": "With that, you are going to see what's been causing you all the problems","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": "line_29",
+					"is_player": false,
+					"choices": []
+				},
+				{
+					"name": "Hart",
+					"line": [
+						{"text": "And...what if I see it?","expression": "neutral"}
+					],
+					"audio": "Hart_voice",
+					"next_line_index": "line_30",
+					"is_player": true,
+					"choices": []
+				},
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "We can communicate with each other while you are in that world. So you just report to me what you see there.","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": "line_31",
+					"is_player": false,
+					"choices": []
+				},
+				{
+					"name": "Hart",
+					"line": [
+						{"text": "Okay...sounds simple enough. Guess I'm in.","expression": "neutral"}
+					],
+					"audio": "Hart_voice",
+					"next_line_index": null,
+					"is_player": true,
+					"choices": []
+				}
+			]
+		},
+		{
+			"dialogue_id": "Entering the Therapist room 5",
+			"dialogue": [
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "Right. The machine's in the room just right across.","expression": "neutral"},
+						{"text": "I'll head there to do some preparation. Head there whenever you are ready. I'll be waiting.","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": null,
+					"is_player": false,
+					"choices": []
+				}
+			]
+		},
+		{
+			"dialogue_id": "Entering the Therapist room the sequel 1",
+			"dialogue": [
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "Oh, I’ve just finished some preparations.","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": "line_1",
+					"is_player": false,
+					"choices": []
+				},
+				{
+					"name": "Hart",
+					"line": [
+						{"text": "It really does exist...","expression": "neutral"}
+					],
+					"audio": "Hart_voice",
+					"next_line_index": "line_2",
+					"is_player": true,
+					"choices": []
+				},
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "Well yeah, and not only for show.","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": null,
+					"is_player": false,
+					"choices": []
+				}
+			]
+		},
+		{
+			"dialogue_id": "Entering the Therapist room the sequel 2",
+			"dialogue": [
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "So, you ready? Lie down on the machine whenever you are.","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": null,
+					"is_player": false,
+					"choices": []
+				}
+			]
+		},
+		{
+			"dialogue_id": "Entering the Therapist room the sequel's sequel 1",
+			"dialogue": [
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "Alright, make sure you are in a comfortable pose.","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": "line_1",
+					"is_player": false,
+					"choices": []
+				},
+				{
+					"name": "Hart",
+					"line": [
+						{"text": "What’s going to happen now?","expression": "neutral"}
+					],
+					"audio": "Hart_voice",
+					"next_line_index": "line_2",
+					"is_player": true,
+					"choices": []
+				},
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "I’m going to transfer you to your own mind. Hopefully you’ll get to see what’s been the root cause of all your doings.","expression": "neutral"},
+						{"text": "Just tell me what you see there, I’ll be right here.","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": "line_3",
+					"is_player": false,
+					"choices": []
+				},
+				{
+					"name": "Hart",
+					"line": [
+						{"text": "How do I tell you? Are you going to hear me when I'm there?","expression": "neutral"}
+					],
+					"audio": "Hart_voice",
+					"next_line_index": "line_4",
+					"is_player": true,
+					"choices": []
+				},
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "Yeah. And I can talk to you through here as well.","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": null,
+					"is_player": false,
+					"choices": []
+				}
+			]
+
+		},
+		{
+			"dialogue_id": "Entering the Therapist room the sequel's sequel 2",
+			"dialogue": [
+				{
+					"name": "Therapist",
+					"line": [
+						{"text": "Alright, here goes.","expression": "neutral"}
+					],
+					"audio": "therapist_voice",
+					"next_line_index": null,
+					"is_player": false,
+					"choices": []
+				}
+			]
+		}
+	]
+}

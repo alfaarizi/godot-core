@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=3 uid="uid://s8s0psalsy3j"]
+
+[ext_resource type="Script" path="res://rooms/prologue/therapy_room_2/therapy_room_2.gd" id="1_vywgw"]
+[ext_resource type="PackedScene" uid="uid://le2f2of2o5d7" path="res://rooms/prologue/therapy_room_2/Therapy_room_2_tilemap.tscn" id="2_cyfh4"]
+[ext_resource type="PackedScene" uid="uid://bhrutww653eol" path="res://characters/player/player.tscn" id="3_46w5h"]
+[ext_resource type="PackedScene" uid="uid://c84okus6y6nte" path="res://rooms/door.tscn" id="4_7xa5r"]
+[ext_resource type="PackedScene" uid="uid://cj3deljjo8g4r" path="res://characters/therapist/therapist.tscn" id="4_gv8on"]
+[ext_resource type="PackedScene" uid="uid://bln04fcnkpha8" path="res://characters/dynamic_bounds_camera.tscn" id="6_rxd45"]
+
+[sub_resource type="Animation" id="Animation_0igpg"]
+length = 0.001
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Therapist")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["move_left", 1],
+"method": &"change_animation_frame"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["move_down", 1],
+"method": &"change_animation_frame"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_6q1tv"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jlf0n"]
+_data = {
+"RESET": SubResource("Animation_0igpg"),
+"new_animation": SubResource("Animation_6q1tv")
+}
+
+[node name="TherapyRoom2" type="Node2D" node_paths=PackedStringArray("player", "doors")]
+y_sort_enabled = true
+script = ExtResource("1_vywgw")
+player = NodePath("Player")
+doors = [NodePath("Door")]
+metadata/_edit_lock_ = true
+
+[node name="TherapyRoom2TileMap" parent="." instance=ExtResource("2_cyfh4")]
+
+[node name="Player" parent="." instance=ExtResource("3_46w5h")]
+position = Vector2(505, 461)
+
+[node name="Therapist" parent="." instance=ExtResource("4_gv8on")]
+position = Vector2(1366, 698)
+metadata/_edit_lock_ = true
+
+[node name="Door" parent="." instance=ExtResource("4_7xa5r")]
+position = Vector2(505, 333)
+push_dist = 84.0
+path_to_new_scene = "res://rooms/prologue/lobby/lobby.tscn"
+entry_door_name = "therapy_room_2"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_jlf0n")
+}
+
+[node name="DynamicBoundsCamera" parent="." instance=ExtResource("6_rxd45")]
+unique_name_in_owner = true
+is_centered = true

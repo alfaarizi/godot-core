@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://ca6p583nomxom"]
+
+[ext_resource type="Script" path="res://game_controller.gd" id="1_vcpqr"]
+[ext_resource type="PackedScene" uid="uid://bvl6pho6rlwh0" path="res://rooms/prologue/lobby/lobby.tscn" id="2_ditks"]
+[ext_resource type="PackedScene" uid="uid://qrkrnqv83mlo" path="res://ui/hud/hud.tscn" id="3_eg36v"]
+[ext_resource type="PackedScene" uid="uid://byucwlac08hca" path="res://ui/dialogue/dialogue_hud.tscn" id="3_gumqn"]
+[ext_resource type="PackedScene" uid="uid://3ayqdowaichi" path="res://assets/ui/loading_screen.tscn" id="5_mlbqp"]
+
+[node name="GameController" type="Node"]
+script = ExtResource("1_vcpqr")
+
+[node name="World2D" type="Node2D" parent="."]
+unique_name_in_owner = true
+y_sort_enabled = true
+
+[node name="Lobby" parent="World2D" instance=ExtResource("2_ditks")]
+unique_name_in_owner = true
+position = Vector2(1, 1)
+
+[node name="HUD" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Hud" parent="HUD" instance=ExtResource("3_eg36v")]
+
+[node name="DialogueHud" parent="HUD" instance=ExtResource("3_gumqn")]
+unique_name_in_owner = true
+
+[node name="LoadingScreen" parent="." instance=ExtResource("5_mlbqp")]
+unique_name_in_owner = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.884099, 0.884099, 0.884099, 1)

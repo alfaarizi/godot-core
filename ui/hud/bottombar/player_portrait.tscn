@@ -1,0 +1,178 @@
+[gd_scene load_steps=9 format=3 uid="uid://bdiyvjr8vmj16"]
+
+[ext_resource type="Texture2D" uid="uid://y2j2ms1mohkg" path="res://assets/Hart.png" id="1_cxtp3"]
+[ext_resource type="Script" path="res://ui/hud/bottombar/player_portrait.gd" id="1_u8sss"]
+[ext_resource type="Theme" uid="uid://dkk0nnkkys24f" path="res://assets/ui/main_theme.tres" id="2_4u3qy"]
+[ext_resource type="Texture2D" uid="uid://dgrfruvxhyd3i" path="res://assets/ui/template/c1.png" id="2_vyw16"]
+[ext_resource type="FontFile" uid="uid://30r0tno0ep1n" path="res://assets/ui/Born2bSportyV2.ttf" id="3_twfif"]
+[ext_resource type="PackedScene" uid="uid://c3q06iuf2h3px" path="res://ui/hud/topbar/status_container.tscn" id="4_nwa8l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l6ncn"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dt6xe"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="DialogueBox" type="MarginContainer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -540.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_right = 25
+script = ExtResource("1_u8sss")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+alignment_vertical = 2
+
+[node name="PlayerProfileTexture" type="TextureRect" parent="HBoxContainer/AspectRatioContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("1_cxtp3")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/AspectRatioContainer/PlayerProfileTexture"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.187
+anchor_top = 1.0
+anchor_right = 2.615
+anchor_bottom = 1.0
+offset_left = 0.239998
+offset_top = -152.0
+offset_right = -0.199951
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_bottom = 20
+
+[node name="Wellness" type="VBoxContainer" parent="HBoxContainer/AspectRatioContainer/PlayerProfileTexture/MarginContainer"]
+custom_minimum_size = Vector2(1165, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="HBoxContainer/AspectRatioContainer/PlayerProfileTexture/MarginContainer/Wellness"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.7
+
+[node name="NinePatchRect" type="NinePatchRect" parent="HBoxContainer/AspectRatioContainer/PlayerProfileTexture/MarginContainer/Wellness/AspectRatioContainer"]
+custom_minimum_size = Vector2(210, 45)
+layout_mode = 2
+texture = ExtResource("2_vyw16")
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer/AspectRatioContainer/PlayerProfileTexture/MarginContainer/Wellness/AspectRatioContainer/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayerName" type="Label" parent="HBoxContainer/AspectRatioContainer/PlayerProfileTexture/MarginContainer/Wellness/AspectRatioContainer/NinePatchRect/CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_twfif")
+theme_override_font_sizes/font_size = 48
+text = "John"
+
+[node name="StatusContainer" parent="HBoxContainer/AspectRatioContainer/PlayerProfileTexture/MarginContainer/Wellness/AspectRatioContainer/NinePatchRect" instance=ExtResource("4_nwa8l")]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_left = 1.071
+anchor_top = 1.0
+anchor_right = 3.357
+anchor_bottom = 1.0
+offset_left = 0.0899811
+offset_top = -45.0
+offset_right = 0.0299683
+offset_bottom = 0.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/AspectRatioContainer/PlayerProfileTexture/MarginContainer/Wellness"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.75
+
+[node name="Panel" type="Panel" parent="HBoxContainer/AspectRatioContainer/PlayerProfileTexture/MarginContainer/Wellness/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_l6ncn")
+
+[node name="PlayerHealthLength" type="HBoxContainer" parent="HBoxContainer/AspectRatioContainer/PlayerProfileTexture/MarginContainer/Wellness/VBoxContainer/Panel"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_top = 2.0
+offset_right = 1165.0
+offset_bottom = 25.0
+
+[node name="PlayerHealthSlider" type="HSlider" parent="HBoxContainer/AspectRatioContainer/PlayerProfileTexture/MarginContainer/Wellness/VBoxContainer/Panel/PlayerHealthLength"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_4u3qy")
+theme_type_variation = &"HealthBar"
+value = 50.0
+
+[node name="PlayerHealthLabel" type="RichTextLabel" parent="HBoxContainer/AspectRatioContainer/PlayerProfileTexture/MarginContainer/Wellness/VBoxContainer/Panel/PlayerHealthLength"]
+unique_name_in_owner = true
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+text = "100/100"
+fit_content = true
+scroll_active = false
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/AspectRatioContainer/PlayerProfileTexture/MarginContainer/Wellness/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_dt6xe")
+
+[node name="PlayerEnergyLength" type="HBoxContainer" parent="HBoxContainer/AspectRatioContainer/PlayerProfileTexture/MarginContainer/Wellness/VBoxContainer/Panel2"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_top = 2.0
+offset_right = 990.25
+offset_bottom = 26.0
+
+[node name="PlayerEnergySlider" type="HSlider" parent="HBoxContainer/AspectRatioContainer/PlayerProfileTexture/MarginContainer/Wellness/VBoxContainer/Panel2/PlayerEnergyLength"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_4u3qy")
+theme_type_variation = &"EnergyBar"
+value = 25.0
+
+[node name="PlayerEnergyLabel" type="RichTextLabel" parent="HBoxContainer/AspectRatioContainer/PlayerProfileTexture/MarginContainer/Wellness/VBoxContainer/Panel2/PlayerEnergyLength"]
+unique_name_in_owner = true
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+theme = ExtResource("2_4u3qy")
+text = "100/100"
+fit_content = true
+scroll_active = false
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 320
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 25
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+alignment_vertical = 2

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvl6pho6rlwh0"]
+
+[ext_resource type="Script" path="res://rooms/prologue/lobby/lobby.gd" id="1_bx1gp"]
+[ext_resource type="PackedScene" uid="uid://x68wqnapv2il" path="res://rooms/prologue/lobby/lobby_tilemap.tscn" id="2_wqpll"]
+[ext_resource type="PackedScene" uid="uid://bhrutww653eol" path="res://characters/player/player.tscn" id="3_8asr2"]
+[ext_resource type="PackedScene" uid="uid://c84okus6y6nte" path="res://rooms/door.tscn" id="4_gavxl"]
+
+[node name="Lobby" type="Node2D" node_paths=PackedStringArray("player", "doors")]
+y_sort_enabled = true
+script = ExtResource("1_bx1gp")
+player = NodePath("Player")
+doors = [NodePath("Door1"), NodePath("Door2")]
+
+[node name="LobbyTileMap" parent="." instance=ExtResource("2_wqpll")]
+
+[node name="Player" parent="." instance=ExtResource("3_8asr2")]
+position = Vector2(679, 1903)
+
+[node name="Door1" parent="." instance=ExtResource("4_gavxl")]
+position = Vector2(504, 1815)
+path_to_new_scene = "res://rooms/prologue/therapy_room_1/therapy_room_1.tscn"
+entry_door_name = "therapy_room_1"
+metadata/_edit_lock_ = true
+
+[node name="Door2" parent="." instance=ExtResource("4_gavxl")]
+position = Vector2(508, 2406)
+press_required = false
+entry_direction = 1
+push_dist = 96.0
+path_to_new_scene = "res://rooms/prologue/therapy_room_2/Therapy_room_2.tscn"
+entry_door_name = "therapy_room_2"

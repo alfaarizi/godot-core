@@ -1,0 +1,149 @@
+[gd_scene load_steps=21 format=3 uid="uid://cj3deljjo8g4r"]
+
+[ext_resource type="Script" path="res://characters/therapist/therapist.gd" id="1_2auem"]
+[ext_resource type="Texture2D" uid="uid://j8eydamv4jnp" path="res://assets/sprites/player/shadow.png" id="2_kwjcb"]
+[ext_resource type="Texture2D" uid="uid://gql8ukd782a8" path="res://assets/sprites/therapist/down2.png" id="3_vqgh5"]
+[ext_resource type="Texture2D" uid="uid://cn2lfgplmxago" path="res://assets/sprites/therapist/right1.png" id="4_8ohpm"]
+[ext_resource type="Texture2D" uid="uid://c4vgkyssmj8mb" path="res://assets/sprites/therapist/up1.png" id="5_xf8si"]
+[ext_resource type="Script" path="res://characters/cutscene_sprite.gd" id="6_iojb8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4g6hy"]
+atlas = ExtResource("3_vqgh5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvl5x"]
+atlas = ExtResource("3_vqgh5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7o83b"]
+atlas = ExtResource("3_vqgh5")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5wt2"]
+atlas = ExtResource("3_vqgh5")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gm0g5"]
+atlas = ExtResource("4_8ohpm")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sywwf"]
+atlas = ExtResource("4_8ohpm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5tps"]
+atlas = ExtResource("4_8ohpm")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bn6rr"]
+atlas = ExtResource("4_8ohpm")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sryyd"]
+atlas = ExtResource("5_xf8si")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dd08j"]
+atlas = ExtResource("5_xf8si")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8v0f"]
+atlas = ExtResource("5_xf8si")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_broda"]
+atlas = ExtResource("5_xf8si")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_to2om"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4g6hy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvl5x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7o83b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5wt2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7o83b")
+}],
+"loop": true,
+"name": &"move_down",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gm0g5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sywwf")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_h5tps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bn6rr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5tps")
+}],
+"loop": true,
+"name": &"move_right",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sryyd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dd08j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8v0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_broda")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8v0f")
+}],
+"loop": true,
+"name": &"move_up",
+"speed": 4.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pwjbs"]
+radius = 3.5
+height = 7.0
+
+[node name="Therapist" type="CharacterBody2D"]
+y_sort_enabled = true
+scale = Vector2(6, 6)
+script = ExtResource("1_2auem")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.156863)
+position = Vector2(0, -13)
+scale = Vector2(0.875, 0.9375)
+texture = ExtResource("2_kwjcb")
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -15)
+sprite_frames = SubResource("SpriteFrames_to2om")
+animation = &"move_down"
+frame = 1
+script = ExtResource("6_iojb8")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -5)
+shape = SubResource("CapsuleShape2D_pwjbs")
+metadata/_edit_lock_ = true
