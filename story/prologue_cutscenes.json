@@ -40,7 +40,7 @@
 				{
 					"name": "Therapist",
 					"line": [
-						{"text": "So how have you been today?","expression": "neutral"}
+						{"text": "So, how have you been today?","expression": "neutral"}
 					],
 					"audio": "therapist_voice",
 					"next_line_index": "line_1",
