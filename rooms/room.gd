@@ -13,6 +13,7 @@ var character_references: Dictionary = {}
 func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
+	Global.player = player
 	cutscene_animation = find_child("AnimationPlayer", true, false)
 	if cutscene_animation:
 		#cutscene_animation.animation_finished.connect(_on_animation_finished)
@@ -34,7 +35,8 @@ func populate_character_references() -> void:
 				break
 
 func debug_scene() -> void:
-	print("no scene has started")
+	#print("no scene has started")
+	pass
 
 func do(fun: Callable, args: Array = []) -> Variant:
 	var result = fun.callv(args)

@@ -52,7 +52,6 @@ y_sort_enabled = true
 script = ExtResource("1_vywgw")
 player = NodePath("Player")
 doors = [NodePath("Door")]
-metadata/_edit_lock_ = true
 
 [node name="TherapyRoom2TileMap" parent="." instance=ExtResource("2_cyfh4")]
 

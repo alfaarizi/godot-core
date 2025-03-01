@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=59 format=3 uid="uid://cx7tjoori5htd"]
+[gd_resource type="TileSet" load_steps=61 format=3 uid="uid://cx7tjoori5htd"]
 
 [ext_resource type="Texture2D" uid="uid://dagm0l0c3dfda" path="res://presets/maps/prologue/therapy/props/machine1.png" id="1_4bdc4"]
 [ext_resource type="Texture2D" uid="uid://cg5hanouirju3" path="res://presets/maps/prologue/therapy/props/smallbookshelfvert.png" id="1_15ddd"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://raw2hv7lwrq0" path="res://presets/maps/prologue/therapy/props/rug.png" id="6_vdgn6"]
 [ext_resource type="Texture2D" uid="uid://dhqlb3mjxgdmi" path="res://presets/maps/prologue/therapy/props/longchair.png" id="7_xy0mq"]
 [ext_resource type="Texture2D" uid="uid://dijlbnxxfvoc3" path="res://presets/maps/prologue/therapy/props/sofa2.png" id="8_yv0p7"]
+[ext_resource type="Shader" path="res://shader/outline_inline_2d.gdshader" id="8_yy8r4"]
 [ext_resource type="Texture2D" uid="uid://dqdhnef33t4kn" path="res://presets/maps/prologue/therapy/props/mysteryPurple.png" id="13_hjqwp"]
 [ext_resource type="Texture2D" uid="uid://cbolcloxvk5qn" path="res://presets/maps/prologue/therapy/props/mysteryRed.png" id="17_5w0bk"]
 [ext_resource type="Texture2D" uid="uid://b2umf54byuls8" path="res://presets/maps/prologue/therapy/props/mysteryYellow.png" id="18_1boyf"]
@@ -128,6 +129,14 @@ texture_region_size = Vector2i(32, 64)
 0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_8gy1u")
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -32, 8, -32, 8, 12, -12, 12)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6vihp"]
+shader = ExtResource("8_yy8r4")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 1.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_n8rfg"]
 polygon = PackedVector2Array(-83.2, -30.4, -11.2, -30.4, -11.2, -38.4, -4.8, -43.2, 0, -48, 35.2, -48, 41.6, -40, 59.2, -40, 62.4, -32, 64, 36.8, 22.4, 36.8, 20.8, 32, -6.4, 32, -76.8, 32, -81.6, 30.4, -83.2, 28.8, -83.2, 24)
 
@@ -136,6 +145,7 @@ texture = ExtResource("1_4bdc4")
 texture_region_size = Vector2i(160, 96)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(8, 8)
+0:0/0/material = SubResource("ShaderMaterial_6vihp")
 0:0/0/y_sort_origin = -32
 0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_n8rfg")
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-82, 22, -82, -22, -82, -24, -80, -26, -76, -26, -10, -26, -6, -30, -2, -32, 2, -32, 32, -32, 34, -30, 38, -26, 66, -26, 68, -24, 68, -16, 70, -12, 70, 14, 66, 20, 62, 24, 62, 32, 22, 32, 22, 28, 20, 26, 4, 26, 0, 26, -4, 24, -6, 22, -80, 22)

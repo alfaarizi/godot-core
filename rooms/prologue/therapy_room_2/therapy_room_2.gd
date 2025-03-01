@@ -31,7 +31,7 @@ func debug_scene() -> void:
 
 	#CameraTransition.transition_camera(dynamic_bounds_camera, player.dynamic_bounds_camera)
 	
-	print("player cannot move")
+	print("player can move")
 	
 	GameState.change_state(GameState.State.EXPLORING)
 
