@@ -4,10 +4,11 @@
 [ext_resource type="Script" path="res://rooms/tilemap.gd" id="1_wg11o"]
 [ext_resource type="TileSet" uid="uid://iwv3aqtospur" path="res://presets/maps/prologue/void/void_wall_preset.tres" id="2_sc4rc"]
 
-[node name="Void_01_tilemap" type="Node2D" node_paths=PackedStringArray("tile_map_rect")]
+[node name="Void_01_tilemap" type="Node2D" node_paths=PackedStringArray("tile_map_rect", "interactable_layers")]
 scale = Vector2(3.5, 3.5)
 script = ExtResource("1_wg11o")
 tile_map_rect = NodePath("Walls")
+interactable_layers = [NodePath("Props")]
 
 [node name="Floor" type="TileMapLayer" parent="."]
 texture_filter = 1

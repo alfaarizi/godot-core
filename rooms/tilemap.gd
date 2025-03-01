@@ -3,39 +3,41 @@ extends Node2D
 class_name TileMapScene
 
 @export var tile_map_rect: TileMapLayer: set = set_tile_map_rect
-var prop_layer: TileMapLayer
+@export var interactable_layers: Array[TileMapLayer] = []: set = set_interactable_layers
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
 	SceneManager.change_tilemap_bounds(get_tilemap_bounds())
-	prop_layer = find_child("Props", true, false)
-	setup_interaction_areas()
+	if not interactable_layers.is_empty():
+		for layer in interactable_layers: setup_interaction_areas(layer) 
+	else:
+		for layer in find_children("*", "TileMapLayer", true, true): setup_interaction_areas(layer) 
 	
-	
-func setup_interaction_areas():
-	if not prop_layer:
+func setup_interaction_areas(layer: TileMapLayer):
+	if not (layer and layer.tile_set):
 		return
 
-	var used_cells = prop_layer.get_used_cells()  # Get the used cells in the layer
-	for cell in used_cells:
-		var cell_pos = prop_layer.map_to_local(cell)  # Convert map coordinates to local coordinates
+	var tile_set = layer.tile_set
+	
+	for cell in layer.get_used_cells():
+		var tile_data = layer.get_cell_tile_data(cell)
+		if not (tile_data and tile_data.material):
+			continue
 		
-		var tile_id = prop_layer.get_cell_source_id(cell)
+		var tile_id = layer.get_cell_source_id(cell)
 		if tile_id == -1:
 			continue
 
-		var tile_set = prop_layer.tile_set
-		var tile_data = prop_layer.get_cell_tile_data(cell)
-		var shader_material = tile_data.material
-		if not shader_material:
+		var atlas_coords = layer.get_cell_atlas_coords(cell)
+		if atlas_coords == Vector2i(-1, -1):
 			continue
-
-		var atlas_coords = prop_layer.get_cell_atlas_coords(cell)
+		
 		var atlas_source = tile_set.get_source(tile_id) as TileSetAtlasSource
 		if not atlas_source:
 			continue
 			
+		var cell_pos = layer.map_to_local(cell)  # Convert map coordinates to local coordinates
 		var text_region_size = atlas_source.texture_region_size
 		var size_in_atlas = atlas_source.get_tile_size_in_atlas(atlas_coords)
 		var texture_origin = tile_data.texture_origin
@@ -54,10 +56,11 @@ func setup_interaction_areas():
 		area.add_child(collision_shape)
 		
 		## Connect signals for player entering or exiting the interaction area
+		var shader_material = tile_data.material
 		shader_material.set_shader_parameter("width", 0.0)
 		area.connect("body_entered", Callable(self, "_on_interaction_area_entered").bind(shader_material))
 		area.connect("body_exited", Callable(self, "_on_interaction_area_exited").bind(shader_material))
-		prop_layer.add_child(area)
+		layer.add_child(area)
 
 func _on_interaction_area_entered(body, _material):
 	if body is Player:	
@@ -75,6 +78,17 @@ func _on_interaction_area_exited(body, _material):
 
 func set_tile_map_rect(_tile_map_rect: TileMapLayer):
 	tile_map_rect = _tile_map_rect
+	update_configuration_warnings() 
+
+func set_interactable_layers(_interactable_layers: Array[TileMapLayer]) -> void:
+	interactable_layers = []
+	for layer in _interactable_layers:
+		interactable_layers.append(layer)
+	
+func _get_configuration_warnings() -> PackedStringArray:
+	if not tile_map_rect:
+		return ["a tile map layer must be given to calculate camera bounding rectangle"]
+	return []
 
 func get_tilemap_bounds() -> Array[Vector2]:
 	if not tile_map_rect:
