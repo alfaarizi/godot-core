@@ -6,12 +6,13 @@
 [ext_resource type="TileSet" uid="uid://cx7tjoori5htd" path="res://presets/maps/prologue/therapy/Props_presets.tres" id="3_c1xqs"]
 [ext_resource type="Texture2D" uid="uid://cjwdiu05xvbd" path="res://presets/maps/prologue/therapy/props/lightmask_0.png" id="5_2afsh"]
 
-[node name="TherapyRoom2TileMap" type="Node2D" node_paths=PackedStringArray("tile_map_rect")]
+[node name="TherapyRoom2TileMap" type="Node2D" node_paths=PackedStringArray("tile_map_rect", "interactable_layers")]
 y_sort_enabled = true
 texture_filter = 1
 scale = Vector2(3.5, 3.5)
 script = ExtResource("1_cjjhy")
 tile_map_rect = NodePath("Walls")
+interactable_layers = [NodePath("Props")]
 metadata/_edit_lock_ = true
 
 [node name="Floor" type="TileMapLayer" parent="."]

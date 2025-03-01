@@ -6,10 +6,11 @@
 [ext_resource type="TileSet" uid="uid://cx7tjoori5htd" path="res://presets/maps/prologue/therapy/Props_presets.tres" id="4_w5pvc"]
 [ext_resource type="Texture2D" uid="uid://cjwdiu05xvbd" path="res://presets/maps/prologue/therapy/props/lightmask_0.png" id="5_q8esc"]
 
-[node name="LobbyTileMap" type="Node2D" node_paths=PackedStringArray("tile_map_rect")]
+[node name="LobbyTileMap" type="Node2D" node_paths=PackedStringArray("tile_map_rect", "interactable_layers")]
 y_sort_enabled = true
 script = ExtResource("1_gtb35")
 tile_map_rect = NodePath("Walls")
+interactable_layers = [NodePath("Props")]
 metadata/_edit_lock_ = true
 
 [node name="Floor" type="TileMapLayer" parent="."]
