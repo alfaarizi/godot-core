@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://db4nwtdub3hv8"]
+
+[ext_resource type="Script" path="res://rooms/prologue/void_01/void_01.gd" id="1_frmsj"]
+[ext_resource type="PackedScene" uid="uid://c0i2xdpx5mwj4" path="res://rooms/prologue/void_01/Void_01_tilemap.tscn" id="2_oqekj"]
+[ext_resource type="PackedScene" uid="uid://duohwe56pwoss" path="res://rooms/prologue/void_02/Void_02_tilemap.tscn" id="3_fftgj"]
+[ext_resource type="PackedScene" uid="uid://bhrutww653eol" path="res://characters/player/player.tscn" id="3_rcxwo"]
+[ext_resource type="PackedScene" uid="uid://cdj7bihqle5td" path="res://rooms/prologue/void_03/Void_03_tilemap.tscn" id="4_waame"]
+
+[node name="Void" type="Node2D" node_paths=PackedStringArray("player")]
+script = ExtResource("1_frmsj")
+player = NodePath("Player")
+metadata/_edit_lock_ = true
+
+[node name="Void_01_tilemap" parent="." instance=ExtResource("2_oqekj")]
+
+[node name="Void_02_tilemap" parent="." instance=ExtResource("3_fftgj")]
+visible = false
+
+[node name="Void_03_tilemap" parent="." instance=ExtResource("4_waame")]
+visible = false
+
+[node name="Player" parent="." instance=ExtResource("3_rcxwo")]
+position = Vector2(530, 841)
