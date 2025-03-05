@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlwedffn6rur5"
-path="res://.godot/imported/up3.png-ed1dee5257373178d482902102846b36.ctex"
+uid="uid://nk3e1alkl8vc"
+path="res://.godot/imported/brodown.png-97b4176e18cbc59e363a7fa6d310d572.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/player/movementsheet2+3/up3.png"
-dest_files=["res://.godot/imported/up3.png-ed1dee5257373178d482902102846b36.ctex"]
+source_file="res://assets/sprites/player/movement_sheet2/brodown.png"
+dest_files=["res://.godot/imported/brodown.png-97b4176e18cbc59e363a7fa6d310d572.ctex"]
 
 [params]
 

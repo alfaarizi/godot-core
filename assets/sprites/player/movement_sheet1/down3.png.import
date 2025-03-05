@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b830conwpuvhx"
-path="res://.godot/imported/right3.png-170071fe74c43951548b7bb2b246f238.ctex"
+uid="uid://bidj324rig8va"
+path="res://.godot/imported/down3.png-d8061ea5ca0d9883b2f1379c66f74317.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/player/movementsheet2+3/right3.png"
-dest_files=["res://.godot/imported/right3.png-170071fe74c43951548b7bb2b246f238.ctex"]
+source_file="res://assets/sprites/player/movement_sheet1/down3.png"
+dest_files=["res://.godot/imported/down3.png-d8061ea5ca0d9883b2f1379c66f74317.ctex"]
 
 [params]
 

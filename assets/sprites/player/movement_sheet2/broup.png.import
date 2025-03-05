@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nucaweapf2fa"
-path="res://.godot/imported/left3.png-90c05025fbb7669dabe8b31397454340.ctex"
+uid="uid://bq112tw3dsc23"
+path="res://.godot/imported/broup.png-0422a94f509d944fdc4ec58f00eca436.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/player/movementsheet2+3/left3.png"
-dest_files=["res://.godot/imported/left3.png-90c05025fbb7669dabe8b31397454340.ctex"]
+source_file="res://assets/sprites/player/movement_sheet2/broup.png"
+dest_files=["res://.godot/imported/broup.png-0422a94f509d944fdc4ec58f00eca436.ctex"]
 
 [params]
 
