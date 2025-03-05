@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cem2obioy51de"]
-
-[ext_resource type="PackedScene" uid="uid://duohwe56pwoss" path="res://rooms/prologue/void_02/Void_02_tilemap.tscn" id="1_essrm"]
-
-[node name="Void_02" type="Node2D"]
-metadata/_edit_lock_ = true
-
-[node name="Void_02_tilemap" parent="." instance=ExtResource("1_essrm")]
-metadata/_edit_lock_ = true
