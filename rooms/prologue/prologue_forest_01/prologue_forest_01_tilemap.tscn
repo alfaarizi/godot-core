@@ -15,7 +15,6 @@ tile_map_data = PackedByteArray("AAAEAAgAAQACAAIAAAAEAAkAAQACAAMAAAAFAAgAAQADAAI
 tile_set = ExtResource("2_7jggv")
 
 [node name="Wall background" type="TileMapLayer" parent="."]
-scale = Vector2(1, 1)
 tile_set = ExtResource("3_1mjga")
 
 [node name="Wall" type="TileMapLayer" parent="."]
