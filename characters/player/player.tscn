@@ -1,11 +1,11 @@
-[gd_scene load_steps=25 format=3 uid="uid://bhrutww653eol"]
+[gd_scene load_steps=27 format=3 uid="uid://bhrutww653eol"]
 
 [ext_resource type="Script" path="res://characters/player/player.gd" id="1_nf707"]
 [ext_resource type="Texture2D" uid="uid://j8eydamv4jnp" path="res://assets/sprites/player/shadow.png" id="2_78tfa"]
 [ext_resource type="Texture2D" uid="uid://bdlasiu5spifl" path="res://assets/sprites/player/footprint_particles.png" id="3_gk2r0"]
-[ext_resource type="Texture2D" uid="uid://bidj324rig8va" path="res://assets/sprites/player/movementsheet2+3/down3.png" id="4_vai1d"]
-[ext_resource type="Texture2D" uid="uid://b830conwpuvhx" path="res://assets/sprites/player/movementsheet2+3/right3.png" id="5_7jcbx"]
-[ext_resource type="Texture2D" uid="uid://dlwedffn6rur5" path="res://assets/sprites/player/movementsheet2+3/up3.png" id="6_2frgg"]
+[ext_resource type="Texture2D" uid="uid://chfgwamf5md7e" path="res://assets/sprites/player/movement_sheet2/brodown2.png" id="4_3fsfs"]
+[ext_resource type="Texture2D" uid="uid://b830conwpuvhx" path="res://assets/sprites/player/movement_sheet1/right3.png" id="5_7jcbx"]
+[ext_resource type="Texture2D" uid="uid://k7fja0ydbd8g" path="res://assets/sprites/player/movement_sheet2/broup2.png" id="6_fv5gw"]
 [ext_resource type="Script" path="res://characters/cutscene_sprite.gd" id="7_43wkp"]
 [ext_resource type="PackedScene" uid="uid://bln04fcnkpha8" path="res://characters/dynamic_bounds_camera.tscn" id="9_geyl2"]
 
@@ -36,17 +36,21 @@ scale_max = 0.7
 scale_curve = SubResource("CurveTexture_56bot")
 alpha_curve = SubResource("CurveTexture_kswdy")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7h6dh"]
-atlas = ExtResource("4_vai1d")
-region = Rect2(32, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5a5s"]
+atlas = ExtResource("4_3fsfs")
+region = Rect2(32, 0, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lrwfr"]
-atlas = ExtResource("4_vai1d")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_lffpa"]
+atlas = ExtResource("4_3fsfs")
+region = Rect2(0, 0, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6oma0"]
-atlas = ExtResource("4_vai1d")
-region = Rect2(96, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_gte32"]
+atlas = ExtResource("4_3fsfs")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1o46g"]
+atlas = ExtResource("4_3fsfs")
+region = Rect2(64, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xqc4j"]
 atlas = ExtResource("5_7jcbx")
@@ -60,39 +64,40 @@ region = Rect2(0, 0, 32, 32)
 atlas = ExtResource("5_7jcbx")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a86f3"]
-atlas = ExtResource("6_2frgg")
-region = Rect2(32, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_qen73"]
+atlas = ExtResource("6_fv5gw")
+region = Rect2(32, 0, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x8i2q"]
-atlas = ExtResource("6_2frgg")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbw72"]
+atlas = ExtResource("6_fv5gw")
+region = Rect2(0, 0, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_18mcd"]
-atlas = ExtResource("6_2frgg")
-region = Rect2(96, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qytu"]
+atlas = ExtResource("6_fv5gw")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18lxd"]
+atlas = ExtResource("6_fv5gw")
+region = Rect2(64, 0, 32, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_to2om"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7h6dh")
+"texture": SubResource("AtlasTexture_q5a5s")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lrwfr")
+"texture": SubResource("AtlasTexture_lffpa")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6oma0")
+"texture": SubResource("AtlasTexture_gte32")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lrwfr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6oma0")
+"texture": SubResource("AtlasTexture_1o46g")
 }],
 "loop": true,
 "name": &"move_down",
-"speed": 4.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -116,40 +121,37 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_a86f3")
+"texture": SubResource("AtlasTexture_qen73")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x8i2q")
+"texture": SubResource("AtlasTexture_sbw72")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_18mcd")
+"texture": SubResource("AtlasTexture_8qytu")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x8i2q")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_18mcd")
+"texture": SubResource("AtlasTexture_18lxd")
 }],
 "loop": true,
 "name": &"move_up",
-"speed": 4.0
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pwjbs"]
-radius = 3.5
-height = 11.3333
+radius = 6.0
+height = 16.0
 
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
 texture_filter = 1
-scale = Vector2(6, 6)
+scale = Vector2(3.5, 3.5)
 script = ExtResource("1_nf707")
 metadata/_edit_lock_ = true
 
 [node name="Shadow" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 0.156863)
-position = Vector2(0, -13)
-scale = Vector2(0.875, 0.9375)
+position = Vector2(0.5, -16)
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("2_78tfa")
 metadata/_edit_lock_ = true
 
@@ -166,16 +168,19 @@ metadata/_edit_lock_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(0, -15)
+position = Vector2(0, -24)
 sprite_frames = SubResource("SpriteFrames_to2om")
 animation = &"move_down"
+frame = 1
+frame_progress = 0.852954
 script = ExtResource("7_43wkp")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -5)
+position = Vector2(0, -8)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_pwjbs")
+debug_color = Color(0.964319, 0, 0.49347, 0.42)
 metadata/_edit_lock_ = true
 
 [node name="DynamicBoundsCamera" parent="." instance=ExtResource("9_geyl2")]
