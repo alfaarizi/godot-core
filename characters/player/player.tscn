@@ -1,10 +1,10 @@
-[gd_scene load_steps=27 format=3 uid="uid://bhrutww653eol"]
+[gd_scene load_steps=28 format=3 uid="uid://bhrutww653eol"]
 
 [ext_resource type="Script" path="res://characters/player/player.gd" id="1_nf707"]
 [ext_resource type="Texture2D" uid="uid://j8eydamv4jnp" path="res://assets/sprites/player/shadow.png" id="2_78tfa"]
 [ext_resource type="Texture2D" uid="uid://bdlasiu5spifl" path="res://assets/sprites/player/footprint_particles.png" id="3_gk2r0"]
 [ext_resource type="Texture2D" uid="uid://nk3e1alkl8vc" path="res://assets/sprites/player/movement_sheet2/brodown.png" id="4_t2p8q"]
-[ext_resource type="Texture2D" uid="uid://b830conwpuvhx" path="res://assets/sprites/player/movement_sheet1/right3.png" id="5_7jcbx"]
+[ext_resource type="Texture2D" uid="uid://s7f0da26eii7" path="res://assets/sprites/player/movement_sheet2/broright.png" id="5_ey871"]
 [ext_resource type="Texture2D" uid="uid://bq112tw3dsc23" path="res://assets/sprites/player/movement_sheet2/broup.png" id="6_cod8b"]
 [ext_resource type="Script" path="res://characters/cutscene_sprite.gd" id="7_43wkp"]
 [ext_resource type="PackedScene" uid="uid://bln04fcnkpha8" path="res://characters/dynamic_bounds_camera.tscn" id="9_geyl2"]
@@ -52,17 +52,21 @@ region = Rect2(96, 0, 32, 48)
 atlas = ExtResource("4_t2p8q")
 region = Rect2(64, 0, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xqc4j"]
-atlas = ExtResource("5_7jcbx")
-region = Rect2(32, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_esm0p"]
+atlas = ExtResource("5_ey871")
+region = Rect2(32, 0, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6fe5d"]
-atlas = ExtResource("5_7jcbx")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4q2d"]
+atlas = ExtResource("5_ey871")
+region = Rect2(0, 0, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n6kl3"]
-atlas = ExtResource("5_7jcbx")
-region = Rect2(96, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_6lxl8"]
+atlas = ExtResource("5_ey871")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psei7"]
+atlas = ExtResource("5_ey871")
+region = Rect2(64, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fhpuo"]
 atlas = ExtResource("6_cod8b")
@@ -101,23 +105,20 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xqc4j")
+"texture": SubResource("AtlasTexture_esm0p")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6fe5d")
-}, {
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_n6kl3")
+"texture": SubResource("AtlasTexture_p4q2d")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6fe5d")
+"texture": SubResource("AtlasTexture_6lxl8")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n6kl3")
+"texture": SubResource("AtlasTexture_psei7")
 }],
 "loop": true,
 "name": &"move_right",
-"speed": 6.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -170,7 +171,8 @@ metadata/_edit_lock_ = true
 unique_name_in_owner = true
 position = Vector2(0, -24)
 sprite_frames = SubResource("SpriteFrames_to2om")
-animation = &"move_down"
+animation = &"move_right"
+frame_progress = 0.689509
 script = ExtResource("7_43wkp")
 metadata/_edit_lock_ = true
 
