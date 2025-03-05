@@ -168,7 +168,9 @@ metadata/_edit_lock_ = true
 unique_name_in_owner = true
 position = Vector2(0, -15)
 sprite_frames = SubResource("SpriteFrames_to2om")
-animation = &"move_down"
+animation = &"move_right"
+frame = 4
+frame_progress = 0.99559
 script = ExtResource("7_43wkp")
 metadata/_edit_lock_ = true
 
