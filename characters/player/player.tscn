@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://characters/player/player.gd" id="1_nf707"]
 [ext_resource type="Texture2D" uid="uid://j8eydamv4jnp" path="res://assets/sprites/player/shadow.png" id="2_78tfa"]
 [ext_resource type="Texture2D" uid="uid://bdlasiu5spifl" path="res://assets/sprites/player/footprint_particles.png" id="3_gk2r0"]
-[ext_resource type="Texture2D" uid="uid://chfgwamf5md7e" path="res://assets/sprites/player/movement_sheet2/brodown2.png" id="4_3fsfs"]
+[ext_resource type="Texture2D" uid="uid://nk3e1alkl8vc" path="res://assets/sprites/player/movement_sheet2/brodown.png" id="4_t2p8q"]
 [ext_resource type="Texture2D" uid="uid://b830conwpuvhx" path="res://assets/sprites/player/movement_sheet1/right3.png" id="5_7jcbx"]
-[ext_resource type="Texture2D" uid="uid://k7fja0ydbd8g" path="res://assets/sprites/player/movement_sheet2/broup2.png" id="6_fv5gw"]
+[ext_resource type="Texture2D" uid="uid://bq112tw3dsc23" path="res://assets/sprites/player/movement_sheet2/broup.png" id="6_cod8b"]
 [ext_resource type="Script" path="res://characters/cutscene_sprite.gd" id="7_43wkp"]
 [ext_resource type="PackedScene" uid="uid://bln04fcnkpha8" path="res://characters/dynamic_bounds_camera.tscn" id="9_geyl2"]
 
@@ -36,20 +36,20 @@ scale_max = 0.7
 scale_curve = SubResource("CurveTexture_56bot")
 alpha_curve = SubResource("CurveTexture_kswdy")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_q5a5s"]
-atlas = ExtResource("4_3fsfs")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1f2ff"]
+atlas = ExtResource("4_t2p8q")
 region = Rect2(32, 0, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lffpa"]
-atlas = ExtResource("4_3fsfs")
+[sub_resource type="AtlasTexture" id="AtlasTexture_eygvb"]
+atlas = ExtResource("4_t2p8q")
 region = Rect2(0, 0, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gte32"]
-atlas = ExtResource("4_3fsfs")
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hiua"]
+atlas = ExtResource("4_t2p8q")
 region = Rect2(96, 0, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1o46g"]
-atlas = ExtResource("4_3fsfs")
+[sub_resource type="AtlasTexture" id="AtlasTexture_6henu"]
+atlas = ExtResource("4_t2p8q")
 region = Rect2(64, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xqc4j"]
@@ -64,36 +64,36 @@ region = Rect2(0, 0, 32, 32)
 atlas = ExtResource("5_7jcbx")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qen73"]
-atlas = ExtResource("6_fv5gw")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhpuo"]
+atlas = ExtResource("6_cod8b")
 region = Rect2(32, 0, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sbw72"]
-atlas = ExtResource("6_fv5gw")
+[sub_resource type="AtlasTexture" id="AtlasTexture_shc8f"]
+atlas = ExtResource("6_cod8b")
 region = Rect2(0, 0, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8qytu"]
-atlas = ExtResource("6_fv5gw")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ugni"]
+atlas = ExtResource("6_cod8b")
 region = Rect2(96, 0, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_18lxd"]
-atlas = ExtResource("6_fv5gw")
+[sub_resource type="AtlasTexture" id="AtlasTexture_emsg2"]
+atlas = ExtResource("6_cod8b")
 region = Rect2(64, 0, 32, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_to2om"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q5a5s")
+"texture": SubResource("AtlasTexture_1f2ff")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lffpa")
+"texture": SubResource("AtlasTexture_eygvb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gte32")
+"texture": SubResource("AtlasTexture_0hiua")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1o46g")
+"texture": SubResource("AtlasTexture_6henu")
 }],
 "loop": true,
 "name": &"move_down",
@@ -121,16 +121,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qen73")
+"texture": SubResource("AtlasTexture_fhpuo")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_sbw72")
+"texture": SubResource("AtlasTexture_shc8f")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8qytu")
+"texture": SubResource("AtlasTexture_1ugni")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_18lxd")
+"texture": SubResource("AtlasTexture_emsg2")
 }],
 "loop": true,
 "name": &"move_up",
@@ -171,8 +171,6 @@ unique_name_in_owner = true
 position = Vector2(0, -24)
 sprite_frames = SubResource("SpriteFrames_to2om")
 animation = &"move_down"
-frame = 1
-frame_progress = 0.852954
 script = ExtResource("7_43wkp")
 metadata/_edit_lock_ = true
 
