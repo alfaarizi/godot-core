@@ -6,7 +6,7 @@ var has_entered: bool = false
 
 @export var player: Player: set = set_player
 @export var doors: Array[Door]: set = set_doors
-var cutscene_animation: AnimationPlayer = null
+var cutscene_animation: CutscenePlayer = null
 
 var character_references: Dictionary = {}
 
@@ -14,28 +14,11 @@ func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
 	Global.player = player
-	cutscene_animation = find_child("AnimationPlayer", true, false)
-	if cutscene_animation:
-		#cutscene_animation.animation_finished.connect(_on_animation_finished)
-		populate_character_references()
-	print(character_references)
+	cutscene_animation = find_child("CutscenePlayer", true, false)
 	debug_scene()
 #
-func populate_character_references() -> void:
-	var characters := get_children().filter(func(e): return e is CharacterBody2D)
-	var animated_sprites := cutscene_animation.get_children().filter(func(e): return e is AnimatedSprite2D)
-	if not (animated_sprites and characters):
-		return
-	
-	for sprite in animated_sprites:
-		for character in characters:
-			print(sprite.name + ", " + character.name)
-			if ("Cut_" + character.name) == sprite.name:
-				character_references[sprite] = character
-				break
 
 func debug_scene() -> void:
-	#print("no scene has started")
 	pass
 
 func do(fun: Callable, args: Array = []) -> Variant:

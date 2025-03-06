@@ -1,6 +1,6 @@
 extends Room
 
-@onready var animation_player: AnimationPlayer = %AnimationPlayer
+@onready var cutscene_player: CutscenePlayer = %CutscenePlayer
 @onready var dynamic_bounds_camera: DynamicBoundsCamera = %DynamicBoundsCamera
 
 func cutscene_01():
@@ -25,8 +25,8 @@ func debug_scene() -> void:
 
 	CameraTransition.switch_camera(player.dynamic_bounds_camera, dynamic_bounds_camera)
 	
-	#await cutscene_01()
-	#await cutscene_02()
+	await cutscene_01()
+	await cutscene_02()
 	#await cutscene_03()
 
 	#CameraTransition.transition_camera(dynamic_bounds_camera, player.dynamic_bounds_camera)

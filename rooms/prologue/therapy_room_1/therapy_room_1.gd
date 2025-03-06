@@ -1,16 +1,16 @@
 extends Room
-
-@onready var animation_player: AnimationPlayer = %AnimationPlayer
+@onready var cutscene_player: CutscenePlayer = %CutscenePlayer
 @onready var dynamic_bounds_camera: DynamicBoundsCamera = %DynamicBoundsCamera
 
-func cutscene_01():
-	await delay(1.0)
-	await play("01_therapist_turning")
-	await delay(1.0)
-	await do(start_dialogue, ["Entering the Therapist room 1"])
-	await play("02_therapist_to_sofa")
-	await delay(1.0)
-	
+
+#func cutscene_01():
+	#await delay(1.0)
+	#await play("01_therapist_turning")
+	#await delay(1.0)
+	#await do(start_dialogue, ["Entering the Therapist room 1"])
+	#await play("02_therapist_to_sofa")
+	#await delay(1.0)
+
 func cutscene_02():
 	await play("03_after_sesh")
 	await delay(1.0)
@@ -31,6 +31,8 @@ func debug_scene() -> void:
 	GameState.change_state(GameState.State.CUTSCENE)
 
 	CameraTransition.switch_camera(player.dynamic_bounds_camera, dynamic_bounds_camera)
+	
+	await cutscene_player.play_cutscene("cutscene_01")
 	
 	#await cutscene_01()
 	#await cutscene_02()

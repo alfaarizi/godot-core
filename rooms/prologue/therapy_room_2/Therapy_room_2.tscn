@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://s8s0psalsy3j"]
+[gd_scene load_steps=11 format=3 uid="uid://s8s0psalsy3j"]
 
 [ext_resource type="Script" path="res://rooms/prologue/therapy_room_2/therapy_room_2.gd" id="1_vywgw"]
 [ext_resource type="PackedScene" uid="uid://le2f2of2o5d7" path="res://rooms/prologue/therapy_room_2/Therapy_room_2_tilemap.tscn" id="2_cyfh4"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c84okus6y6nte" path="res://rooms/door.tscn" id="4_7xa5r"]
 [ext_resource type="PackedScene" uid="uid://cj3deljjo8g4r" path="res://characters/therapist/therapist.tscn" id="4_gv8on"]
 [ext_resource type="PackedScene" uid="uid://bln04fcnkpha8" path="res://characters/dynamic_bounds_camera.tscn" id="6_rxd45"]
+[ext_resource type="PackedScene" uid="uid://bkkqbagsf2627" path="res://components/cutscene_player.tscn" id="7_kfjnh"]
 
 [sub_resource type="Animation" id="Animation_0igpg"]
 length = 0.001
@@ -68,7 +69,7 @@ push_dist = 84.0
 path_to_new_scene = "res://rooms/prologue/lobby/lobby.tscn"
 entry_door_name = "therapy_room_2"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="CutscenePlayer" parent="." instance=ExtResource("7_kfjnh")]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_jlf0n")

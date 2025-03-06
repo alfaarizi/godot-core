@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://ddidnaktvwg15"]
+[gd_scene load_steps=99 format=3 uid="uid://ddidnaktvwg15"]
 
 [ext_resource type="Script" path="res://rooms/prologue/therapy_room_1/therapy_room_1.gd" id="1_ojqgy"]
 [ext_resource type="PackedScene" uid="uid://derrir5d4ljbp" path="res://rooms/prologue/therapy_room_1/Therapy_room_1_tilemap.tscn" id="2_tlh12"]
@@ -6,10 +6,16 @@
 [ext_resource type="PackedScene" uid="uid://c84okus6y6nte" path="res://rooms/door.tscn" id="5_wb5kv"]
 [ext_resource type="PackedScene" uid="uid://cj3deljjo8g4r" path="res://characters/therapist/therapist.tscn" id="6_b5trd"]
 [ext_resource type="Texture2D" uid="uid://bidj324rig8va" path="res://assets/sprites/player/movement_sheet1/down3.png" id="6_hmjnl"]
+[ext_resource type="PackedScene" uid="uid://bkkqbagsf2627" path="res://components/cutscene_player.tscn" id="6_jcd14"]
+[ext_resource type="Script" path="res://components/cutscene_util/cutscene_animation.gd" id="7_16ga0"]
 [ext_resource type="Texture2D" uid="uid://nucaweapf2fa" path="res://assets/sprites/player/movement_sheet1/left3.png" id="7_pkgcv"]
 [ext_resource type="Texture2D" uid="uid://b830conwpuvhx" path="res://assets/sprites/player/movement_sheet1/right3.png" id="8_i1p5f"]
+[ext_resource type="Script" path="res://components/cutscene_util/cutscene_action.gd" id="8_qq6r4"]
 [ext_resource type="Texture2D" uid="uid://dlwedffn6rur5" path="res://assets/sprites/player/movement_sheet1/up3.png" id="9_1a2k5"]
+[ext_resource type="Script" path="res://components/cutscene_util/delay_action.gd" id="9_ty83p"]
 [ext_resource type="Texture2D" uid="uid://32hwort0faip" path="res://assets/sprites/therapist/down1.png" id="10_sis6t"]
+[ext_resource type="Script" path="res://components/cutscene_util/play_action.gd" id="10_svm2h"]
+[ext_resource type="Script" path="res://components/cutscene_util/dialogue_action.gd" id="11_7tnfc"]
 [ext_resource type="Texture2D" uid="uid://g1w444rqc8vd" path="res://assets/sprites/therapist/left1.png" id="11_fx6v4"]
 [ext_resource type="Texture2D" uid="uid://cn2lfgplmxago" path="res://assets/sprites/therapist/right1.png" id="12_w4xa5"]
 [ext_resource type="Texture2D" uid="uid://c4vgkyssmj8mb" path="res://assets/sprites/therapist/up1.png" id="13_eeijv"]
@@ -280,6 +286,123 @@ _data = {
 "RESET": SubResource("Animation_pahui"),
 "test": SubResource("Animation_4xaem")
 }
+
+[sub_resource type="Resource" id="Resource_w782w"]
+script = ExtResource("9_ty83p")
+time = 1.0
+
+[sub_resource type="Resource" id="Resource_fsqdr"]
+script = ExtResource("8_qq6r4")
+"Action Type" = 1
+Action = SubResource("Resource_w782w")
+
+[sub_resource type="Resource" id="Resource_its0x"]
+script = ExtResource("10_svm2h")
+animation_name = "01_therapist_turning"
+
+[sub_resource type="Resource" id="Resource_wwe43"]
+script = ExtResource("8_qq6r4")
+"Action Type" = 2
+Action = SubResource("Resource_its0x")
+
+[sub_resource type="Resource" id="Resource_8iyky"]
+script = ExtResource("9_ty83p")
+time = 1.0
+
+[sub_resource type="Resource" id="Resource_oayiq"]
+script = ExtResource("8_qq6r4")
+"Action Type" = 1
+Action = SubResource("Resource_8iyky")
+
+[sub_resource type="Resource" id="Resource_kftyd"]
+script = ExtResource("11_7tnfc")
+dialogue_id = "Entering the Therapist room 1"
+
+[sub_resource type="Resource" id="Resource_tl50v"]
+script = ExtResource("8_qq6r4")
+"Action Type" = 3
+Action = SubResource("Resource_kftyd")
+
+[sub_resource type="Resource" id="Resource_nlh55"]
+script = ExtResource("10_svm2h")
+animation_name = "02_therapist_to_sofa"
+
+[sub_resource type="Resource" id="Resource_u5nw2"]
+script = ExtResource("8_qq6r4")
+"Action Type" = 2
+Action = SubResource("Resource_nlh55")
+
+[sub_resource type="Resource" id="Resource_x8fy1"]
+script = ExtResource("9_ty83p")
+time = 1.0
+
+[sub_resource type="Resource" id="Resource_o7nbl"]
+script = ExtResource("8_qq6r4")
+"Action Type" = 1
+Action = SubResource("Resource_x8fy1")
+
+[sub_resource type="Resource" id="Resource_3fucl"]
+script = ExtResource("7_16ga0")
+cutscene_name = "cutscene_01"
+actions = Array[ExtResource("8_qq6r4")]([SubResource("Resource_fsqdr"), SubResource("Resource_wwe43"), SubResource("Resource_oayiq"), SubResource("Resource_tl50v"), SubResource("Resource_u5nw2"), SubResource("Resource_o7nbl")])
+
+[sub_resource type="Resource" id="Resource_klg7n"]
+script = ExtResource("8_qq6r4")
+"Action Type" = 0
+
+[sub_resource type="Resource" id="Resource_p8yqk"]
+script = ExtResource("8_qq6r4")
+"Action Type" = 0
+
+[sub_resource type="Resource" id="Resource_o5v3a"]
+script = ExtResource("8_qq6r4")
+"Action Type" = 0
+
+[sub_resource type="Resource" id="Resource_thedk"]
+script = ExtResource("8_qq6r4")
+"Action Type" = 0
+
+[sub_resource type="Resource" id="Resource_lmci1"]
+script = ExtResource("8_qq6r4")
+"Action Type" = 0
+
+[sub_resource type="Resource" id="Resource_ikvug"]
+script = ExtResource("8_qq6r4")
+"Action Type" = 0
+
+[sub_resource type="Resource" id="Resource_0pj3l"]
+script = ExtResource("8_qq6r4")
+"Action Type" = 0
+
+[sub_resource type="Resource" id="Resource_g6meg"]
+script = ExtResource("7_16ga0")
+cutscene_name = "cutscene_02"
+actions = Array[ExtResource("8_qq6r4")]([SubResource("Resource_klg7n"), SubResource("Resource_p8yqk"), SubResource("Resource_o5v3a"), SubResource("Resource_thedk"), SubResource("Resource_lmci1"), SubResource("Resource_ikvug"), SubResource("Resource_0pj3l")])
+
+[sub_resource type="Resource" id="Resource_ap2ai"]
+script = ExtResource("8_qq6r4")
+"Action Type" = 0
+
+[sub_resource type="Resource" id="Resource_uwoij"]
+script = ExtResource("8_qq6r4")
+"Action Type" = 0
+
+[sub_resource type="Resource" id="Resource_pq0uv"]
+script = ExtResource("8_qq6r4")
+"Action Type" = 0
+
+[sub_resource type="Resource" id="Resource_f1ovm"]
+script = ExtResource("8_qq6r4")
+"Action Type" = 0
+
+[sub_resource type="Resource" id="Resource_4gnvp"]
+script = ExtResource("8_qq6r4")
+"Action Type" = 0
+
+[sub_resource type="Resource" id="Resource_rcu41"]
+script = ExtResource("7_16ga0")
+cutscene_name = ""
+actions = Array[ExtResource("8_qq6r4")]([SubResource("Resource_ap2ai"), SubResource("Resource_uwoij"), SubResource("Resource_pq0uv"), SubResource("Resource_f1ovm"), SubResource("Resource_4gnvp")])
 
 [sub_resource type="Animation" id="Animation_huxuq"]
 resource_name = "therapist_turn"
@@ -952,11 +1075,12 @@ path_to_new_scene = "res://rooms/prologue/lobby/lobby.tscn"
 entry_door_name = "therapy_room_1"
 metadata/_edit_lock_ = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="CutscenePlayer" parent="." instance=ExtResource("6_jcd14")]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_v0xek")
 }
+cutscene_animations = Array[ExtResource("7_16ga0")]([SubResource("Resource_3fucl"), SubResource("Resource_g6meg"), SubResource("Resource_rcu41")])
 
 [node name="AnimationPlayerOLD" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
