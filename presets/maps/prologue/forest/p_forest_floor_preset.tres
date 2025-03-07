@@ -1,7 +1,8 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://cd8qyg2f6lrjl"]
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://cd8qyg2f6lrjl"]
 
 [ext_resource type="Texture2D" uid="uid://d4g1ed0k8npgk" path="res://presets/maps/prologue/forest/floors/dirt1.2.png" id="1_f8w2e"]
 [ext_resource type="Texture2D" uid="uid://dlq1lxmwx4psc" path="res://presets/maps/prologue/forest/floors/grass.png" id="2_v3t65"]
+[ext_resource type="Texture2D" uid="uid://bc51tervrlgr8" path="res://presets/maps/prologue/forest/floor_deco/flowers.png" id="3_8xblm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gypgk"]
 texture = ExtResource("1_f8w2e")
@@ -77,6 +78,14 @@ texture = ExtResource("2_v3t65")
 6:7/0 = 0
 7:7/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hdwuj"]
+texture = ExtResource("3_8xblm")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
 [resource]
 sources/0 = SubResource("TileSetAtlasSource_gypgk")
 sources/1 = SubResource("TileSetAtlasSource_3bdgf")
+sources/2 = SubResource("TileSetAtlasSource_hdwuj")

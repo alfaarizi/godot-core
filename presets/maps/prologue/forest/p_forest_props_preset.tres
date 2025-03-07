@@ -1,0 +1,54 @@
+[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://d157ad615ut7p"]
+
+[ext_resource type="Texture2D" uid="uid://bskh2da5gxlh4" path="res://presets/maps/prologue/therapy/props/mysteryBlue.png" id="1_xwktl"]
+[ext_resource type="Texture2D" uid="uid://cundtwx7emw6i" path="res://presets/maps/prologue/therapy/props/mysteryGreen.png" id="2_msisr"]
+[ext_resource type="Texture2D" uid="uid://dqdhnef33t4kn" path="res://presets/maps/prologue/therapy/props/mysteryPurple.png" id="3_cmcag"]
+[ext_resource type="Texture2D" uid="uid://cbolcloxvk5qn" path="res://presets/maps/prologue/therapy/props/mysteryRed.png" id="4_hk7u5"]
+[ext_resource type="Texture2D" uid="uid://b2umf54byuls8" path="res://presets/maps/prologue/therapy/props/mysteryYellow.png" id="5_0ykdu"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1pq51"]
+texture = ExtResource("1_xwktl")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sge4n"]
+texture = ExtResource("2_msisr")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hl2wf"]
+texture = ExtResource("3_cmcag")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2jrd6"]
+texture = ExtResource("4_hk7u5")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x2lir"]
+texture = ExtResource("5_0ykdu")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[resource]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_1pq51")
+sources/1 = SubResource("TileSetAtlasSource_sge4n")
+sources/2 = SubResource("TileSetAtlasSource_hl2wf")
+sources/3 = SubResource("TileSetAtlasSource_2jrd6")
+sources/4 = SubResource("TileSetAtlasSource_x2lir")
