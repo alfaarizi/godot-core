@@ -11,21 +11,21 @@ extends Room
 	#await play("02_therapist_to_sofa")
 	#await delay(1.0)
 
-func cutscene_02():
-	await play("03_after_sesh")
-	await delay(1.0)
-	await do(start_dialogue, ["Entering the Therapist room 2"]) 
-	await delay(2.0)
-	await do(start_dialogue, ["Entering the Therapist room 3"])
-	await delay(2.0)
-	await do(start_dialogue, ["Entering the Therapist room 4"])
-	
-func cutscene_03():	
-	await play("03_after_sesh")
-	await delay(1.0)
-	await do(start_dialogue, ["Entering the Therapist room 5"])
-	await play("04_therapist_exiting")
-	await delay(1.0)
+#func cutscene_02():
+	#await play("03_after_sesh")
+	#await delay(1.0)
+	#await do(start_dialogue, ["Entering the Therapist room 2"]) 
+	#await delay(2.0)
+	#await do(start_dialogue, ["Entering the Therapist room 3"])
+	#await delay(2.0)
+	#await do(start_dialogue, ["Entering the Therapist room 4"])
+	#
+#func cutscene_03():	
+	#await play("03_after_sesh")
+	#await delay(1.0)
+	#await do(start_dialogue, ["Entering the Therapist room 5"])
+	#await play("04_therapist_exiting")
+	#await delay(1.0)
 
 func debug_scene() -> void:
 	GameState.change_state(GameState.State.CUTSCENE)
@@ -33,10 +33,8 @@ func debug_scene() -> void:
 	CameraTransition.switch_camera(player.dynamic_bounds_camera, dynamic_bounds_camera)
 	
 	await cutscene_player.play_cutscene("cutscene_01")
-	
-	#await cutscene_01()
-	#await cutscene_02()
-	#await cutscene_03()
+	await cutscene_player.play_cutscene("cutscene_02")
+	await cutscene_player.play_cutscene("cutscene_03")
 
 	#CameraTransition.transition_camera(dynamic_bounds_camera, player.dynamic_bounds_camera)
 	

@@ -1,24 +1,13 @@
-[gd_scene load_steps=99 format=3 uid="uid://ddidnaktvwg15"]
+[gd_scene load_steps=60 format=3 uid="uid://ddidnaktvwg15"]
 
 [ext_resource type="Script" path="res://rooms/prologue/therapy_room_1/therapy_room_1.gd" id="1_ojqgy"]
 [ext_resource type="PackedScene" uid="uid://derrir5d4ljbp" path="res://rooms/prologue/therapy_room_1/Therapy_room_1_tilemap.tscn" id="2_tlh12"]
 [ext_resource type="PackedScene" uid="uid://bhrutww653eol" path="res://characters/player/player.tscn" id="3_cwlvg"]
 [ext_resource type="PackedScene" uid="uid://c84okus6y6nte" path="res://rooms/door.tscn" id="5_wb5kv"]
 [ext_resource type="PackedScene" uid="uid://cj3deljjo8g4r" path="res://characters/therapist/therapist.tscn" id="6_b5trd"]
-[ext_resource type="Texture2D" uid="uid://bidj324rig8va" path="res://assets/sprites/player/movement_sheet1/down3.png" id="6_hmjnl"]
 [ext_resource type="PackedScene" uid="uid://bkkqbagsf2627" path="res://components/cutscene_player.tscn" id="6_jcd14"]
-[ext_resource type="Script" path="res://components/cutscene_util/cutscene_animation.gd" id="7_16ga0"]
-[ext_resource type="Texture2D" uid="uid://nucaweapf2fa" path="res://assets/sprites/player/movement_sheet1/left3.png" id="7_pkgcv"]
-[ext_resource type="Texture2D" uid="uid://b830conwpuvhx" path="res://assets/sprites/player/movement_sheet1/right3.png" id="8_i1p5f"]
-[ext_resource type="Script" path="res://components/cutscene_util/cutscene_action.gd" id="8_qq6r4"]
-[ext_resource type="Texture2D" uid="uid://dlwedffn6rur5" path="res://assets/sprites/player/movement_sheet1/up3.png" id="9_1a2k5"]
-[ext_resource type="Script" path="res://components/cutscene_util/delay_action.gd" id="9_ty83p"]
-[ext_resource type="Texture2D" uid="uid://32hwort0faip" path="res://assets/sprites/therapist/down1.png" id="10_sis6t"]
-[ext_resource type="Script" path="res://components/cutscene_util/play_action.gd" id="10_svm2h"]
-[ext_resource type="Script" path="res://components/cutscene_util/dialogue_action.gd" id="11_7tnfc"]
-[ext_resource type="Texture2D" uid="uid://g1w444rqc8vd" path="res://assets/sprites/therapist/left1.png" id="11_fx6v4"]
-[ext_resource type="Texture2D" uid="uid://cn2lfgplmxago" path="res://assets/sprites/therapist/right1.png" id="12_w4xa5"]
-[ext_resource type="Texture2D" uid="uid://c4vgkyssmj8mb" path="res://assets/sprites/therapist/up1.png" id="13_eeijv"]
+[ext_resource type="Script" path="res://components/cutscene_util/cutscene.gd" id="7_fuki3"]
+[ext_resource type="Script" path="res://components/cutscene_util/cutscene_frame.gd" id="8_0e42a"]
 [ext_resource type="PackedScene" uid="uid://bln04fcnkpha8" path="res://characters/dynamic_bounds_camera.tscn" id="14_j2fhb"]
 
 [sub_resource type="Animation" id="Animation_tj1ur"]
@@ -287,768 +276,244 @@ _data = {
 "test": SubResource("Animation_4xaem")
 }
 
-[sub_resource type="Resource" id="Resource_w782w"]
-script = ExtResource("9_ty83p")
+[sub_resource type="GDScript" id="GDScript_pofxq"]
+
+[sub_resource type="Resource" id="Resource_ntrm7"]
+resource_name = "DelayAction"
+script = SubResource("GDScript_pofxq")
 time = 1.0
 
-[sub_resource type="Resource" id="Resource_fsqdr"]
-script = ExtResource("8_qq6r4")
+[sub_resource type="Resource" id="Resource_o4hon"]
+script = ExtResource("8_0e42a")
+action_type = 1
+action = SubResource("Resource_ntrm7")
 "Action Type" = 1
-Action = SubResource("Resource_w782w")
+Action = SubResource("Resource_ntrm7")
 
-[sub_resource type="Resource" id="Resource_its0x"]
-script = ExtResource("10_svm2h")
-animation_name = "01_therapist_turning"
+[sub_resource type="GDScript" id="GDScript_7n2rv"]
 
-[sub_resource type="Resource" id="Resource_wwe43"]
-script = ExtResource("8_qq6r4")
+[sub_resource type="Resource" id="Resource_vqitr"]
+resource_name = "PlayAction"
+script = SubResource("GDScript_7n2rv")
+animation_name = ""
+
+[sub_resource type="Resource" id="Resource_767xp"]
+script = ExtResource("8_0e42a")
+action_type = 2
+action = SubResource("Resource_vqitr")
 "Action Type" = 2
-Action = SubResource("Resource_its0x")
+Action = SubResource("Resource_vqitr")
 
-[sub_resource type="Resource" id="Resource_8iyky"]
-script = ExtResource("9_ty83p")
+[sub_resource type="GDScript" id="GDScript_kgua7"]
+
+[sub_resource type="Resource" id="Resource_hgmrw"]
+resource_name = "DelayAction"
+script = SubResource("GDScript_kgua7")
 time = 1.0
 
-[sub_resource type="Resource" id="Resource_oayiq"]
-script = ExtResource("8_qq6r4")
+[sub_resource type="Resource" id="Resource_018kg"]
+script = ExtResource("8_0e42a")
+action_type = 1
+action = SubResource("Resource_hgmrw")
 "Action Type" = 1
-Action = SubResource("Resource_8iyky")
+Action = SubResource("Resource_hgmrw")
 
-[sub_resource type="Resource" id="Resource_kftyd"]
-script = ExtResource("11_7tnfc")
-dialogue_id = "Entering the Therapist room 1"
+[sub_resource type="GDScript" id="GDScript_4ev3g"]
 
-[sub_resource type="Resource" id="Resource_tl50v"]
-script = ExtResource("8_qq6r4")
+[sub_resource type="Resource" id="Resource_mdi2d"]
+resource_name = "DialogueAction"
+script = SubResource("GDScript_4ev3g")
+dialogue_id = ""
+
+[sub_resource type="Resource" id="Resource_8ltel"]
+script = ExtResource("8_0e42a")
+action_type = 3
+action = SubResource("Resource_mdi2d")
 "Action Type" = 3
-Action = SubResource("Resource_kftyd")
+Action = SubResource("Resource_mdi2d")
 
-[sub_resource type="Resource" id="Resource_nlh55"]
-script = ExtResource("10_svm2h")
-animation_name = "02_therapist_to_sofa"
+[sub_resource type="Resource" id="Resource_fqok6"]
+resource_name = "PlayAction"
+script = SubResource("GDScript_7n2rv")
+animation_name = ""
 
-[sub_resource type="Resource" id="Resource_u5nw2"]
-script = ExtResource("8_qq6r4")
+[sub_resource type="Resource" id="Resource_3isbk"]
+script = ExtResource("8_0e42a")
+action_type = 2
+action = SubResource("Resource_fqok6")
 "Action Type" = 2
-Action = SubResource("Resource_nlh55")
+Action = SubResource("Resource_fqok6")
 
-[sub_resource type="Resource" id="Resource_x8fy1"]
-script = ExtResource("9_ty83p")
+[sub_resource type="Resource" id="Resource_p02ov"]
+resource_name = "DelayAction"
+script = SubResource("GDScript_kgua7")
 time = 1.0
 
-[sub_resource type="Resource" id="Resource_o7nbl"]
-script = ExtResource("8_qq6r4")
+[sub_resource type="Resource" id="Resource_067cu"]
+script = ExtResource("8_0e42a")
+action_type = 1
+action = SubResource("Resource_p02ov")
 "Action Type" = 1
-Action = SubResource("Resource_x8fy1")
+Action = SubResource("Resource_p02ov")
 
-[sub_resource type="Resource" id="Resource_3fucl"]
-script = ExtResource("7_16ga0")
+[sub_resource type="Resource" id="Resource_ea145"]
+script = ExtResource("7_fuki3")
 cutscene_name = "cutscene_01"
-actions = Array[ExtResource("8_qq6r4")]([SubResource("Resource_fsqdr"), SubResource("Resource_wwe43"), SubResource("Resource_oayiq"), SubResource("Resource_tl50v"), SubResource("Resource_u5nw2"), SubResource("Resource_o7nbl")])
+frames = Array[ExtResource("8_0e42a")]([SubResource("Resource_o4hon"), SubResource("Resource_767xp"), SubResource("Resource_018kg"), SubResource("Resource_8ltel"), SubResource("Resource_3isbk"), SubResource("Resource_067cu")])
 
-[sub_resource type="Resource" id="Resource_klg7n"]
-script = ExtResource("8_qq6r4")
-"Action Type" = 0
+[sub_resource type="Resource" id="Resource_2ph47"]
+resource_name = "PlayAction"
+script = SubResource("GDScript_7n2rv")
+animation_name = ""
 
-[sub_resource type="Resource" id="Resource_p8yqk"]
-script = ExtResource("8_qq6r4")
-"Action Type" = 0
+[sub_resource type="Resource" id="Resource_jnp3s"]
+script = ExtResource("8_0e42a")
+action_type = 2
+action = SubResource("Resource_2ph47")
+"Action Type" = 2
+Action = SubResource("Resource_2ph47")
 
-[sub_resource type="Resource" id="Resource_o5v3a"]
-script = ExtResource("8_qq6r4")
-"Action Type" = 0
+[sub_resource type="Resource" id="Resource_8ogs7"]
+resource_name = "DelayAction"
+script = SubResource("GDScript_kgua7")
+time = 1.0
 
-[sub_resource type="Resource" id="Resource_thedk"]
-script = ExtResource("8_qq6r4")
-"Action Type" = 0
+[sub_resource type="Resource" id="Resource_i6un1"]
+script = ExtResource("8_0e42a")
+action_type = 1
+action = SubResource("Resource_8ogs7")
+"Action Type" = 1
+Action = SubResource("Resource_8ogs7")
 
-[sub_resource type="Resource" id="Resource_lmci1"]
-script = ExtResource("8_qq6r4")
-"Action Type" = 0
+[sub_resource type="Resource" id="Resource_dd8sj"]
+resource_name = "DialogueAction"
+script = SubResource("GDScript_4ev3g")
+dialogue_id = ""
 
-[sub_resource type="Resource" id="Resource_ikvug"]
-script = ExtResource("8_qq6r4")
-"Action Type" = 0
+[sub_resource type="Resource" id="Resource_hamg6"]
+script = ExtResource("8_0e42a")
+action_type = 3
+action = SubResource("Resource_dd8sj")
+"Action Type" = 3
+Action = SubResource("Resource_dd8sj")
 
-[sub_resource type="Resource" id="Resource_0pj3l"]
-script = ExtResource("8_qq6r4")
-"Action Type" = 0
+[sub_resource type="Resource" id="Resource_c1hr4"]
+resource_name = "DelayAction"
+script = SubResource("GDScript_kgua7")
+time = 1.0
 
-[sub_resource type="Resource" id="Resource_g6meg"]
-script = ExtResource("7_16ga0")
+[sub_resource type="Resource" id="Resource_11yrm"]
+script = ExtResource("8_0e42a")
+action_type = 1
+action = SubResource("Resource_c1hr4")
+"Action Type" = 1
+Action = SubResource("Resource_c1hr4")
+
+[sub_resource type="Resource" id="Resource_wm06n"]
+resource_name = "DialogueAction"
+script = SubResource("GDScript_4ev3g")
+dialogue_id = ""
+
+[sub_resource type="Resource" id="Resource_bu1f1"]
+script = ExtResource("8_0e42a")
+action_type = 3
+action = SubResource("Resource_wm06n")
+"Action Type" = 3
+Action = SubResource("Resource_wm06n")
+
+[sub_resource type="Resource" id="Resource_vmfe3"]
+resource_name = "DelayAction"
+script = SubResource("GDScript_kgua7")
+time = 1.0
+
+[sub_resource type="Resource" id="Resource_xrelm"]
+script = ExtResource("8_0e42a")
+action_type = 1
+action = SubResource("Resource_vmfe3")
+"Action Type" = 1
+Action = SubResource("Resource_vmfe3")
+
+[sub_resource type="Resource" id="Resource_ukuyk"]
+resource_name = "DialogueAction"
+script = SubResource("GDScript_4ev3g")
+dialogue_id = ""
+
+[sub_resource type="Resource" id="Resource_1dv7p"]
+script = ExtResource("8_0e42a")
+action_type = 3
+action = SubResource("Resource_ukuyk")
+"Action Type" = 3
+Action = SubResource("Resource_ukuyk")
+
+[sub_resource type="Resource" id="Resource_fe1h1"]
+script = ExtResource("7_fuki3")
 cutscene_name = "cutscene_02"
-actions = Array[ExtResource("8_qq6r4")]([SubResource("Resource_klg7n"), SubResource("Resource_p8yqk"), SubResource("Resource_o5v3a"), SubResource("Resource_thedk"), SubResource("Resource_lmci1"), SubResource("Resource_ikvug"), SubResource("Resource_0pj3l")])
+frames = Array[ExtResource("8_0e42a")]([SubResource("Resource_jnp3s"), SubResource("Resource_i6un1"), SubResource("Resource_hamg6"), SubResource("Resource_11yrm"), SubResource("Resource_bu1f1"), SubResource("Resource_xrelm"), SubResource("Resource_1dv7p")])
 
-[sub_resource type="Resource" id="Resource_ap2ai"]
-script = ExtResource("8_qq6r4")
-"Action Type" = 0
+[sub_resource type="Resource" id="Resource_nlh6y"]
+resource_name = "PlayAction"
+script = SubResource("GDScript_7n2rv")
+animation_name = ""
 
-[sub_resource type="Resource" id="Resource_uwoij"]
-script = ExtResource("8_qq6r4")
-"Action Type" = 0
+[sub_resource type="Resource" id="Resource_8dymp"]
+script = ExtResource("8_0e42a")
+action_type = 2
+action = SubResource("Resource_nlh6y")
+"Action Type" = 2
+Action = SubResource("Resource_nlh6y")
 
-[sub_resource type="Resource" id="Resource_pq0uv"]
-script = ExtResource("8_qq6r4")
-"Action Type" = 0
+[sub_resource type="Resource" id="Resource_kypil"]
+resource_name = "DelayAction"
+script = SubResource("GDScript_kgua7")
+time = 1.0
 
-[sub_resource type="Resource" id="Resource_f1ovm"]
-script = ExtResource("8_qq6r4")
-"Action Type" = 0
+[sub_resource type="Resource" id="Resource_31cwg"]
+script = ExtResource("8_0e42a")
+action_type = 1
+action = SubResource("Resource_kypil")
+"Action Type" = 1
+Action = SubResource("Resource_kypil")
 
-[sub_resource type="Resource" id="Resource_4gnvp"]
-script = ExtResource("8_qq6r4")
-"Action Type" = 0
+[sub_resource type="Resource" id="Resource_ktl78"]
+resource_name = "DialogueAction"
+script = SubResource("GDScript_4ev3g")
+dialogue_id = ""
 
-[sub_resource type="Resource" id="Resource_rcu41"]
-script = ExtResource("7_16ga0")
-cutscene_name = ""
-actions = Array[ExtResource("8_qq6r4")]([SubResource("Resource_ap2ai"), SubResource("Resource_uwoij"), SubResource("Resource_pq0uv"), SubResource("Resource_f1ovm"), SubResource("Resource_4gnvp")])
+[sub_resource type="Resource" id="Resource_x1dul"]
+script = ExtResource("8_0e42a")
+action_type = 3
+action = SubResource("Resource_ktl78")
+"Action Type" = 3
+Action = SubResource("Resource_ktl78")
 
-[sub_resource type="Animation" id="Animation_huxuq"]
-resource_name = "therapist_turn"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayerOLD/Cut_Therapist:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"down"]
-}
+[sub_resource type="Resource" id="Resource_ha1cs"]
+resource_name = "PlayAction"
+script = SubResource("GDScript_7n2rv")
+animation_name = ""
 
-[sub_resource type="Animation" id="Animation_8vjbw"]
-resource_name = "therapist_to_sofa_2"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayerOLD/Cut_Therapist:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.8, 0.9, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(725, 414), Vector2(725, 750), Vector2(725, 750), Vector2(775, 750)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationPlayerOLD/Cut_Therapist:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.8, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [&"down", &"right", &"down"]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AnimationPlayerOLD/Cut_Therapist:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 0.9, 1, 1.16667, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [1, 2, 3, 0, 0, 1, 2, 3, 0]
-}
+[sub_resource type="Resource" id="Resource_vwrnp"]
+script = ExtResource("8_0e42a")
+action_type = 2
+action = SubResource("Resource_ha1cs")
+"Action Type" = 2
+Action = SubResource("Resource_ha1cs")
 
-[sub_resource type="Animation" id="Animation_xtktj"]
-resource_name = "mc_after_sesh"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayerOLD/Cut_Player:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(785, 650)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationPlayerOLD/Cut_Player:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"down"]
-}
+[sub_resource type="Resource" id="Resource_5p4o5"]
+resource_name = "DelayAction"
+script = SubResource("GDScript_kgua7")
+time = 1.0
 
-[sub_resource type="Animation" id="Animation_n0fnl"]
-resource_name = "mc_to_couch"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayerOLD/Cut_Player:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6, 1.4, 1.7, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(394, 1134), Vector2(394, 850), Vector2(700, 850), Vector2(700, 750), Vector2(800, 750)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationPlayerOLD/Cut_Player:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.6, 1.4, 1.7, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [&"up", &"right", &"up", &"right", &"right"]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AnimationPlayerOLD/Cut_Player:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 0]
-}
+[sub_resource type="Resource" id="Resource_dsr0a"]
+script = ExtResource("8_0e42a")
+action_type = 1
+action = SubResource("Resource_5p4o5")
+"Action Type" = 1
+Action = SubResource("Resource_5p4o5")
 
-[sub_resource type="Animation" id="Animation_ovkoc"]
-resource_name = "therapist_walking_out"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayerOLD/Cut_Therapist:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 1, 1.5, 1.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(785, 750), Vector2(650, 750), Vector2(650, 1000), Vector2(385, 1000), Vector2(385, 1200)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationPlayerOLD/Cut_Therapist:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4, 1, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [&"left", &"down", &"left", &"down"]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AnimationPlayerOLD/Cut_Therapist:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("AnimationPlayerOLD/Cut_Therapist:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-
-[sub_resource type="Animation" id="Animation_aiioe"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = false
-tracks/0/path = NodePath("AnimationPlayerOLD/Cut_Player:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(395, 1202)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = false
-tracks/1/path = NodePath("AnimationPlayerOLD/Cut_Player:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"up"]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = false
-tracks/2/path = NodePath("AnimationPlayerOLD/Cut_Player:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = false
-tracks/3/path = NodePath("AnimationPlayerOLD/Cut_Therapist:animation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"up"]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = false
-tracks/4/path = NodePath("AnimationPlayerOLD/Cut_Therapist:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(725, 414)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = false
-tracks/5/path = NodePath("AnimationPlayerOLD/Cut_Therapist:frame")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = false
-tracks/6/path = NodePath("AnimationPlayerOLD/Cut_Therapist:visible")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = false
-tracks/7/path = NodePath("Player:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(395, 1202)]
-}
-
-[sub_resource type="Animation" id="Animation_nbh0g"]
-resource_name = "test"
-tracks/0/type = "method"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.4),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": ["Entering the Therapist room 1"],
-"method": &"start_dialogue"
-}]
-}
-
-[sub_resource type="Animation" id="Animation_xjetn"]
-resource_name = "test_running"
-length = 4.0
-tracks/0/type = "method"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Player")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.333333, 0.733333, 3.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"values": [{
-"args": ["move_left", 1],
-"method": &"change_animation_frame"
-}, {
-"args": ["move_right"],
-"method": &"play_animation"
-}, {
-"args": [],
-"method": &"stop_animation"
-}]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Player:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.766667, 3.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(392, 1125), Vector2(600, 1125)]
-}
-
-[sub_resource type="Animation" id="Animation_q7igy"]
-resource_name = "therapist_after_sesh"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayerOLD/Cut_Therapist:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"up"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationPlayerOLD/Cut_Therapist:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(785, 750)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_i86gj"]
-_data = {
-"01_therapist_turn": SubResource("Animation_huxuq"),
-"02_therapist_to_sofa": SubResource("Animation_8vjbw"),
-"03_mc_after_sesh": SubResource("Animation_xtktj"),
-"03_mc_to_couch": SubResource("Animation_n0fnl"),
-"04_therapist_walking_out": SubResource("Animation_ovkoc"),
-"RESET": SubResource("Animation_aiioe"),
-"test": SubResource("Animation_nbh0g"),
-"test_running": SubResource("Animation_xjetn"),
-"therapist_after_sesh": SubResource("Animation_q7igy")
-}
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k0oxg"]
-atlas = ExtResource("6_hmjnl")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2e7fo"]
-atlas = ExtResource("6_hmjnl")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vvqg7"]
-atlas = ExtResource("6_hmjnl")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_42o7k"]
-atlas = ExtResource("6_hmjnl")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pnksh"]
-atlas = ExtResource("7_pkgcv")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_51pwp"]
-atlas = ExtResource("7_pkgcv")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_blove"]
-atlas = ExtResource("7_pkgcv")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_moqw4"]
-atlas = ExtResource("7_pkgcv")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g55yg"]
-atlas = ExtResource("8_i1p5f")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fy0lb"]
-atlas = ExtResource("8_i1p5f")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7ncmf"]
-atlas = ExtResource("8_i1p5f")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8v7qt"]
-atlas = ExtResource("8_i1p5f")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k1xiu"]
-atlas = ExtResource("9_1a2k5")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uit6b"]
-atlas = ExtResource("9_1a2k5")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_l1ba0"]
-atlas = ExtResource("9_1a2k5")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sg6hh"]
-atlas = ExtResource("9_1a2k5")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_uj0lg"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k0oxg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2e7fo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vvqg7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_42o7k")
-}],
-"loop": true,
-"name": &"down",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pnksh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_51pwp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_blove")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_moqw4")
-}],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g55yg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fy0lb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7ncmf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8v7qt")
-}],
-"loop": true,
-"name": &"right",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k1xiu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uit6b")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_l1ba0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sg6hh")
-}],
-"loop": true,
-"name": &"up",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pm2v7"]
-atlas = ExtResource("10_sis6t")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2uton"]
-atlas = ExtResource("10_sis6t")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qfqsk"]
-atlas = ExtResource("10_sis6t")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wdo7y"]
-atlas = ExtResource("10_sis6t")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rd6wu"]
-atlas = ExtResource("11_fx6v4")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x7qmr"]
-atlas = ExtResource("11_fx6v4")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6lslt"]
-atlas = ExtResource("11_fx6v4")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q7n5k"]
-atlas = ExtResource("11_fx6v4")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ltgig"]
-atlas = ExtResource("12_w4xa5")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bsk06"]
-atlas = ExtResource("12_w4xa5")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mcjm1"]
-atlas = ExtResource("12_w4xa5")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_l88n4"]
-atlas = ExtResource("12_w4xa5")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lvhtp"]
-atlas = ExtResource("13_eeijv")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xusmj"]
-atlas = ExtResource("13_eeijv")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b8lmk"]
-atlas = ExtResource("13_eeijv")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4ncdw"]
-atlas = ExtResource("13_eeijv")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ba0vu"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pm2v7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2uton")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qfqsk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wdo7y")
-}],
-"loop": true,
-"name": &"down",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rd6wu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x7qmr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6lslt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_q7n5k")
-}],
-"loop": true,
-"name": &"left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ltgig")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bsk06")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mcjm1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_l88n4")
-}],
-"loop": true,
-"name": &"right",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lvhtp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xusmj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b8lmk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4ncdw")
-}],
-"loop": true,
-"name": &"up",
-"speed": 5.0
-}]
+[sub_resource type="Resource" id="Resource_1mxyc"]
+script = ExtResource("7_fuki3")
+cutscene_name = "cutscene_03"
+frames = Array[ExtResource("8_0e42a")]([SubResource("Resource_8dymp"), SubResource("Resource_31cwg"), SubResource("Resource_x1dul"), SubResource("Resource_vwrnp"), SubResource("Resource_dsr0a")])
 
 [node name="TherapyRoom1" type="Node2D" node_paths=PackedStringArray("player", "doors")]
 y_sort_enabled = true
@@ -1080,30 +545,7 @@ unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_v0xek")
 }
-cutscene_animations = Array[ExtResource("7_16ga0")]([SubResource("Resource_3fucl"), SubResource("Resource_g6meg"), SubResource("Resource_rcu41")])
-
-[node name="AnimationPlayerOLD" type="AnimationPlayer" parent="."]
-unique_name_in_owner = true
-libraries = {
-"": SubResource("AnimationLibrary_i86gj")
-}
-
-[node name="Cut_Player" type="AnimatedSprite2D" parent="AnimationPlayerOLD"]
-visible = false
-texture_filter = 1
-position = Vector2(395, 1202)
-scale = Vector2(6, 6)
-sprite_frames = SubResource("SpriteFrames_uj0lg")
-animation = &"up"
-
-[node name="Cut_Therapist" type="AnimatedSprite2D" parent="AnimationPlayerOLD"]
-visible = false
-texture_filter = 1
-position = Vector2(725, 414)
-scale = Vector2(6, 6)
-sprite_frames = SubResource("SpriteFrames_ba0vu")
-animation = &"down"
-frame = 1
+cutscenes = Array[ExtResource("7_fuki3")]([SubResource("Resource_ea145"), SubResource("Resource_fe1h1"), SubResource("Resource_1mxyc")])
 
 [node name="DynamicBoundsCamera" parent="." instance=ExtResource("14_j2fhb")]
 unique_name_in_owner = true
