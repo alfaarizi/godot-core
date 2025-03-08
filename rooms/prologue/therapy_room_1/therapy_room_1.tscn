@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://ddidnaktvwg15"]
+[gd_scene load_steps=62 format=3 uid="uid://ddidnaktvwg15"]
 
 [ext_resource type="Script" path="res://rooms/prologue/therapy_room_1/therapy_room_1.gd" id="1_ojqgy"]
 [ext_resource type="PackedScene" uid="uid://derrir5d4ljbp" path="res://rooms/prologue/therapy_room_1/Therapy_room_1_tilemap.tscn" id="2_tlh12"]
@@ -6,8 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://c84okus6y6nte" path="res://rooms/door.tscn" id="5_wb5kv"]
 [ext_resource type="PackedScene" uid="uid://cj3deljjo8g4r" path="res://characters/therapist/therapist.tscn" id="6_b5trd"]
 [ext_resource type="PackedScene" uid="uid://bkkqbagsf2627" path="res://components/cutscene_player.tscn" id="6_jcd14"]
-[ext_resource type="Script" path="res://components/cutscene_util/cutscene.gd" id="7_fuki3"]
-[ext_resource type="Script" path="res://components/cutscene_util/cutscene_frame.gd" id="8_0e42a"]
+[ext_resource type="Script" path="res://components/cutscene/cutscene.gd" id="7_fuki3"]
+[ext_resource type="Script" path="res://components/cutscene/cutscene_frame.gd" id="8_0e42a"]
+[ext_resource type="Script" path="res://components/cutscene/play_action.gd" id="10_rcems"]
+[ext_resource type="Script" path="res://components/cutscene/delay_action.gd" id="11_ovnpu"]
+[ext_resource type="Script" path="res://components/cutscene/dialogue_action.gd" id="12_3xny8"]
+[ext_resource type="Script" path="res://components/cutscene/camera_action.gd" id="12_43mee"]
 [ext_resource type="PackedScene" uid="uid://bln04fcnkpha8" path="res://characters/dynamic_bounds_camera.tscn" id="14_j2fhb"]
 
 [sub_resource type="Animation" id="Animation_tj1ur"]
@@ -276,239 +280,190 @@ _data = {
 "test": SubResource("Animation_4xaem")
 }
 
-[sub_resource type="GDScript" id="GDScript_pofxq"]
+[sub_resource type="Resource" id="Resource_1wwaj"]
+script = ExtResource("12_43mee")
+camera_from = NodePath("../Player")
+camera_from_property = "dynamic_bounds_camera"
+camera_to = NodePath("../DynamicBoundsCamera")
+camera_to_property = ""
+smooth_transition = false
 
-[sub_resource type="Resource" id="Resource_ntrm7"]
-resource_name = "DelayAction"
-script = SubResource("GDScript_pofxq")
+[sub_resource type="Resource" id="Resource_3wdqr"]
+script = ExtResource("8_0e42a")
+action_type = 4
+action = SubResource("Resource_1wwaj")
+
+[sub_resource type="Resource" id="Resource_1kbje"]
+script = ExtResource("11_ovnpu")
 time = 1.0
 
 [sub_resource type="Resource" id="Resource_o4hon"]
 script = ExtResource("8_0e42a")
 action_type = 1
-action = SubResource("Resource_ntrm7")
-"Action Type" = 1
-Action = SubResource("Resource_ntrm7")
+action = SubResource("Resource_1kbje")
 
-[sub_resource type="GDScript" id="GDScript_7n2rv"]
-
-[sub_resource type="Resource" id="Resource_vqitr"]
-resource_name = "PlayAction"
-script = SubResource("GDScript_7n2rv")
-animation_name = ""
+[sub_resource type="Resource" id="Resource_qk1k8"]
+script = ExtResource("10_rcems")
+animation_name = "01_therapist_turning"
 
 [sub_resource type="Resource" id="Resource_767xp"]
 script = ExtResource("8_0e42a")
 action_type = 2
-action = SubResource("Resource_vqitr")
-"Action Type" = 2
-Action = SubResource("Resource_vqitr")
+action = SubResource("Resource_qk1k8")
 
-[sub_resource type="GDScript" id="GDScript_kgua7"]
-
-[sub_resource type="Resource" id="Resource_hgmrw"]
-resource_name = "DelayAction"
-script = SubResource("GDScript_kgua7")
+[sub_resource type="Resource" id="Resource_4jjoi"]
+script = ExtResource("11_ovnpu")
 time = 1.0
 
 [sub_resource type="Resource" id="Resource_018kg"]
 script = ExtResource("8_0e42a")
 action_type = 1
-action = SubResource("Resource_hgmrw")
-"Action Type" = 1
-Action = SubResource("Resource_hgmrw")
+action = SubResource("Resource_4jjoi")
 
-[sub_resource type="GDScript" id="GDScript_4ev3g"]
-
-[sub_resource type="Resource" id="Resource_mdi2d"]
-resource_name = "DialogueAction"
-script = SubResource("GDScript_4ev3g")
-dialogue_id = ""
+[sub_resource type="Resource" id="Resource_474fi"]
+script = ExtResource("12_3xny8")
+dialogue_id = "Entering the Therapist room 1"
 
 [sub_resource type="Resource" id="Resource_8ltel"]
 script = ExtResource("8_0e42a")
 action_type = 3
-action = SubResource("Resource_mdi2d")
-"Action Type" = 3
-Action = SubResource("Resource_mdi2d")
+action = SubResource("Resource_474fi")
 
-[sub_resource type="Resource" id="Resource_fqok6"]
-resource_name = "PlayAction"
-script = SubResource("GDScript_7n2rv")
-animation_name = ""
+[sub_resource type="Resource" id="Resource_2wjul"]
+script = ExtResource("10_rcems")
+animation_name = "02_therapist_to_sofa"
 
 [sub_resource type="Resource" id="Resource_3isbk"]
 script = ExtResource("8_0e42a")
 action_type = 2
-action = SubResource("Resource_fqok6")
-"Action Type" = 2
-Action = SubResource("Resource_fqok6")
+action = SubResource("Resource_2wjul")
 
-[sub_resource type="Resource" id="Resource_p02ov"]
-resource_name = "DelayAction"
-script = SubResource("GDScript_kgua7")
+[sub_resource type="Resource" id="Resource_je0hq"]
+script = ExtResource("11_ovnpu")
 time = 1.0
 
 [sub_resource type="Resource" id="Resource_067cu"]
 script = ExtResource("8_0e42a")
 action_type = 1
-action = SubResource("Resource_p02ov")
-"Action Type" = 1
-Action = SubResource("Resource_p02ov")
+action = SubResource("Resource_je0hq")
 
 [sub_resource type="Resource" id="Resource_ea145"]
 script = ExtResource("7_fuki3")
 cutscene_name = "cutscene_01"
-frames = Array[ExtResource("8_0e42a")]([SubResource("Resource_o4hon"), SubResource("Resource_767xp"), SubResource("Resource_018kg"), SubResource("Resource_8ltel"), SubResource("Resource_3isbk"), SubResource("Resource_067cu")])
+frames = Array[ExtResource("8_0e42a")]([SubResource("Resource_3wdqr"), SubResource("Resource_o4hon"), SubResource("Resource_767xp"), SubResource("Resource_018kg"), SubResource("Resource_8ltel"), SubResource("Resource_3isbk"), SubResource("Resource_067cu")])
 
-[sub_resource type="Resource" id="Resource_2ph47"]
-resource_name = "PlayAction"
-script = SubResource("GDScript_7n2rv")
-animation_name = ""
+[sub_resource type="Resource" id="Resource_thtu6"]
+script = ExtResource("10_rcems")
+animation_name = "03_after_sesh"
 
 [sub_resource type="Resource" id="Resource_jnp3s"]
 script = ExtResource("8_0e42a")
 action_type = 2
-action = SubResource("Resource_2ph47")
-"Action Type" = 2
-Action = SubResource("Resource_2ph47")
+action = SubResource("Resource_thtu6")
 
-[sub_resource type="Resource" id="Resource_8ogs7"]
-resource_name = "DelayAction"
-script = SubResource("GDScript_kgua7")
+[sub_resource type="Resource" id="Resource_8rovj"]
+script = ExtResource("11_ovnpu")
 time = 1.0
 
 [sub_resource type="Resource" id="Resource_i6un1"]
 script = ExtResource("8_0e42a")
 action_type = 1
-action = SubResource("Resource_8ogs7")
-"Action Type" = 1
-Action = SubResource("Resource_8ogs7")
+action = SubResource("Resource_8rovj")
 
-[sub_resource type="Resource" id="Resource_dd8sj"]
-resource_name = "DialogueAction"
-script = SubResource("GDScript_4ev3g")
-dialogue_id = ""
+[sub_resource type="Resource" id="Resource_2e5ri"]
+script = ExtResource("12_3xny8")
+dialogue_id = "Entering the Therapist room 2"
 
 [sub_resource type="Resource" id="Resource_hamg6"]
 script = ExtResource("8_0e42a")
 action_type = 3
-action = SubResource("Resource_dd8sj")
-"Action Type" = 3
-Action = SubResource("Resource_dd8sj")
+action = SubResource("Resource_2e5ri")
 
-[sub_resource type="Resource" id="Resource_c1hr4"]
-resource_name = "DelayAction"
-script = SubResource("GDScript_kgua7")
-time = 1.0
+[sub_resource type="Resource" id="Resource_tjvju"]
+script = ExtResource("11_ovnpu")
+time = 2.0
 
 [sub_resource type="Resource" id="Resource_11yrm"]
 script = ExtResource("8_0e42a")
 action_type = 1
-action = SubResource("Resource_c1hr4")
-"Action Type" = 1
-Action = SubResource("Resource_c1hr4")
+action = SubResource("Resource_tjvju")
 
-[sub_resource type="Resource" id="Resource_wm06n"]
-resource_name = "DialogueAction"
-script = SubResource("GDScript_4ev3g")
-dialogue_id = ""
+[sub_resource type="Resource" id="Resource_82srg"]
+script = ExtResource("12_3xny8")
+dialogue_id = "Entering the Therapist room 3"
 
 [sub_resource type="Resource" id="Resource_bu1f1"]
 script = ExtResource("8_0e42a")
 action_type = 3
-action = SubResource("Resource_wm06n")
-"Action Type" = 3
-Action = SubResource("Resource_wm06n")
+action = SubResource("Resource_82srg")
 
-[sub_resource type="Resource" id="Resource_vmfe3"]
-resource_name = "DelayAction"
-script = SubResource("GDScript_kgua7")
-time = 1.0
+[sub_resource type="Resource" id="Resource_143l0"]
+script = ExtResource("11_ovnpu")
+time = 2.0
 
 [sub_resource type="Resource" id="Resource_xrelm"]
 script = ExtResource("8_0e42a")
 action_type = 1
-action = SubResource("Resource_vmfe3")
-"Action Type" = 1
-Action = SubResource("Resource_vmfe3")
+action = SubResource("Resource_143l0")
 
-[sub_resource type="Resource" id="Resource_ukuyk"]
-resource_name = "DialogueAction"
-script = SubResource("GDScript_4ev3g")
-dialogue_id = ""
+[sub_resource type="Resource" id="Resource_ohdn3"]
+script = ExtResource("12_3xny8")
+dialogue_id = "Entering the Therapist room 4"
 
 [sub_resource type="Resource" id="Resource_1dv7p"]
 script = ExtResource("8_0e42a")
 action_type = 3
-action = SubResource("Resource_ukuyk")
-"Action Type" = 3
-Action = SubResource("Resource_ukuyk")
+action = SubResource("Resource_ohdn3")
 
 [sub_resource type="Resource" id="Resource_fe1h1"]
 script = ExtResource("7_fuki3")
 cutscene_name = "cutscene_02"
 frames = Array[ExtResource("8_0e42a")]([SubResource("Resource_jnp3s"), SubResource("Resource_i6un1"), SubResource("Resource_hamg6"), SubResource("Resource_11yrm"), SubResource("Resource_bu1f1"), SubResource("Resource_xrelm"), SubResource("Resource_1dv7p")])
 
-[sub_resource type="Resource" id="Resource_nlh6y"]
-resource_name = "PlayAction"
-script = SubResource("GDScript_7n2rv")
-animation_name = ""
+[sub_resource type="Resource" id="Resource_h8k1w"]
+script = ExtResource("10_rcems")
+animation_name = "03_after_sesh"
 
 [sub_resource type="Resource" id="Resource_8dymp"]
 script = ExtResource("8_0e42a")
 action_type = 2
-action = SubResource("Resource_nlh6y")
-"Action Type" = 2
-Action = SubResource("Resource_nlh6y")
+action = SubResource("Resource_h8k1w")
 
-[sub_resource type="Resource" id="Resource_kypil"]
-resource_name = "DelayAction"
-script = SubResource("GDScript_kgua7")
+[sub_resource type="Resource" id="Resource_8lcs7"]
+script = ExtResource("11_ovnpu")
 time = 1.0
 
 [sub_resource type="Resource" id="Resource_31cwg"]
 script = ExtResource("8_0e42a")
 action_type = 1
-action = SubResource("Resource_kypil")
-"Action Type" = 1
-Action = SubResource("Resource_kypil")
+action = SubResource("Resource_8lcs7")
 
-[sub_resource type="Resource" id="Resource_ktl78"]
-resource_name = "DialogueAction"
-script = SubResource("GDScript_4ev3g")
-dialogue_id = ""
+[sub_resource type="Resource" id="Resource_qbgmv"]
+script = ExtResource("12_3xny8")
+dialogue_id = "Entering the Therapist room 5"
 
 [sub_resource type="Resource" id="Resource_x1dul"]
 script = ExtResource("8_0e42a")
 action_type = 3
-action = SubResource("Resource_ktl78")
-"Action Type" = 3
-Action = SubResource("Resource_ktl78")
+action = SubResource("Resource_qbgmv")
 
-[sub_resource type="Resource" id="Resource_ha1cs"]
-resource_name = "PlayAction"
-script = SubResource("GDScript_7n2rv")
-animation_name = ""
+[sub_resource type="Resource" id="Resource_f3phw"]
+script = ExtResource("10_rcems")
+animation_name = "04_therapist_exiting"
 
 [sub_resource type="Resource" id="Resource_vwrnp"]
 script = ExtResource("8_0e42a")
 action_type = 2
-action = SubResource("Resource_ha1cs")
-"Action Type" = 2
-Action = SubResource("Resource_ha1cs")
+action = SubResource("Resource_f3phw")
 
-[sub_resource type="Resource" id="Resource_5p4o5"]
-resource_name = "DelayAction"
-script = SubResource("GDScript_kgua7")
+[sub_resource type="Resource" id="Resource_060tr"]
+script = ExtResource("11_ovnpu")
 time = 1.0
 
 [sub_resource type="Resource" id="Resource_dsr0a"]
 script = ExtResource("8_0e42a")
 action_type = 1
-action = SubResource("Resource_5p4o5")
-"Action Type" = 1
-Action = SubResource("Resource_5p4o5")
+action = SubResource("Resource_060tr")
 
 [sub_resource type="Resource" id="Resource_1mxyc"]
 script = ExtResource("7_fuki3")
