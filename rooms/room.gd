@@ -4,7 +4,6 @@ class_name Room
 
 @export var player: Player: set = _set_player
 @export var doors: Array[Door]: set = _set_doors
-var cutscene_animation: CutscenePlayer = null
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
