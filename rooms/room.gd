@@ -6,8 +6,7 @@ class_name Room
 @export var doors: Array[Door]: set = _set_doors
 
 func _ready() -> void:
-	if Engine.is_editor_hint():
-		return
+	if Engine.is_editor_hint(): return
 	Global.player = player
 	init_scene()
 

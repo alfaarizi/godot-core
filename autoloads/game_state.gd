@@ -6,10 +6,10 @@ signal state_changed(new_state: State)
 var current_state: State = State.EXPLORING
 
 func change_state(new_state: State) -> void:
-	print(current_state)
 	if current_state == new_state:
 		return
 	current_state = new_state
+	print(State.keys()[current_state])
 	state_changed.emit(new_state)
 
 func _unhandled_input(event: InputEvent) -> void:	

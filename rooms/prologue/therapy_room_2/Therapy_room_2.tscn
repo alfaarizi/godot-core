@@ -175,9 +175,11 @@ position = Vector2(1366, 698)
 metadata/_edit_lock_ = true
 
 [node name="Door" parent="." instance=ExtResource("4_7xa5r")]
+unique_name_in_owner = true
 position = Vector2(504, 415)
 path_to_new_scene = "res://rooms/prologue/lobby/lobby.tscn"
 entry_door_name = "therapy_room_2"
+door_key_preconditions = Array[String]([])
 
 [node name="CutscenePlayer" parent="." instance=ExtResource("7_kfjnh")]
 unique_name_in_owner = true
@@ -193,10 +195,12 @@ is_centered = true
 [node name="triggerable" parent="." instance=ExtResource("14_cyv35")]
 position = Vector2(504, 479)
 trigger_direction = 1
+trigger_key_preconditions = Array[String](["TherapyRoom1_triggerable2"])
 
 [node name="triggerable2" parent="." instance=ExtResource("14_cyv35")]
 position = Vector2(780, 633)
 trigger_direction = 1
+trigger_key_preconditions = Array[String](["TherapyRoom2_triggerable"])
 
 [connection signal="is_triggered" from="triggerable" to="." method="_on_triggerable_is_triggered"]
 [connection signal="is_triggered" from="triggerable2" to="." method="_on_triggerable_2_is_triggered"]
