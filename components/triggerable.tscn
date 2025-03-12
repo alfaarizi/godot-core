@@ -2,16 +2,18 @@
 
 [ext_resource type="Script" path="res://components/triggerable.gd" id="1_h6l61"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y1fu6"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfmya"]
 size = Vector2(32, 16)
 
 [node name="triggerable" type="Area2D"]
 script = ExtResource("1_h6l61")
-area_shape = SubResource("RectangleShape2D_y1fu6")
+area_shape = SubResource("RectangleShape2D_rfmya")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true
 scale = Vector2(4, 4)
-shape = SubResource("RectangleShape2D_y1fu6")
+shape = SubResource("RectangleShape2D_rfmya")
+debug_color = Color(0.777409, 0.439269, 0, 0.42)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

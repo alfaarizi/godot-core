@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://nk3e1alkl8vc" path="res://assets/sprites/player/movement_sheet2/brodown.png" id="4_t2p8q"]
 [ext_resource type="Texture2D" uid="uid://s7f0da26eii7" path="res://assets/sprites/player/movement_sheet2/broright.png" id="5_ey871"]
 [ext_resource type="Texture2D" uid="uid://bq112tw3dsc23" path="res://assets/sprites/player/movement_sheet2/broup.png" id="6_cod8b"]
-[ext_resource type="Script" path="res://characters/cutscene_sprite.gd" id="7_43wkp"]
+[ext_resource type="Script" path="res://characters/cutscene_sprite_2d.gd" id="7_43wkp"]
 [ext_resource type="PackedScene" uid="uid://bln04fcnkpha8" path="res://characters/dynamic_bounds_camera.tscn" id="9_geyl2"]
 
 [sub_resource type="Curve" id="Curve_ab1h0"]
@@ -167,12 +167,12 @@ texture = ExtResource("3_gk2r0")
 trail_lifetime = 0.1
 metadata/_edit_lock_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="CutsceneSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(0, -24)
 sprite_frames = SubResource("SpriteFrames_to2om")
-animation = &"move_right"
-frame_progress = 0.689509
+animation = &"move_down"
+frame = 1
 script = ExtResource("7_43wkp")
 metadata/_edit_lock_ = true
 

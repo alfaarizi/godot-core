@@ -23,9 +23,10 @@ entry_door_name = "therapy_room_1"
 metadata/_edit_lock_ = true
 
 [node name="Door2" parent="." instance=ExtResource("4_gavxl")]
-position = Vector2(508, 2406)
+position = Vector2(504, 2360)
 press_required = false
 entry_direction = 1
-push_dist = 96.0
+push_dist = 32.0
 path_to_new_scene = "res://rooms/prologue/therapy_room_2/Therapy_room_2.tscn"
 entry_door_name = "therapy_room_2"
+door_key_preconditions = Array[String](["Lobby_Door1"])

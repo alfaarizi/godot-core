@@ -2,15 +2,18 @@
 
 [ext_resource type="Script" path="res://rooms/door.gd" id="1_ie6pj"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_nnkki"]
-radius = 18.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfmya"]
+size = Vector2(32, 16)
 
 [node name="Door" type="Area2D"]
 script = ExtResource("1_ie6pj")
+area_shape = SubResource("RectangleShape2D_rfmya")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
 scale = Vector2(4, 4)
-shape = SubResource("CircleShape2D_nnkki")
+shape = SubResource("RectangleShape2D_rfmya")
+debug_color = Color(1.82897e-06, 0.641182, 0.33837, 0.42)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://gql8ukd782a8" path="res://assets/sprites/therapist/down2.png" id="3_vqgh5"]
 [ext_resource type="Texture2D" uid="uid://cn2lfgplmxago" path="res://assets/sprites/therapist/right1.png" id="4_8ohpm"]
 [ext_resource type="Texture2D" uid="uid://c4vgkyssmj8mb" path="res://assets/sprites/therapist/up1.png" id="5_xf8si"]
-[ext_resource type="Script" path="res://characters/cutscene_sprite.gd" id="6_iojb8"]
+[ext_resource type="Script" path="res://characters/cutscene_sprite_2d.gd" id="6_iojb8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4g6hy"]
 atlas = ExtResource("3_vqgh5")
@@ -134,7 +134,7 @@ scale = Vector2(0.875, 0.9375)
 texture = ExtResource("2_kwjcb")
 metadata/_edit_lock_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="CutsceneSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(0, -15)
 sprite_frames = SubResource("SpriteFrames_to2om")

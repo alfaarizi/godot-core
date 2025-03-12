@@ -59,7 +59,6 @@ enum State { READY, DISPLAYING, WAITING_FOR_INPUT, COMPLETED }
 enum SlideDirection { SLIDE_IN, SLIDE_OUT }
 
 func _ready() -> void:
-	print("ready")
 	_reset_text()
 	#scrollbar.connect("changed", func(): scroll_container.scroll_vertical = scrollbar.max_value )
 	current_state = State.READY
