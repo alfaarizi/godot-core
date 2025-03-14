@@ -532,7 +532,6 @@ entry_direction = 1
 push_dist = 32.0
 path_to_new_scene = "res://rooms/prologue/lobby/lobby.tscn"
 entry_door_name = "therapy_room_1"
-door_key_preconditions = Array[String]([])
 metadata/_edit_lock_ = true
 
 [node name="CutscenePlayer" parent="." instance=ExtResource("6_jcd14")]

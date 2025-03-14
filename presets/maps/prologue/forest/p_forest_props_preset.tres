@@ -1,10 +1,11 @@
-[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://d157ad615ut7p"]
+[gd_resource type="TileSet" load_steps=13 format=3 uid="uid://d157ad615ut7p"]
 
 [ext_resource type="Texture2D" uid="uid://bskh2da5gxlh4" path="res://presets/maps/prologue/therapy/props/mysteryBlue.png" id="1_xwktl"]
 [ext_resource type="Texture2D" uid="uid://cundtwx7emw6i" path="res://presets/maps/prologue/therapy/props/mysteryGreen.png" id="2_msisr"]
 [ext_resource type="Texture2D" uid="uid://dqdhnef33t4kn" path="res://presets/maps/prologue/therapy/props/mysteryPurple.png" id="3_cmcag"]
 [ext_resource type="Texture2D" uid="uid://cbolcloxvk5qn" path="res://presets/maps/prologue/therapy/props/mysteryRed.png" id="4_hk7u5"]
 [ext_resource type="Texture2D" uid="uid://b2umf54byuls8" path="res://presets/maps/prologue/therapy/props/mysteryYellow.png" id="5_0ykdu"]
+[ext_resource type="Texture2D" uid="uid://cimuk8innftpy" path="res://presets/maps/prologue/forest/props/mediumtree.png" id="6_4xyrn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1pq51"]
 texture = ExtResource("1_xwktl")
@@ -45,6 +46,33 @@ texture = ExtResource("5_0ykdu")
 0:1/0 = 0
 1:1/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ei05m"]
+texture = ExtResource("6_4xyrn")
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+0:0/0 = 0
+3:0/0 = 0
+
 [resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_1pq51")
@@ -52,3 +80,4 @@ sources/1 = SubResource("TileSetAtlasSource_sge4n")
 sources/2 = SubResource("TileSetAtlasSource_hl2wf")
 sources/3 = SubResource("TileSetAtlasSource_2jrd6")
 sources/4 = SubResource("TileSetAtlasSource_x2lir")
+sources/5 = SubResource("TileSetAtlasSource_ei05m")
