@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://bhrutww653eol" path="res://characters/player/player.tscn" id="2_8qu3m"]
 [ext_resource type="PackedScene" uid="uid://c84okus6y6nte" path="res://rooms/door.tscn" id="4_6ap32"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4sqgo"]
-size = Vector2(64, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7nrcj"]
+size = Vector2(64, 10)
 
 [node name="Prologue_forest_01" type="Node2D" node_paths=PackedStringArray("player", "doors")]
 script = ExtResource("1_c3cnw")
@@ -21,9 +21,9 @@ metadata/_edit_lock_ = true
 position = Vector2(387, 695)
 
 [node name="Door" parent="." instance=ExtResource("4_6ap32")]
-unique_name_in_owner = true
 position = Vector2(2127, -1)
 press_required = false
-area_shape = SubResource("RectangleShape2D_4sqgo")
+area_shape = SubResource("RectangleShape2D_7nrcj")
+push_dist = 128.0
 path_to_new_scene = "res://rooms/prologue/prologue_forest_02/prologue_forest_02.tscn"
 entry_door_name = "011"
