@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bhrutww653eol"]
+[gd_scene load_steps=29 format=3 uid="uid://bhrutww653eol"]
 
 [ext_resource type="Script" path="res://characters/player/player.gd" id="1_nf707"]
 [ext_resource type="Texture2D" uid="uid://j8eydamv4jnp" path="res://assets/sprites/player/shadow.png" id="2_78tfa"]
@@ -142,6 +142,9 @@ animations = [{
 radius = 6.0
 height = 16.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_2cflt"]
+radius = 4.0
+
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
 texture_filter = 1
@@ -172,7 +175,6 @@ unique_name_in_owner = true
 position = Vector2(0, -24)
 sprite_frames = SubResource("SpriteFrames_to2om")
 animation = &"move_down"
-frame = 1
 script = ExtResource("7_43wkp")
 metadata/_edit_lock_ = true
 
@@ -182,6 +184,14 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_pwjbs")
 debug_color = Color(0.964319, 0, 0.49347, 0.42)
 metadata/_edit_lock_ = true
+
+[node name="InteractionArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_2cflt")
+debug_color = Color(5.77569e-07, 0.643417, 0.300385, 0.42)
 
 [node name="DynamicBoundsCamera" parent="." instance=ExtResource("9_geyl2")]
 unique_name_in_owner = true
