@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://kyvptps0yg1q"]
+
+[ext_resource type="PackedScene" uid="uid://cu6in8mpy1sw3" path="res://rooms/prologue/prologue_forest_04/prologue_forest_04_tilemap.tscn" id="1_34hri"]
+[ext_resource type="PackedScene" uid="uid://bhrutww653eol" path="res://characters/player/player.tscn" id="2_if45l"]
+
+[node name="prologue_forest_04" type="Node2D"]
+metadata/_edit_lock_ = true
+
+[node name="prologue_forest_04_tilemap" parent="." instance=ExtResource("1_34hri")]
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("2_if45l")]
+position = Vector2(40, 537)

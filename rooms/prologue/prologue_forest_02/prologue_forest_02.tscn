@@ -1,12 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://grhykgkfc84g"]
+[gd_scene load_steps=6 format=3 uid="uid://grhykgkfc84g"]
 
+[ext_resource type="Script" path="res://rooms/prologue/prologue_forest_02/prologue_forest_02.gd" id="1_qcipw"]
 [ext_resource type="PackedScene" uid="uid://b08tps2a0ph22" path="res://rooms/prologue/prologue_forest_02/prologue_forest_02_tilemap.tscn" id="1_ujuhx"]
 [ext_resource type="PackedScene" uid="uid://bhrutww653eol" path="res://characters/player/player.tscn" id="2_6ha88"]
+[ext_resource type="PackedScene" uid="uid://c84okus6y6nte" path="res://rooms/door.tscn" id="4_0at65"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_seu2s"]
+size = Vector2(64, 15)
+
+[node name="Prologue_forest_02" type="Node2D" node_paths=PackedStringArray("doors")]
+script = ExtResource("1_qcipw")
+doors = [NodePath("Door1")]
+metadata/_edit_lock_ = true
 
 [node name="prologue_forest_02_tilemap" parent="." instance=ExtResource("1_ujuhx")]
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("2_6ha88")]
 position = Vector2(1575, 1800)
+
+[node name="Door1" parent="." instance=ExtResource("4_0at65")]
+unique_name_in_owner = true
+position = Vector2(1572, 1904)
+press_required = false
+area_shape = SubResource("RectangleShape2D_seu2s")
+entry_direction = 1
+path_to_new_scene = "res://rooms/prologue/prologue_forest_01/Prologue_forest_01.tscn"
+entry_door_name = "011"

@@ -7,7 +7,7 @@ enum SceneTransition { FREE, HIDE, DETACH }
 
 func _ready() -> void:
 	Global.game_controller = self
-	current_2d_scene = %Lobby
+	current_2d_scene = %Prologue_forest_01
 	Global.dialogue = %DialogueHud
 	SceneManager.entry_door_changed.connect(_on_entry_door_changed)
 	loading_screen.animation_player.animation_finished.connect(func(anim_name): _on_animation_finished(anim_name))
