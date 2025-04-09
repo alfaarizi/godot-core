@@ -7,14 +7,12 @@ var is_enabled: bool = true
 var correct_direction: bool = false
 
 @export var press_required: bool = true: set = _set_press_required
-@export var area_shape: Shape2D: set = _set_area_shape
 @export_enum("north", "south", "east", "west") var entry_direction: int: set = _set_entry_direction
 @export var push_dist: float = 16.0: set = _set_push_dist
 @export var path_to_new_scene: String: set = _set_path_to_new_scene
 @export var entry_door_name:String: set = _set_entry_door_name
 @export var door_key_preconditions: Array[String] = []
 
-@onready var collision_shape_2d: CollisionShape2D = %CollisionShape2D
 @onready var door_key: String # {parent_node_name}_{triggerable_name}
 
 func _ready() -> void:
@@ -61,12 +59,6 @@ func _on_body_exited(body: Node2D) -> void:
 
 func _set_press_required(_press_required: bool) -> void:
 	press_required = _press_required
-
-func _set_area_shape(_area_shape: Shape2D):
-	if not _area_shape: return
-	area_shape = _area_shape
-	if collision_shape_2d:
-		collision_shape_2d.shape = area_shape
 
 func _set_entry_direction(_entry_direction: int) -> void:
 	entry_direction = _entry_direction
