@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://ddidnaktvwg15"]
+[gd_scene load_steps=62 format=3 uid="uid://ddidnaktvwg15"]
 
 [ext_resource type="Script" path="res://rooms/prologue/therapy_room_1/therapy_room_1.gd" id="1_ojqgy"]
 [ext_resource type="PackedScene" uid="uid://derrir5d4ljbp" path="res://rooms/prologue/therapy_room_1/Therapy_room_1_tilemap.tscn" id="2_tlh12"]
@@ -13,9 +13,6 @@
 [ext_resource type="Script" path="res://components/cutscene/dialogue_action.gd" id="12_3xny8"]
 [ext_resource type="PackedScene" uid="uid://bln04fcnkpha8" path="res://characters/dynamic_bounds_camera.tscn" id="14_j2fhb"]
 [ext_resource type="PackedScene" uid="uid://cllr1aojmhb0c" path="res://components/triggerable.tscn" id="14_x75pf"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfmya"]
-size = Vector2(32, 16)
 
 [sub_resource type="Animation" id="Animation_tj1ur"]
 resource_name = "01_therapist_turning"
@@ -527,7 +524,6 @@ position = Vector2(728, 476)
 unique_name_in_owner = true
 position = Vector2(395, 1240)
 press_required = false
-area_shape = SubResource("RectangleShape2D_rfmya")
 entry_direction = 1
 push_dist = 32.0
 path_to_new_scene = "res://rooms/prologue/lobby/lobby.tscn"
