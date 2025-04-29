@@ -1,14 +1,14 @@
 [gd_resource type="TileSet" load_steps=19 format=3 uid="uid://cd8qyg2f6lrjl"]
 
-[ext_resource type="Texture2D" uid="uid://d4g1ed0k8npgk" path="res://presets/maps/prologue/forest/floors/dirt1.2.png" id="1_f8w2e"]
-[ext_resource type="Texture2D" uid="uid://dlq1lxmwx4psc" path="res://presets/maps/prologue/forest/floors/grass.png" id="2_v3t65"]
-[ext_resource type="Texture2D" uid="uid://bc51tervrlgr8" path="res://presets/maps/prologue/forest/floor_deco/flowers.png" id="3_8xblm"]
-[ext_resource type="Texture2D" uid="uid://cfd3haqsrcu4y" path="res://presets/maps/prologue/forest/walls/dirtcliff.png" id="4_0a7sb"]
-[ext_resource type="Texture2D" uid="uid://dk87k4vgtltgq" path="res://presets/maps/prologue/forest/floors/grassonly.png" id="5_3eklg"]
-[ext_resource type="Texture2D" uid="uid://bn434fp4qnm6q" path="res://presets/maps/prologue/forest/floors/dirt2.1.png" id="6_r3i8j"]
-[ext_resource type="Texture2D" uid="uid://cqdjbxqpg6s4s" path="res://presets/maps/prologue/forest/floors/dirt2.2.png" id="7_3wqcx"]
-[ext_resource type="Texture2D" uid="uid://c410hlc32fga2" path="res://presets/maps/prologue/forest/floors/grassonly2.png" id="8_gldl2"]
-[ext_resource type="Texture2D" uid="uid://cd54krvqbqhl0" path="res://presets/maps/prologue/forest/floors/grass_inverted.png" id="9_a141g"]
+[ext_resource type="Texture2D" uid="uid://dr00xq2w0af1f" path="res://presets/maps/prologue/forest/floors/dirt1.2.png" id="1_f8w2e"]
+[ext_resource type="Texture2D" uid="uid://bm31b2kofthuk" path="res://presets/maps/prologue/forest/floors/grass.png" id="2_v3t65"]
+[ext_resource type="Texture2D" uid="uid://c53l7lnxjnh5y" path="res://presets/maps/prologue/forest/floor_deco/flowers.png" id="3_8xblm"]
+[ext_resource type="Texture2D" uid="uid://d2gehitsbole7" path="res://presets/maps/prologue/forest/walls/dirtcliff.png" id="4_0a7sb"]
+[ext_resource type="Texture2D" uid="uid://cy3btk3comyyf" path="res://presets/maps/prologue/forest/floors/grassonly.png" id="5_3eklg"]
+[ext_resource type="Texture2D" uid="uid://bo1twn0fl37yv" path="res://presets/maps/prologue/forest/floors/dirt2.1.png" id="6_r3i8j"]
+[ext_resource type="Texture2D" uid="uid://diglxatjfjcg0" path="res://presets/maps/prologue/forest/floors/dirt2.2.png" id="7_3wqcx"]
+[ext_resource type="Texture2D" uid="uid://bs1g4uxjeknqo" path="res://presets/maps/prologue/forest/floors/grassonly2.png" id="8_gldl2"]
+[ext_resource type="Texture2D" uid="uid://bnfca3ms7ohvn" path="res://presets/maps/prologue/forest/floors/grass_inverted.png" id="9_a141g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gypgk"]
 texture = ExtResource("1_f8w2e")
