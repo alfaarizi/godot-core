@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddw4y3b8vgpm6"]
+
+[ext_resource type="Script" path="res://rooms/room.gd" id="1_afegh"]
+[ext_resource type="PackedScene" uid="uid://dm0u8qkl2jhm3" path="res://rooms/prologue/prologue_forest_07/prologue_forest_07_tilemap.tscn" id="2_i45qg"]
+[ext_resource type="PackedScene" uid="uid://bhrutww653eol" path="res://characters/player/player.tscn" id="3_lg4mr"]
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("player")]
+script = ExtResource("1_afegh")
+player = NodePath("Player")
+
+[node name="prologue_forest_07_tilemap" parent="." instance=ExtResource("2_i45qg")]
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("3_lg4mr")]
+position = Vector2(949, 1981)
