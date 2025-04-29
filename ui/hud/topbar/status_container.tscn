@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c3q06iuf2h3px"]
 
 [ext_resource type="Script" path="res://ui/hud/topbar/status_container.gd" id="1_1hi6h"]
-[ext_resource type="Texture2D" uid="uid://dqdfp3uyqoylc" path="res://assets/ui/template/c3.png" id="1_efj2y"]
+[ext_resource type="Texture2D" uid="uid://d34banwxjvuoo" path="res://assets/ui/template/c3.png" id="1_efj2y"]
 
 [node name="StatusContainer" type="HBoxContainer"]
 custom_minimum_size = Vector2(480, 45)

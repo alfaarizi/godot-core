@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0awanp5ioktg"]
 
-[ext_resource type="Texture2D" uid="uid://f1hfhohgps15" path="res://ui/hud/sidebar/inventory/sidebar.png" id="1_yjdv7"]
+[ext_resource type="Texture2D" uid="uid://cv5b78aw2wopw" path="res://ui/hud/sidebar/inventory/sidebar.png" id="1_yjdv7"]
 [ext_resource type="PackedScene" uid="uid://bh0dqmwjubyni" path="res://ui/hud/sidebar/inventory/skill.tscn" id="2_h6ndd"]
 [ext_resource type="PackedScene" uid="uid://b5owvq2adk74r" path="res://ui/hud/sidebar/inventory/bag_tab.tscn" id="3_tbd8e"]
 

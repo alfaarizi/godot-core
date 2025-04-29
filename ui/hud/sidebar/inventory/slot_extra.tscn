@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dwyd0drv4b43v"]
 
 [ext_resource type="Script" path="res://ui/hud/sidebar/inventory/slot_extra.gd" id="1_2ec64"]
-[ext_resource type="FontFile" uid="uid://bxxx8ohy7ni0e" path="res://assets/ui/Born2bSportyV2.ttf" id="1_6ebwc"]
+[ext_resource type="FontFile" uid="uid://b0jaq0i5ulxxa" path="res://assets/ui/Born2bSportyV2.ttf" id="1_6ebwc"]
 [ext_resource type="PackedScene" uid="uid://c5vis0bpei1ti" path="res://ui/hud/sidebar/inventory/slot.tscn" id="2_qkahs"]
 
 [node name="SlotExtra" type="HBoxContainer"]
