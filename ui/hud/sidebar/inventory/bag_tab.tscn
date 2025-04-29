@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b5owvq2adk74r"]
 
-[ext_resource type="FontFile" uid="uid://30r0tno0ep1n" path="res://assets/ui/Born2bSportyV2.ttf" id="1_neqky"]
+[ext_resource type="FontFile" uid="uid://bxxx8ohy7ni0e" path="res://assets/ui/Born2bSportyV2.ttf" id="1_neqky"]
 [ext_resource type="PackedScene" uid="uid://dvwwtowclygyg" path="res://ui/hud/sidebar/inventory/bag.tscn" id="2_hf1du"]
 
 [node name="Inventory" type="TabContainer"]

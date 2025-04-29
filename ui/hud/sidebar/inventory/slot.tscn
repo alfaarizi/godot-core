@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://c5vis0bpei1ti"]
 
 [ext_resource type="Script" path="res://ui/hud/sidebar/inventory/slot.gd" id="1_dj1mf"]
-[ext_resource type="Texture2D" uid="uid://drcs2k868j4hj" path="res://ui/hud/sidebar/inventory/slot.png" id="1_oyhvg"]
-[ext_resource type="FontFile" uid="uid://30r0tno0ep1n" path="res://assets/ui/Born2bSportyV2.ttf" id="2_bfbwk"]
-[ext_resource type="Texture2D" uid="uid://ckcf8rh2sg0tv" path="res://assets/ui/hud/fish.png" id="3_4ouxu"]
+[ext_resource type="Texture2D" uid="uid://cb0jnql7ckjps" path="res://ui/hud/sidebar/inventory/slot.png" id="1_oyhvg"]
+[ext_resource type="FontFile" uid="uid://bxxx8ohy7ni0e" path="res://assets/ui/Born2bSportyV2.ttf" id="2_bfbwk"]
+[ext_resource type="Texture2D" uid="uid://dvmwyyyka4jr5" path="res://assets/ui/hud/fish.png" id="3_4ouxu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sv1mq"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
