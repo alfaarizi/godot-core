@@ -1,11 +1,11 @@
 [gd_scene load_steps=29 format=3 uid="uid://bhrutww653eol"]
 
 [ext_resource type="Script" path="res://characters/player/player.gd" id="1_nf707"]
-[ext_resource type="Texture2D" uid="uid://j8eydamv4jnp" path="res://assets/sprites/player/shadow.png" id="2_78tfa"]
-[ext_resource type="Texture2D" uid="uid://bdlasiu5spifl" path="res://assets/sprites/player/footprint_particles.png" id="3_gk2r0"]
-[ext_resource type="Texture2D" uid="uid://nk3e1alkl8vc" path="res://assets/sprites/player/movement_sheet2/brodown.png" id="4_t2p8q"]
-[ext_resource type="Texture2D" uid="uid://s7f0da26eii7" path="res://assets/sprites/player/movement_sheet2/broright.png" id="5_ey871"]
-[ext_resource type="Texture2D" uid="uid://bq112tw3dsc23" path="res://assets/sprites/player/movement_sheet2/broup.png" id="6_cod8b"]
+[ext_resource type="Texture2D" uid="uid://v03ccqgp37dq" path="res://assets/sprites/player/shadow.png" id="2_78tfa"]
+[ext_resource type="Texture2D" uid="uid://bncuqhy7q24ib" path="res://assets/sprites/player/footprint_particles.png" id="3_gk2r0"]
+[ext_resource type="Texture2D" uid="uid://c56hbq1atheox" path="res://assets/sprites/player/movement_sheet2/brodown.png" id="4_t2p8q"]
+[ext_resource type="Texture2D" uid="uid://c7jta4qb1r33v" path="res://assets/sprites/player/movement_sheet2/broright.png" id="5_ey871"]
+[ext_resource type="Texture2D" uid="uid://dl5tyhpxqkiem" path="res://assets/sprites/player/movement_sheet2/broup.png" id="6_cod8b"]
 [ext_resource type="Script" path="res://characters/cutscene_sprite_2d.gd" id="7_43wkp"]
 [ext_resource type="PackedScene" uid="uid://bln04fcnkpha8" path="res://characters/dynamic_bounds_camera.tscn" id="9_geyl2"]
 

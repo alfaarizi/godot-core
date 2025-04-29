@@ -1,7 +1,7 @@
 [gd_resource type="TileSet" load_steps=5 format=3 uid="uid://cfff5epdv1g1r"]
 
-[ext_resource type="Texture2D" uid="uid://cbf8y7gwr06ct" path="res://presets/maps/prologue/void/floors/whitesquare.png" id="1_jqrek"]
-[ext_resource type="Texture2D" uid="uid://dp4snb2eyo2qo" path="res://presets/maps/prologue/void/floors/breaking_final.png" id="2_2t73x"]
+[ext_resource type="Texture2D" uid="uid://cthbtt1bln5cx" path="res://presets/maps/prologue/void/floors/whitesquare.png" id="1_jqrek"]
+[ext_resource type="Texture2D" uid="uid://cmuuay2735s01" path="res://presets/maps/prologue/void/floors/breaking_final.png" id="2_2t73x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e33ah"]
 texture = ExtResource("1_jqrek")

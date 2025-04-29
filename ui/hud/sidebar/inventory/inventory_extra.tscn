@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://7g6ku12bp3l3"]
 
 [ext_resource type="PackedScene" uid="uid://dwyd0drv4b43v" path="res://ui/hud/sidebar/inventory/slot_extra.tscn" id="2_7gwwc"]
-[ext_resource type="Texture2D" uid="uid://2xgn623g4hyc" path="res://assets/ui/template/c2.png" id="2_b677i"]
-[ext_resource type="FontFile" uid="uid://30r0tno0ep1n" path="res://assets/ui/Born2bSportyV2.ttf" id="3_3o8k0"]
+[ext_resource type="Texture2D" uid="uid://c0funiawo7r5a" path="res://assets/ui/template/c2.png" id="2_b677i"]
+[ext_resource type="FontFile" uid="uid://bxxx8ohy7ni0e" path="res://assets/ui/Born2bSportyV2.ttf" id="3_3o8k0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tchrs"]
 bg_color = Color(1, 1, 1, 1)

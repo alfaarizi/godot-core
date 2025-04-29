@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bh0dqmwjubyni"]
 
-[ext_resource type="Texture2D" uid="uid://2xgn623g4hyc" path="res://assets/ui/template/c2.png" id="1_n8ryx"]
+[ext_resource type="Texture2D" uid="uid://c0funiawo7r5a" path="res://assets/ui/template/c2.png" id="1_n8ryx"]
 [ext_resource type="PackedScene" uid="uid://c5vis0bpei1ti" path="res://ui/hud/sidebar/inventory/slot.tscn" id="1_rsp26"]
-[ext_resource type="Texture2D" uid="uid://e8kkm0m480u8" path="res://icon.svg" id="2_hior7"]
-[ext_resource type="FontFile" uid="uid://30r0tno0ep1n" path="res://assets/ui/Born2bSportyV2.ttf" id="3_ljj2i"]
+[ext_resource type="Texture2D" uid="uid://ckai2mumr8u18" path="res://icon.svg" id="2_hior7"]
+[ext_resource type="FontFile" uid="uid://bxxx8ohy7ni0e" path="res://assets/ui/Born2bSportyV2.ttf" id="3_ljj2i"]
 
 [node name="Skill" type="VBoxContainer"]
 custom_minimum_size = Vector2(320, 400)

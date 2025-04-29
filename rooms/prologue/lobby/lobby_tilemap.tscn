@@ -4,7 +4,7 @@
 [ext_resource type="TileSet" uid="uid://b6onl8obvog0o" path="res://presets/maps/prologue/therapy/Floor_presets.tres" id="2_1rljw"]
 [ext_resource type="TileSet" uid="uid://nf6ly2qejnyo" path="res://presets/maps/prologue/therapy/Walls_preset.tres" id="3_nn5p1"]
 [ext_resource type="TileSet" uid="uid://cx7tjoori5htd" path="res://presets/maps/prologue/therapy/Props_presets.tres" id="4_w5pvc"]
-[ext_resource type="Texture2D" uid="uid://cjwdiu05xvbd" path="res://presets/maps/prologue/therapy/props/lightmask_0.png" id="5_q8esc"]
+[ext_resource type="Texture2D" uid="uid://cfh4riin2424k" path="res://presets/maps/prologue/therapy/props/lightmask_0.png" id="5_q8esc"]
 
 [node name="LobbyTileMap" type="Node2D" node_paths=PackedStringArray("tile_map_rect", "interactable_layers")]
 y_sort_enabled = true

@@ -1,10 +1,10 @@
 [gd_scene load_steps=21 format=3 uid="uid://cj3deljjo8g4r"]
 
 [ext_resource type="Script" path="res://characters/therapist/therapist.gd" id="1_2auem"]
-[ext_resource type="Texture2D" uid="uid://j8eydamv4jnp" path="res://assets/sprites/player/shadow.png" id="2_kwjcb"]
-[ext_resource type="Texture2D" uid="uid://gql8ukd782a8" path="res://assets/sprites/therapist/down2.png" id="3_vqgh5"]
-[ext_resource type="Texture2D" uid="uid://cn2lfgplmxago" path="res://assets/sprites/therapist/right1.png" id="4_8ohpm"]
-[ext_resource type="Texture2D" uid="uid://c4vgkyssmj8mb" path="res://assets/sprites/therapist/up1.png" id="5_xf8si"]
+[ext_resource type="Texture2D" uid="uid://v03ccqgp37dq" path="res://assets/sprites/player/shadow.png" id="2_kwjcb"]
+[ext_resource type="Texture2D" uid="uid://ba7yro2ild78v" path="res://assets/sprites/therapist/down2.png" id="3_vqgh5"]
+[ext_resource type="Texture2D" uid="uid://dtydoyx4w2pwq" path="res://assets/sprites/therapist/right1.png" id="4_8ohpm"]
+[ext_resource type="Texture2D" uid="uid://kqygacrsv1sl" path="res://assets/sprites/therapist/up1.png" id="5_xf8si"]
 [ext_resource type="Script" path="res://characters/cutscene_sprite_2d.gd" id="6_iojb8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4g6hy"]
