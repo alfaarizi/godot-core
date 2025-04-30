@@ -181,10 +181,10 @@ func _setup_options():
 	Each action requires one or more Warning Level Names.
 
 	Warning Level Names:
-	    * current        The current settings for the project.
-	    * godot_default  The default settings for Godot.
-	    * gut_default    The warning settings that is used when developing GUT.
-	    * all_warn       Everything set to warn.
+		* current        The current settings for the project.
+		* godot_default  The default settings for Godot.
+		* gut_default    The warning settings that is used when developing GUT.
+		* all_warn       Everything set to warn.
 	""".dedent()
 
 	opts.add('-h', false, 'Print this help')

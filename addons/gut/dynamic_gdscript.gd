@@ -30,4 +30,3 @@ func create_script_from_source(source, override_path=null):
 		DynamicScript = result
 
 	return DynamicScript
-
