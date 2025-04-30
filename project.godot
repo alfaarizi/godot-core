@@ -31,6 +31,10 @@ window/size/always_on_top=true
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gdLinter/plugin.cfg", "res://addons/gut/plugin.cfg")
+
 [gui]
 
 theme/custom="res://assets/ui/main_theme.tres"

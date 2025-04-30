@@ -1,9 +1,11 @@
 image: barichello/godot-ci:4.3
 
-# Stages: import -> export -> deploy
+# Stages: lint -> test -> import -> build -> deploy
 stages:
+  - lint
+  - test
   - import
-  - export
+  - build
   - deploy
 
 # Cache to speed up builds
@@ -17,6 +19,24 @@ variables:
   ITCH_USER:  mkdrdscf
   ITCH_PROJECT: inneranima
 
+gdlint:
+  stage: lint
+  image: python:3.10-slim
+  before_script:
+    - python -m venv .gdlint-venv
+    - . .gdlint-venv/bin/activate
+    - pip install --upgrade pip
+    - pip install "gdtoolkit==4.*"
+  script:
+    - gdlint . --config-file=.gdlintrc
+  allow_failure: true
+
+gdgut:
+  stage: test
+  script:
+    - godot --headless --verbose --script res://addons/gut/gut_cmdln.gd
+  allow_failure: false
+
 # Open the editor to import assets in case the cache was empty or outdated
 import-assets:
   stage: import
@@ -25,7 +45,7 @@ import-assets:
 
 # Build exports
 windows:
-  stage: export
+  stage: build
   script:
     - mkdir -v -p build/windows
     - godot --headless --verbose --export-release "Windows Desktop" ./build/windows/$EXPORT_NAME.exe
@@ -35,7 +55,7 @@ windows:
       - build/windows
 
 linux:
-  stage: export
+  stage: build
   script:
   - mkdir -v -p build/linux
   - godot --headless --verbose --export-release "Linux" ./build/linux/$EXPORT_NAME.x86_64
@@ -45,7 +65,7 @@ linux:
       - build/linux
 
 # macos:
-#   stage: export
+#   stage: build
 #   script:
 #     - mkdir -v -p build/macos
 #     - godot --headless --verbose --export-release "macOS" ./build/macos/$EXPORT_NAME.dmg
@@ -55,7 +75,7 @@ linux:
 #       - build/macos
 
 web:
-  stage: export
+  stage: build
   script:
     - mkdir -v -p build/web
     - godot --headless --verbose --export-release "Web" ./build/web/$EXPORT_NAME.html

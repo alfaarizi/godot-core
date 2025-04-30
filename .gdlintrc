@@ -1,0 +1,57 @@
+class-definitions-order:  # Defines the expected order of class elements in GDScript
+- tools
+- classnames
+- extends
+- docstrings
+- signals
+- enums
+- consts
+- staticvars
+- exports
+- pubvars
+- prvvars
+- onreadypubvars
+- onreadyprvvars
+- others
+
+class-name: ([A-Z][a-z0-9]*)+                                                       # CamelCase (PlayerController)
+class-variable-name: _?[a-z][a-z0-9]*(_[a-z0-9]+)*                                  # snake_case with optional leading underscore (_health, player_speed)
+constant-name: _?[A-Z][A-Z0-9]*(_[A-Z0-9]+)*                                        # SCREAMING_SNAKE_CASE (MAX_SPEED)
+function-name: (_on_([A-Z][a-z0-9]*)+(_[a-z0-9]+)*|_?[a-z][a-z0-9]*(_[a-z0-9]+)*)   # snake_case, allows signal callbacks
+signal-name: '[a-z][a-z0-9]*(_[a-z0-9]+)*'                                          # snake_case (health_changed)
+enum-name: ([A-Z][a-z0-9]*)+                                                        # CamelCase (ElementType)
+enum-element-name: '[A-Z][A-Z0-9]*(_[A-Z0-9]+)*'                                    # SCREAMING_SNAKE_CASE (FIRE, WATER)
+function-argument-name: _?[a-z][a-z0-9]*(_[a-z0-9]+)*                               # snake_case (player_id)
+function-variable-name: '[a-z][a-z0-9]*(_[a-z0-9]+)*'                               # snake_case (temp_value)
+load-constant-name: (([A-Z][a-z0-9]*)+|_?[A-Z][A-Z0-9]*(_[A-Z0-9]+)*)               # Either CamelCase or SCREAMING_SNAKE_CASE
+function-preload-variable-name: ([A-Z][a-z0-9]*)+                                   # CamelCase (PlayerScene)
+class-load-variable-name: (([A-Z][a-z0-9]*)+|_?[a-z][a-z0-9]*(_[a-z0-9]+)*)         # Either CamelCase or snake_case
+loop-variable-name: _?[a-z][a-z0-9]*(_[a-z0-9]+)*                                   # snake_case (i, item_index)
+sub-class-name: _?([A-Z][a-z0-9]*)+                                                 # CamelCase with optional leading underscore (_InnerClass)
+
+# Code quality
+function-arguments-number: 10   # Maximum number of function arguments
+max-file-lines: 1000            # Maximum lines per file
+max-line-length: 140            # Maximum characters per line
+max-public-methods: 20          # Maximum public methods per class
+max-returns: 6                  # Maximum return statements per function
+
+# Formatting
+tab-characters: 1               # Use tabs for indentation
+mixed-tabs-and-spaces: null     # Allow mixed tabs and spaces
+trailing-whitespace: null       # Allow trailing whitespace
+
+# Code issues
+comparison-with-itself: null    # Check for comparisons like x == x
+duplicated-load: null           # Check for duplicated load statements
+expression-not-assigned: null   # Check for expressions that aren't assigned or used
+unnecessary-pass: null          # Check for unnecessary pass statements
+unused-argument: null           # Check for unused function arguments
+no-elif-return: null            # Check for elif after return
+no-else-return: null            # Check for else after return
+
+# Exclusions
+disable: []                     # Rules to disable
+excluded_directories: !!set
+  .git: null                    # Exclude .git directory
+  addons: null
