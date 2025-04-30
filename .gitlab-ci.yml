@@ -36,7 +36,7 @@ gdlint:
 gdut:
   stage: test
   script:
-    - godot -s addons/gut/gut_cmdln.gd -d --path $PWD -ginclude_subdirs -gdir=res://tests -gexit -gprefix=test_
+    - godot --headless --verbose -s addons/gut/gut_cmdln.gd -d --path $PWD -ginclude_subdirs -gdir=res://tests -gexit -gprefix=test_
   allow_failure: false
 
 # Open the editor to import assets in case the cache was empty or outdated
