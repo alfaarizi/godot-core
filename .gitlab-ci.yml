@@ -1,0 +1,117 @@
+image: barichello/godot-ci:4.3
+
+# Stages: import -> export -> deploy
+stages:
+  - import
+  - export
+  - deploy
+
+# Cache to speed up builds
+cache:
+  key: godot-4.3-${CI_PROJECT_NAME}-${CI_COMMIT_REF_SLUG}
+  paths:
+    - .godot/imported/
+
+variables:
+  EXPORT_NAME: InnerAnima
+  ITCH_USER:  mkdrdscf
+  ITCH_PROJECT: inneranima
+
+# Open the editor to import assets in case the cache was empty or outdated
+import-assets:
+  stage: import
+  script:
+    - godot --headless --verbose --editor --quit
+
+# Build exports
+windows:
+  stage: export
+  script:
+    - mkdir -v -p build/windows
+    - godot --headless --verbose --export-release "Windows Desktop" ./build/windows/$EXPORT_NAME.exe
+  artifacts:
+    name: $EXPORT_NAME-$CI_JOB_NAME
+    paths:
+      - build/windows
+
+linux:
+  stage: export
+  script:
+  - mkdir -v -p build/linux
+  - godot --headless --verbose --export-release "Linux" ./build/linux/$EXPORT_NAME.x86_64
+  artifacts:
+    name: $EXPORT_NAME-$CI_JOB_NAME
+    paths:
+      - build/linux
+
+# macos:
+#   stage: export
+#   script:
+#     - mkdir -v -p build/macos
+#     - godot --headless --verbose --export-release "macOS" ./build/macos/$EXPORT_NAME.dmg
+#   artifacts:
+#     name: $EXPORT_NAME-$CI_JOB_NAME
+#     paths:
+#       - build/macos
+
+web:
+  stage: export
+  script:
+    - mkdir -v -p build/web
+    - godot --headless --verbose --export-release "Web" ./build/web/$EXPORT_NAME.html
+  artifacts:
+    name: $EXPORT_NAME-$CI_JOB_NAME
+    paths:
+      - build/web
+
+# Deployment to development
+pages:
+  stage: deploy
+  script:
+    - rm -f *.md
+    - mkdir -p public
+    - mv build/web/* ./public/
+  dependencies:
+    - web
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "develop" && $CI_PROJECT_NAMESPACE == "inner-anima"'
+
+# Deployment to production environment
+itchio:windows:
+  stage: deploy
+  script:
+    -  butler push ./build/windows ${ITCH_USER}/${ITCH_PROJECT}:windows
+  dependencies:
+    - windows
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main" && $CI_PROJECT_NAMESPACE == "inner-anima"'
+
+itchio:linux:
+  stage: deploy
+  script:
+    -  butler push ./build/linux ${ITCH_USER}/${ITCH_PROJECT}:linux
+  dependencies:
+    - linux
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main" && $CI_PROJECT_NAMESPACE == "inner-anima"'
+
+# itchio:macos:
+#   stage: deploy
+#   script:
+#     -  butler push ./build/macos ${ITCH_USER}/${ITCH_PROJECT}:macos
+#   dependencies:
+#     - macos
+#   rules:
+#     - if: '$CI_COMMIT_BRANCH == "main" && $CI_PROJECT_NAMESPACE == "inner-anima"'
+
+itchio:web:
+  stage: deploy
+  script:
+    -  butler push ./build/web ${ITCH_USER}/${ITCH_PROJECT}:web
+  dependencies:
+    - web
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main" && $CI_PROJECT_NAMESPACE == "inner-anima"'
