@@ -3,8 +3,8 @@ image: barichello/godot-ci:4.3
 # Stages: lint -> test -> import -> build -> deploy
 stages:
   - lint
-  - test
   - prepare
+  - test
   - build
   - deploy
 
@@ -32,18 +32,18 @@ gdlint:
     - gdlint .
   allow_failure: true
 
-# Unit Test
-gdut:
-  stage: test
-  script:
-    - godot -s addons/gut/gut_cmdln.gd -d --path $PWD -ginclude_subdirs -gdir=res://tests -gexit -gprefix=test_
-  allow_failure: false
-
 # Open the editor to import assets in case the cache was empty or outdated
 assets:
   stage: prepare
   script:
     - godot --headless --verbose --editor --quit
+
+# Unit Test
+gdut:
+  stage: test
+  script:
+    - godot --headless --verbose -s addons/gut/gut_cmdln.gd -d --path $PWD -ginclude_subdirs -gdir=res://tests -gexit -gprefix=test_
+  allow_failure: false
 
 # Build exports
 windows:
