@@ -13,9 +13,6 @@ func _ready() -> void:
 	loading_screen.animation_player.animation_finished.connect(func(anim_name): _on_animation_finished(anim_name))
 
 func _on_entry_door_changed(_entry_door: Door) -> void:
-	#print("curret scene is it null?" + str(current_2d_scene == null))
-	#print("is it null?" + str(current_2d_scene.get_entered_door() == null))
-	#print(SceneManager.current_entry_door.entry_door_name)
 	SceneManager.change_player_position(current_2d_scene.get_entered_door().get_entry_position())
 	
 func change_2d_scene(new_scene: String, scene_transition: SceneTransition) -> void:
