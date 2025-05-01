@@ -10,4 +10,3 @@ func stop_animation() -> void:
 
 func change_animation_frame(anim_name: String, frame: int) -> void:
 	cutscene_sprite_2d._change_animation_frame(anim_name, frame)
-	

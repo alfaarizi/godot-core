@@ -1,10 +1,17 @@
 image: barichello/godot-ci:4.3
 
-# Stages: import -> export -> deploy
+# Stages: lint -> prepare -> test -> build -> deploy
 stages:
-  - import
-  - export
+  - lint
+  - prepare
+  - test
+  - build
   - deploy
+
+variables:
+  EXPORT_NAME: InnerAnima
+  ITCH_USER:  mkdrdscf
+  ITCH_PROJECT: inneranima
 
 # Cache to speed up builds
 cache:
@@ -12,20 +19,43 @@ cache:
   paths:
     - .godot/imported/
 
-variables:
-  EXPORT_NAME: InnerAnima
-  ITCH_USER:  mkdrdscf
-  ITCH_PROJECT: inneranima
+# Linter
+gdlint:
+  stage: lint
+  image: python:3.10-slim
+  before_script:
+    - python -m venv .gdlint-venv
+    - . .gdlint-venv/bin/activate
+    - pip install --upgrade pip
+    - pip install "gdtoolkit==4.*"
+  script:
+    - gdlint .
+  allow_failure: true
 
 # Open the editor to import assets in case the cache was empty or outdated
-import-assets:
-  stage: import
+assets:
+  stage: prepare
   script:
-    - godot --headless --verbose --editor --quit
+    - rm -rf .import
+    - mkdir -p .godot .import
+    - godot --headless --verbose --import --quit
+  artifacts:
+    paths:
+      - .import/
+      - .godot/imported/
+      - .godot/global_script_class_cache.cfg
+
+# Unit Test
+gdut:
+  stage: test
+  needs: ["assets"]
+  script:
+    - godot --headless --verbose -s addons/gut/gut_cmdln.gd -d --path $PWD -ginclude_subdirs -gdir=res://tests -gexit -gprefix=test_
+  allow_failure: false
 
 # Build exports
 windows:
-  stage: export
+  stage: build
   script:
     - mkdir -v -p build/windows
     - godot --headless --verbose --export-release "Windows Desktop" ./build/windows/$EXPORT_NAME.exe
@@ -35,7 +65,7 @@ windows:
       - build/windows
 
 linux:
-  stage: export
+  stage: build
   script:
   - mkdir -v -p build/linux
   - godot --headless --verbose --export-release "Linux" ./build/linux/$EXPORT_NAME.x86_64
@@ -45,7 +75,7 @@ linux:
       - build/linux
 
 # macos:
-#   stage: export
+#   stage: build
 #   script:
 #     - mkdir -v -p build/macos
 #     - godot --headless --verbose --export-release "macOS" ./build/macos/$EXPORT_NAME.dmg
@@ -55,10 +85,10 @@ linux:
 #       - build/macos
 
 web:
-  stage: export
+  stage: build
   script:
     - mkdir -v -p build/web
-    - godot --headless --verbose --export-release "Web" ./build/web/$EXPORT_NAME.html
+    - godot --headless --verbose --export-release "Web" ./build/web/index.html
   artifacts:
     name: $EXPORT_NAME-$CI_JOB_NAME
     paths:

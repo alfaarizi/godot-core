@@ -1,14 +1,14 @@
 class_name StatusContainer extends HBoxContainer
 
+const PLAYER_STATUS_MAX := 10
+
 @export var player_status: Array[Texture] = []
 @onready var _player_status_container: Array[TextureRect] = [
-	%Status1Texture, %Status2Texture, %Status3Texture, 
-	%Status4Texture, %Status5Texture, %Status6Texture, 
-	%Status7Texture, %Status8Texture, %Status9Texture, 
+	%Status1Texture, %Status2Texture, %Status3Texture,
+	%Status4Texture, %Status5Texture, %Status6Texture,
+	%Status7Texture, %Status8Texture, %Status9Texture,
 	%Status10Texture
 ]
-
-const PLAYER_STATUS_MAX := 10
 
 func _ready() -> void:
 	for status in _player_status_container:

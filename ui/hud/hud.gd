@@ -10,9 +10,9 @@ extends CanvasLayer
 
 func _ready() -> void:
 	GameState.state_changed.connect(_on_state_change)
-	self.visible = false	
+	self.visible = false
 	_sample_display()
-	
+
 func _on_state_change(new_state: GameState.State) -> void:
 	match new_state:
 		GameState.State.UI_NAVIGATION:
@@ -25,10 +25,10 @@ func _sample_display() -> void:
 	player_portrait.status_container.add_status(ICON)
 	player_portrait.status_container.add_status(ICON)
 	for i in randf_range(0,10):
-		player_container_1.status_container.add_status(ICON)	
+		player_container_1.status_container.add_status(ICON)
 	for i in randf_range(0,10):
-		player_container_2.status_container.add_status(ICON)	
+		player_container_2.status_container.add_status(ICON)
 	for i in randf_range(0,10):
-		player_container_3.status_container.add_status(ICON)	
+		player_container_3.status_container.add_status(ICON)
 	for i in randf_range(0,10):
-		player_container_4.status_container.add_status(ICON)	
+		player_container_4.status_container.add_status(ICON)

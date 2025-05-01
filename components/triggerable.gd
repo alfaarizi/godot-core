@@ -1,13 +1,14 @@
 @tool
-class_name Triggerable 
+class_name Triggerable
 extends Area2D
 
-var is_nearby: bool = false
 signal is_triggered
 
 @export var area_shape: Shape2D: set = _set_area_shape
 @export_enum("north", "south", "east", "west") var trigger_direction: int: set = _set_trigger_direction
 @export var trigger_key_preconditions: Array[String] = []
+
+var is_nearby: bool = false
 
 @onready var collision_shape_2d: CollisionShape2D = %CollisionShape2D
 @onready var trigger_key: String # {parent_node_name}_{triggerable_name}
@@ -33,7 +34,7 @@ func _disconnect_trigger_signal():
 		is_triggered.disconnect(conn["callable"])
 	queue_free()
 
-func _on_body_entered(body: Node2D) -> void:	
+func _on_body_entered(body: Node2D) -> void:
 	if not is_triggerable() or has_triggered(): return
 	if body is Player:
 		is_nearby = true

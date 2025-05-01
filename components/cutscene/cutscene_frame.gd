@@ -7,7 +7,7 @@ class_name CutsceneFrame extends Resource
 func _set_action(_action: CutsceneAction):
 	if not _action: return
 	action = _action
-	
+
 func _set_action_type(value: CutsceneAction.Type) -> void:
 	if action_type == value: return
 	action_type = value
@@ -19,8 +19,8 @@ func _set_action_type(value: CutsceneAction.Type) -> void:
 		CutsceneAction.Type.DIALOGUE:
 			action = DialogueAction.new()
 		CutsceneAction.Type.CAMERA:
-			action = CameraAction.new()	
+			action = CameraAction.new()
 		CutsceneAction.Type.EVENT:
 			action = EventAction.new()
-		CutsceneAction.Type.Nil:
+		CutsceneAction.Type.NIL:
 			action = CutsceneAction.new()

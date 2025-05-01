@@ -6,7 +6,7 @@ extends Node
 #func _ready() -> void:
 	#load_dialogue(dialogue_file_path)
 
-func load_dialogue(file_path: String) -> void:    
+func load_dialogue(file_path: String) -> void:
 	if not FileAccess.file_exists(file_path):
 		print("File does not exist!")
 		return
@@ -17,33 +17,33 @@ func load_dialogue(file_path: String) -> void:
 	if json_data == null or not (json_data is Dictionary):
 		print("Error: Failed to parse JSON or incorrect format.")
 		return
-		
+
 	for dialogue_dict in json_data["dialogues"]:
 		var dialogue_obj := Dialogue.new()
 		dialogue_obj.dialogue_id = dialogue_dict["dialogue_id"]
-		
+
 		var starting_indexes: Array[int] = _calculate_starting_indexes(dialogue_dict["dialogue"])
-		
-		for dialogue_item_idx in dialogue_dict["dialogue"].size():				
+
+		for dialogue_item_idx in dialogue_dict["dialogue"].size():
 			var dialogue_item_dict = dialogue_dict["dialogue"][dialogue_item_idx]
-			
+
 			var character_image_path = "res://assets/" + dialogue_item_dict["name"] + ".png"
 			var character = load(character_image_path)
 			var expression = load(character_image_path)
 			var audio = load("res://assets/ui/dialogue/dialogue_item/blah blah.ogg")
-			
+
 			for line_idx in dialogue_item_dict["line"].size():
 				var line = dialogue_item_dict["line"][line_idx]
-				
+
 				# Assign choices only to the last dialogue item
-				var dialogue_item_obj := DialogueItem.new()	
+				var dialogue_item_obj := DialogueItem.new()
 				dialogue_item_obj.name = dialogue_item_dict["name"]
 				dialogue_item_obj.text = line["text"]
 				dialogue_item_obj.character = character
 				dialogue_item_obj.expression = expression
-				dialogue_item_obj.audio = audio					
+				dialogue_item_obj.audio = audio
 				dialogue_item_obj.is_player = dialogue_item_dict["is_player"]
-				
+
 				if line_idx < dialogue_item_dict["line"].size() - 1:
 					dialogue_item_obj.next_line_idx = _sum(starting_indexes.slice(0, dialogue_item_idx)) + line_idx + 1
 					dialogue_item_obj._has_choices = false
@@ -54,8 +54,8 @@ func load_dialogue(file_path: String) -> void:
 					else:
 						dialogue_item_obj.next_line_idx = next_line_idx
 					dialogue_item_obj._has_choices = not dialogue_item_dict["choices"].is_empty()
-					
-				dialogue_obj.dialogue_items.append(dialogue_item_obj)	
+
+				dialogue_obj.dialogue_items.append(dialogue_item_obj)
 		dialogues.append(dialogue_obj)
 
 func retrieve_dialogue_by_id(dialogue_id: String) -> Dialogue:
@@ -69,9 +69,9 @@ func retrieve_dialogue_by_id(dialogue_id: String) -> Dialogue:
 			break
 	if dialogue_idx == -1:
 		print("[Warning] Dialogue with ID %s is not found!" % dialogue_id)
-		return null	
+		return null
 	return dialogues[dialogue_idx]
-	
+
 func retrieve_dialogue_by_index(dialogue_index: int) -> Dialogue:
 	if dialogues.is_empty():
 		print("[Warning] No dialogues loaded! Cannot retrieve dialogue by INDEX.")
@@ -91,10 +91,6 @@ func _calculate_starting_indexes(dialogue_items: Array) -> Array[int]:
 	for dialogue_item_idx in dialogue_items.size():
 		starting_indexes.append(dialogue_items[dialogue_item_idx]["line"].size())
 	return starting_indexes
-	
+
 func _sum(numbers: Array[int]) -> int:
 	return numbers.reduce(func(accum, number): return accum + number, 0)
-	
-		
-	
-	
