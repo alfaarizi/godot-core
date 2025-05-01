@@ -43,12 +43,14 @@ assets:
     paths:
       - .import/
       - .godot/imported/
+      - .godot/global_script_class_cache.cfg
 
 # Unit Test
 gdut:
   stage: test
+  needs: ["assets"]
   script:
-    - godot --headless --verbose --import -s addons/gut/gut_cmdln.gd -d --path $PWD -ginclude_subdirs -gdir=res://tests -gexit -gprefix=test_
+    - godot --headless --verbose -s addons/gut/gut_cmdln.gd -d --path $PWD -ginclude_subdirs -gdir=res://tests -gexit -gprefix=test_
   allow_failure: false
 
 # Build exports
