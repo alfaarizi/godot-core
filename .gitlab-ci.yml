@@ -1,6 +1,6 @@
 image: barichello/godot-ci:4.3
 
-# Stages: lint -> test -> import -> build -> deploy
+# Stages: lint -> prepare -> test -> build -> deploy
 stages:
   - lint
   - prepare
@@ -38,7 +38,7 @@ assets:
   script:
     - rm -rf .import
     - mkdir -p .godot .import
-    - godot --headless --no-window --import --verbose --quit
+    - godot --headless --verbose --import --quit
   artifacts:
     paths:
       - .import/
@@ -48,9 +48,7 @@ assets:
 gdut:
   stage: test
   script:
-    - godot --headless --verbose -s addons/gut/gut_cmdln.gd -d --path $PWD -ginclude_subdirs -gdir=res://tests -gexit -gprefix=test_
-  dependencies:
-    - assets
+    - godot --headless --verbose --import -s addons/gut/gut_cmdln.gd -d --path $PWD -ginclude_subdirs -gdir=res://tests -gexit -gprefix=test_
   allow_failure: false
 
 # Build exports
