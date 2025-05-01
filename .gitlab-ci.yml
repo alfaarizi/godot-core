@@ -88,7 +88,7 @@ web:
   stage: build
   script:
     - mkdir -v -p build/web
-    - godot --headless --verbose --export-release "Web" ./build/web/$EXPORT_NAME.html
+    - godot --headless --verbose --export-release "Web" ./build/web/index.html
   artifacts:
     name: $EXPORT_NAME-$CI_JOB_NAME
     paths:
