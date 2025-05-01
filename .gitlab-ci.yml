@@ -39,12 +39,18 @@ assets:
     - rm -rf .import
     - mkdir -p .godot .import
     - godot --headless --no-window --import --verbose --quit
+  artifacts:
+    paths:
+      - .import/
+      - .godot/imported/
 
 # Unit Test
 gdut:
   stage: test
   script:
     - godot --headless --verbose -s addons/gut/gut_cmdln.gd -d --path $PWD -ginclude_subdirs -gdir=res://tests -gexit -gprefix=test_
+  dependencies:
+    - assets
   allow_failure: false
 
 # Build exports
