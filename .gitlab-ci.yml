@@ -33,7 +33,7 @@ assets:
     - rm -rf .godot/imported/
     - godot --headless --verbose --editor --quit
 
-Unit Test
+# Unit Test
 gdut:
   stage: test
   script:
