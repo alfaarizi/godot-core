@@ -4,15 +4,9 @@ image: barichello/godot-ci:4.3
 stages:
   - lint
   - prepare
-  # - test
+  - test
   - build
   - deploy
-
-# Cache to speed up builds
-cache:
-  key: godot-4.3-${CI_PROJECT_NAME}-${CI_COMMIT_REF_SLUG}
-  paths:
-    - .godot/imported/
 
 variables:
   EXPORT_NAME: InnerAnima
@@ -36,14 +30,15 @@ gdlint:
 assets:
   stage: prepare
   script:
+    - rm -rf .godot/imported/
     - godot --headless --verbose --editor --quit
 
-# Unit Test
-# gdut:
-#   stage: test
-#   script:
-#     - godot --headless --verbose -s addons/gut/gut_cmdln.gd -d --path $PWD -ginclude_subdirs -gdir=res://tests -gexit -gprefix=test_
-#   allow_failure: false
+Unit Test
+gdut:
+  stage: test
+  script:
+    - godot --headless --verbose -s addons/gut/gut_cmdln.gd -d --path $PWD -ginclude_subdirs -gdir=res://tests -gexit -gprefix=test_
+  allow_failure: false
 
 # Build exports
 windows:
