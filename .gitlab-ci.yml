@@ -13,11 +13,11 @@ variables:
   ITCH_USER:  mkdrdscf
   ITCH_PROJECT: inneranima
 
+# Cache to speed up builds
 cache:
-  key: "$CI_PROJECT_NAME-assets"
+  key: godot-4.3-${CI_PROJECT_NAME}-${CI_COMMIT_REF_SLUG}
   paths:
-    - .godot/
-    - .import/
+    - .godot/imported/
 
 # Linter
 gdlint:
@@ -36,7 +36,9 @@ gdlint:
 assets:
   stage: prepare
   script:
-    - godot --headless --verbose --editor --quit
+    - rm -rf .import
+    - mkdir -p .godot .import
+    - godot --headless --no-window --import --verbose --quit
 
 # Unit Test
 gdut:
