@@ -3,7 +3,7 @@ image: barichello/godot-ci:4.3
 # Stages: lint -> test -> import -> build -> deploy
 stages:
   - lint
-  # - prepare
+  - prepare
   - test
   - build
   - deploy
@@ -12,6 +12,12 @@ variables:
   EXPORT_NAME: InnerAnima
   ITCH_USER:  mkdrdscf
   ITCH_PROJECT: inneranima
+
+cache:
+  key: "$CI_PROJECT_NAME-assets"
+  paths:
+    - .godot/
+    - .import/
 
 # Linter
 gdlint:
@@ -27,11 +33,10 @@ gdlint:
   allow_failure: true
 
 # Open the editor to import assets in case the cache was empty or outdated
-# assets:
-#   stage: prepare
-#   script:
-#     - rm -rf .godot/imported/
-#     - godot --headless --verbose --editor --quit
+assets:
+  stage: prepare
+  script:
+    - godot --headless --verbose --editor --quit
 
 # Unit Test
 gdut:
