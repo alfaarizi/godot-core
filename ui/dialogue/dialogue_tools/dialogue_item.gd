@@ -6,8 +6,9 @@ class_name DialogueItem extends DialogueResource
 @export var next_line_idx: int = false
 @export var is_player: bool = true
 
-var _has_choices: bool = false
 var choices: Array[DialogueChoice] = []: set = set_choices
+
+var _has_choices: bool = false
 
 func _get_property_list() -> Array[Dictionary]:
 	var properties: Array[Dictionary] = []
@@ -15,7 +16,7 @@ func _get_property_list() -> Array[Dictionary]:
 		"name": "Enable Choices",
 		"type": TYPE_BOOL,
 	})
-	
+
 	if _has_choices:
 		properties.append({
 			"name": "Choices/Choices",
@@ -24,7 +25,7 @@ func _get_property_list() -> Array[Dictionary]:
 			"hint_string": "DialogueChoice"
 		})
 	return properties
-	
+
 func _set(property: StringName, value: Variant) -> bool:
 	var retval: bool = true
 	match property:
@@ -36,7 +37,7 @@ func _set(property: StringName, value: Variant) -> bool:
 		_:
 			retval = false
 	return retval
-	
+
 func	 _get(property: StringName) -> Variant:
 	match property:
 		"Enable Choices":
@@ -53,4 +54,3 @@ func set_choices(choices_new: Array[DialogueChoice]) -> void:
 	choices = choices_new
 	if choices.size() == 0:
 		push_warning("There are no items in the dialogue choice array")
-	

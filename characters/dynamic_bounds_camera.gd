@@ -21,4 +21,3 @@ func _update_limits(bounds: Array[Vector2]) -> void:
 		var center_x = (limit_left + limit_right) / 2.0
 		var center_y = (limit_top + limit_bottom) / 2.0
 		position = Vector2(center_x, center_y)
-	

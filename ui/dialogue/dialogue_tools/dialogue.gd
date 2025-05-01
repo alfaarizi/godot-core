@@ -6,7 +6,7 @@ class_name Dialogue extends Node
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
-		return	
+		return
 
 func set_dialogue_items(_dialogue_items: Array[DialogueItem]) -> void:
 	for idx in _dialogue_items.size():

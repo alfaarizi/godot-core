@@ -2,16 +2,16 @@
 class_name Door
 extends Area2D
 
-var is_nearby: bool = false
-var is_enabled: bool = true
-var correct_direction: bool = false
-
 @export var press_required: bool = true: set = _set_press_required
 @export_enum("north", "south", "east", "west") var entry_direction: int: set = _set_entry_direction
 @export var push_dist: float = 16.0: set = _set_push_dist
 @export var path_to_new_scene: String: set = _set_path_to_new_scene
 @export var entry_door_name:String: set = _set_entry_door_name
 @export var door_key_preconditions: Array[String] = []
+
+var is_nearby: bool = false
+var is_enabled: bool = true
+var correct_direction: bool = false
 
 @onready var door_key: String # {parent_node_name}_{triggerable_name}
 
@@ -29,7 +29,7 @@ func _process(_delta: float) -> void:
 
 func is_accessible() -> bool:
 	for key in door_key_preconditions:
-		if not SceneManager.door_registry.has(key): 
+		if not SceneManager.door_registry.has(key):
 			return false
 	return true
 
@@ -69,10 +69,10 @@ func _set_push_dist(_push_dist: float) -> void:
 func _set_path_to_new_scene(_path_to_new_scene: String) -> void:
 	path_to_new_scene = _path_to_new_scene
 	update_configuration_warnings()
-	
+
 func _set_entry_door_name(_entry_door_name: String) -> void:
 	entry_door_name = _entry_door_name
-	
+
 func _get_configuration_warnings() -> PackedStringArray:
 	if not path_to_new_scene or path_to_new_scene == "":
 		return ["a path to new scene is required"]
