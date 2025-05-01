@@ -1,8 +1,9 @@
 extends Node
 
+signal state_changed(new_state: State)
+
 enum State { EXPLORING, UI_NAVIGATION, INTERACTING, CUTSCENE }
 
-signal state_changed(new_state: State)
 var current_state: State = State.EXPLORING
 
 func change_state(new_state: State) -> void:
@@ -12,7 +13,7 @@ func change_state(new_state: State) -> void:
 	print(State.keys()[current_state])
 	state_changed.emit(new_state)
 
-func _unhandled_input(event: InputEvent) -> void:	
+func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("player_selection"):
 		match current_state:
 			GameState.State.UI_NAVIGATION:

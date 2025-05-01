@@ -7,7 +7,7 @@ func _play_animation(anim_name: String) -> void:
 		"move_left":
 			anim_name = "move_right"
 			flip_h = true
-		_:			
+		_:
 			flip_h = false
 	is_animation_running = true
 	play(anim_name)
@@ -21,7 +21,7 @@ func _change_animation_frame(anim_name: String, _frame: int) -> void:
 		"move_left":
 			animation = "move_right"
 			flip_h = true
-		_:			
+		_:
 			animation = anim_name
 			flip_h = false
 	frame = _frame

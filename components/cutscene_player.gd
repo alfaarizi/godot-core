@@ -15,7 +15,7 @@ func play_cutscene(cutscene_name: String):
 
 	var cutscene = cutscenes_dict.get(cutscene_name, null)
 	if not cutscene: return
-	
+
 	GameState.change_state(GameState.State.CUTSCENE)
 	for ac in cutscene.frames:
 		await _execute(ac)
@@ -23,10 +23,10 @@ func play_cutscene(cutscene_name: String):
 
 func _execute(cutscene_action: CutsceneFrame):
 	if not cutscene_action: return
-	
+
 	var action := cutscene_action.action
 	var action_type := cutscene_action.action_type
-	
+
 	match action_type:
 		CutsceneAction.Type.DELAY:
 			await _delay(action.time)
@@ -65,7 +65,7 @@ func _do(fun: Callable, args: Array = []) -> Variant:
 	return result
 
 func _get_camera(path: NodePath, property_name: String) -> Camera2D:
-	var node = get_node_or_null(path)	
+	var node = get_node_or_null(path)
 	if node is Camera2D: return node
 	return node.get(property_name) if node else null
 
