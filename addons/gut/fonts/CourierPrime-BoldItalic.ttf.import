@@ -2,7 +2,7 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dpw1iew4ytv7l"
+uid="uid://n6mxiov5sbgc"
 path="res://.godot/imported/CourierPrime-BoldItalic.ttf-65ebcc61dd5e1dfa8f96313da4ad7019.fontdata"
 
 [deps]
@@ -28,7 +28,12 @@ Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[]
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "New Configuration",
+"size": Vector2i(16, 0)
+}]
 language_support={}
 script_support={}
 opentype_features={}

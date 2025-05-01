@@ -13,11 +13,11 @@ variables:
   ITCH_USER:  mkdrdscf
   ITCH_PROJECT: inneranima
 
-# Cache to speed up builds
 cache:
-  key: godot-4.3-${CI_PROJECT_NAME}-${CI_COMMIT_REF_SLUG}
+  key: "$CI_PROJECT_NAME-assets"
   paths:
-    - .godot/imported/
+    - .godot/
+    - .import/
 
 # Linter
 gdlint:

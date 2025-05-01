@@ -2,7 +2,7 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cye1248x6oqxk"
+uid="uid://bll38n2ct6qme"
 path="res://.godot/imported/LobsterTwo-BoldItalic.ttf-227406a33e84448e6aa974176016de19.fontdata"
 
 [deps]
@@ -28,7 +28,12 @@ Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[]
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "New Configuration",
+"size": Vector2i(16, 0)
+}]
 language_support={}
 script_support={}
 opentype_features={}
