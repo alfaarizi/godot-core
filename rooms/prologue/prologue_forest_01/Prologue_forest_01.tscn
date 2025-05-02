@@ -8,19 +8,29 @@
 [node name="Prologue_forest_01" type="Node2D" node_paths=PackedStringArray("player", "doors")]
 script = ExtResource("1_c3cnw")
 player = NodePath("Player")
-doors = [NodePath("Door")]
+doors = [NodePath("Door1"), NodePath("Door2")]
 metadata/_edit_lock_ = true
 
 [node name="prologue_forest_01_tilemap" parent="." instance=ExtResource("1_4u2vl")]
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("2_8qu3m")]
+unique_name_in_owner = true
 position = Vector2(387, 695)
 
-[node name="Door" parent="." instance=ExtResource("4_6ap32")]
+[node name="Door1" parent="." instance=ExtResource("4_6ap32")]
 position = Vector2(2131, -1)
 scale = Vector2(2, 1)
 press_required = false
 push_dist = 128.0
 path_to_new_scene = "res://rooms/prologue/prologue_forest_02/prologue_forest_02.tscn"
 entry_door_name = "011"
+
+[node name="Door2" parent="." instance=ExtResource("4_6ap32")]
+position = Vector2(513, 771)
+scale = Vector2(4.5, 1)
+press_required = false
+entry_direction = 1
+push_dist = 48.0
+path_to_new_scene = "res://rooms/prologue/lobby/lobby.tscn"
+entry_door_name = "lobby"
