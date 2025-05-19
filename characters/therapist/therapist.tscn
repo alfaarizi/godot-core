@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://cj3deljjo8g4r"]
 
 [ext_resource type="Script" path="res://characters/therapist/therapist.gd" id="1_2auem"]
-[ext_resource type="Texture2D" uid="uid://dtcmse2budh0b" path="res://assets/sprites/player/shadow.png" id="2_kwjcb"]
+[ext_resource type="Texture2D" uid="uid://dtcmse2budh0b" path="res://assets/sprites/shadow.png" id="2_kwjcb"]
 [ext_resource type="Texture2D" uid="uid://cbp3ciykuuurv" path="res://assets/sprites/therapist/down2.png" id="3_vqgh5"]
 [ext_resource type="Texture2D" uid="uid://cbrr4btp64lru" path="res://assets/sprites/therapist/right1.png" id="4_8ohpm"]
 [ext_resource type="Texture2D" uid="uid://bkjd5rfkpy55h" path="res://assets/sprites/therapist/up1.png" id="5_xf8si"]

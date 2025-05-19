@@ -1,8 +1,8 @@
 [gd_scene load_steps=29 format=3 uid="uid://bhrutww653eol"]
 
 [ext_resource type="Script" path="res://characters/player/player.gd" id="1_nf707"]
-[ext_resource type="Texture2D" uid="uid://dtcmse2budh0b" path="res://assets/sprites/player/shadow.png" id="2_78tfa"]
-[ext_resource type="Texture2D" uid="uid://bncbq41cuscnl" path="res://assets/sprites/player/footprint_particles.png" id="3_gk2r0"]
+[ext_resource type="Texture2D" uid="uid://dtcmse2budh0b" path="res://assets/sprites/shadow.png" id="2_78tfa"]
+[ext_resource type="Texture2D" uid="uid://bncbq41cuscnl" path="res://assets/sprites/footprint_particles.png" id="3_gk2r0"]
 [ext_resource type="Texture2D" uid="uid://dru8gj6dfk6lf" path="res://assets/sprites/player/movement_sheet3/mcdown1.png" id="4_pro5c"]
 [ext_resource type="Texture2D" uid="uid://d05v4tw5r21gg" path="res://assets/sprites/player/movement_sheet3/mcright1_1.png" id="5_8vci0"]
 [ext_resource type="Texture2D" uid="uid://chahfbbxh67dl" path="res://assets/sprites/player/movement_sheet3/mcup1.png" id="6_05veo"]

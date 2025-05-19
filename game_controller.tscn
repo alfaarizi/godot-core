@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://game_controller.gd" id="1_vcpqr"]
 [ext_resource type="PackedScene" uid="uid://crb2eiswehvl" path="res://rooms/prologue/prologue_forest_01/Prologue_forest_01.tscn" id="2_lu7x6"]
-[ext_resource type="PackedScene" uid="uid://qrkrnqv83mlo" path="res://ui/hud/hud.tscn" id="3_eg36v"]
-[ext_resource type="PackedScene" uid="uid://byucwlac08hca" path="res://ui/dialogue/dialogue_hud.tscn" id="3_gumqn"]
-[ext_resource type="PackedScene" uid="uid://3ayqdowaichi" path="res://assets/ui/loading_screen.tscn" id="5_mlbqp"]
+[ext_resource type="PackedScene" uid="uid://qrkrnqv83mlo" path="res://huds/hud/hud.tscn" id="3_eg36v"]
+[ext_resource type="PackedScene" uid="uid://byucwlac08hca" path="res://huds/dialogue_hud/dialogue_hud.tscn" id="3_gumqn"]
+[ext_resource type="PackedScene" uid="uid://3ayqdowaichi" path="res://components/screens/loading_screen.tscn" id="5_mlbqp"]
 
 [node name="GameController" type="Node"]
 script = ExtResource("1_vcpqr")

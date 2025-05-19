@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://da55802ol0p7t"]
 
 [ext_resource type="PackedScene" uid="uid://c87t043mkt6ou" path="res://rooms/prologue/prologue_forest_03/prologue_forest_03_tilemap.tscn" id="1_e4b1y"]
-[ext_resource type="Script" path="res://prologue_forest_03.gd" id="1_jw8g1"]
+[ext_resource type="Script" path="res://rooms/prologue/prologue_forest_03/prologue_forest_03.gd" id="1_jw8g1"]
 [ext_resource type="PackedScene" uid="uid://bhrutww653eol" path="res://characters/player/player.tscn" id="2_4fft2"]
 [ext_resource type="PackedScene" uid="uid://c84okus6y6nte" path="res://rooms/door.tscn" id="4_0lwns"]
 [ext_resource type="PackedScene" uid="uid://bln04fcnkpha8" path="res://characters/dynamic_bounds_camera.tscn" id="5_whp00"]

@@ -1,0 +1,146 @@
+[gd_scene load_steps=5 format=3 uid="uid://7g6ku12bp3l3"]
+
+[ext_resource type="PackedScene" uid="uid://dwyd0drv4b43v" path="res://huds/hud/sidebar/sidebar_tools/inventory_tools/slot_secondary.tscn" id="1_gp7o0"]
+[ext_resource type="Texture2D" uid="uid://dqu336ljxjk4d" path="res://assets/huds/hud/c2.png" id="2_l5vd1"]
+[ext_resource type="FontFile" uid="uid://b0jaq0i5ulxxa" path="res://assets/huds/Born2bSportyV2.ttf" id="3_6tcny"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tchrs"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[node name="InventorySecondary" type="MarginContainer"]
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 0.111
+anchor_bottom = 1.0
+offset_top = -1080.0
+offset_right = -0.119995
+size_flags_vertical = 3
+theme_override_constants/margin_top = 160
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(213, 920)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+custom_minimum_size = Vector2(213, 520)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -213.0
+offset_bottom = -400.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel/MarginContainer"]
+custom_minimum_size = Vector2(213, 520)
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="Panel/MarginContainer/CenterContainer"]
+custom_minimum_size = Vector2(120, 480)
+layout_mode = 2
+theme_override_constants/v_separation = 20
+
+[node name="SlotSecondary1" parent="Panel/MarginContainer/CenterContainer/GridContainer" instance=ExtResource("1_gp7o0")]
+layout_mode = 2
+label = "1"
+
+[node name="SlotSecondary2" parent="Panel/MarginContainer/CenterContainer/GridContainer" instance=ExtResource("1_gp7o0")]
+layout_mode = 2
+label = "2"
+
+[node name="SlotSecondary3" parent="Panel/MarginContainer/CenterContainer/GridContainer" instance=ExtResource("1_gp7o0")]
+layout_mode = 2
+label = "3"
+
+[node name="SlotSecondary4" parent="Panel/MarginContainer/CenterContainer/GridContainer" instance=ExtResource("1_gp7o0")]
+layout_mode = 2
+label = "4"
+
+[node name="SlotSecondary5" parent="Panel/MarginContainer/CenterContainer/GridContainer" instance=ExtResource("1_gp7o0")]
+layout_mode = 2
+label = "Z"
+
+[node name="MarginContainer2" type="MarginContainer" parent="Panel"]
+custom_minimum_size = Vector2(160, 400)
+layout_direction = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -400.0
+offset_right = -53.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer2"]
+layout_mode = 2
+texture = ExtResource("2_l5vd1")
+
+[node name="Panel" type="Panel" parent="Panel/MarginContainer2/TextureRect"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(130, 370)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/MarginContainer2/TextureRect/Panel"]
+custom_minimum_size = Vector2(130, 50)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.135
+offset_bottom = 0.0499992
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_6tcny")
+theme_override_font_sizes/font_size = 48
+text = "fish"
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 3
+uppercase = true
+
+[node name="HSeparator" type="HSeparator" parent="Panel/MarginContainer2/TextureRect/Panel"]
+custom_minimum_size = Vector2(130, 15)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.135
+anchor_right = 1.0
+anchor_bottom = 0.216
+offset_top = 0.0499992
+offset_bottom = 0.0799942
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_tchrs")
+
+[node name="Label2" type="Label" parent="Panel/MarginContainer2/TextureRect/Panel"]
+custom_minimum_size = Vector2(130, 290)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.22
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.4
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_6tcny")
+theme_override_font_sizes/font_size = 28
+text = "this is a fish, you can use fish to fish another fish"
+horizontal_alignment = 2
+autowrap_mode = 3

@@ -1,18 +1,18 @@
-[gd_scene load_steps=62 format=3 uid="uid://ddidnaktvwg15"]
+[gd_scene load_steps=58 format=3 uid="uid://ddidnaktvwg15"]
 
 [ext_resource type="Script" path="res://rooms/prologue/therapy_room_1/therapy_room_1.gd" id="1_ojqgy"]
 [ext_resource type="PackedScene" uid="uid://derrir5d4ljbp" path="res://rooms/prologue/therapy_room_1/Therapy_room_1_tilemap.tscn" id="2_tlh12"]
 [ext_resource type="PackedScene" uid="uid://bhrutww653eol" path="res://characters/player/player.tscn" id="3_cwlvg"]
 [ext_resource type="PackedScene" uid="uid://c84okus6y6nte" path="res://rooms/door.tscn" id="5_wb5kv"]
 [ext_resource type="PackedScene" uid="uid://cj3deljjo8g4r" path="res://characters/therapist/therapist.tscn" id="6_b5trd"]
-[ext_resource type="PackedScene" uid="uid://bkkqbagsf2627" path="res://components/cutscene_player.tscn" id="6_jcd14"]
-[ext_resource type="Script" path="res://components/cutscene/cutscene.gd" id="7_fuki3"]
-[ext_resource type="Script" path="res://components/cutscene/cutscene_frame.gd" id="8_0e42a"]
-[ext_resource type="Script" path="res://components/cutscene/play_action.gd" id="10_rcems"]
-[ext_resource type="Script" path="res://components/cutscene/delay_action.gd" id="11_ovnpu"]
-[ext_resource type="Script" path="res://components/cutscene/dialogue_action.gd" id="12_3xny8"]
+[ext_resource type="PackedScene" uid="uid://bkkqbagsf2627" path="res://components/cutscene/cutscene_player.tscn" id="6_jcd14"]
+[ext_resource type="Script" path="res://components/cutscene/cutscene_tools/cutscene_item.gd" id="7_mrsbo"]
+[ext_resource type="Script" path="res://components/cutscene/cutscene_tools/cutscene_frame.gd" id="8_usj4s"]
+[ext_resource type="Script" path="res://components/cutscene/cutscene_tools/cutscene_action_types/delay_action.gd" id="9_5oj5d"]
+[ext_resource type="Script" path="res://components/cutscene/cutscene_tools/cutscene_action_types/play_action.gd" id="10_r20nj"]
+[ext_resource type="Script" path="res://components/cutscene/cutscene_tools/cutscene_action_types/dialogue_action.gd" id="11_h1owr"]
 [ext_resource type="PackedScene" uid="uid://bln04fcnkpha8" path="res://characters/dynamic_bounds_camera.tscn" id="14_j2fhb"]
-[ext_resource type="PackedScene" uid="uid://cllr1aojmhb0c" path="res://components/triggerable.tscn" id="14_x75pf"]
+[ext_resource type="PackedScene" uid="uid://cllr1aojmhb0c" path="res://components/interactable/triggerable.tscn" id="14_x75pf"]
 
 [sub_resource type="Animation" id="Animation_tj1ur"]
 resource_name = "01_therapist_turning"
@@ -324,182 +324,164 @@ _data = {
 "test": SubResource("Animation_4xaem")
 }
 
-[sub_resource type="Resource" id="Resource_1kbje"]
-script = ExtResource("11_ovnpu")
+[sub_resource type="Resource" id="Resource_7fhnx"]
+script = ExtResource("9_5oj5d")
 time = 1.0
 
-[sub_resource type="Resource" id="Resource_o4hon"]
-script = ExtResource("8_0e42a")
+[sub_resource type="Resource" id="Resource_bld24"]
+script = ExtResource("8_usj4s")
 action_type = 1
-action = SubResource("Resource_1kbje")
+action = SubResource("Resource_7fhnx")
 
-[sub_resource type="Resource" id="Resource_qk1k8"]
-script = ExtResource("10_rcems")
+[sub_resource type="Resource" id="Resource_vdar0"]
+script = ExtResource("10_r20nj")
 animation_name = "01_therapist_turning"
 
-[sub_resource type="Resource" id="Resource_767xp"]
-script = ExtResource("8_0e42a")
+[sub_resource type="Resource" id="Resource_buwau"]
+script = ExtResource("8_usj4s")
 action_type = 2
-action = SubResource("Resource_qk1k8")
+action = SubResource("Resource_vdar0")
 
-[sub_resource type="Resource" id="Resource_4jjoi"]
-script = ExtResource("11_ovnpu")
+[sub_resource type="Resource" id="Resource_0kbe6"]
+script = ExtResource("9_5oj5d")
 time = 1.0
 
-[sub_resource type="Resource" id="Resource_018kg"]
-script = ExtResource("8_0e42a")
+[sub_resource type="Resource" id="Resource_f2kx8"]
+script = ExtResource("8_usj4s")
 action_type = 1
-action = SubResource("Resource_4jjoi")
+action = SubResource("Resource_0kbe6")
 
-[sub_resource type="Resource" id="Resource_474fi"]
-script = ExtResource("12_3xny8")
+[sub_resource type="Resource" id="Resource_5urgi"]
+script = ExtResource("11_h1owr")
 dialogue_id = "Entering the Therapist room 1"
 
-[sub_resource type="Resource" id="Resource_8ltel"]
-script = ExtResource("8_0e42a")
+[sub_resource type="Resource" id="Resource_x663c"]
+script = ExtResource("8_usj4s")
 action_type = 3
-action = SubResource("Resource_474fi")
+action = SubResource("Resource_5urgi")
 
-[sub_resource type="Resource" id="Resource_2wjul"]
-script = ExtResource("10_rcems")
+[sub_resource type="Resource" id="Resource_n3uil"]
+script = ExtResource("10_r20nj")
 animation_name = "02_therapist_to_sofa"
 
-[sub_resource type="Resource" id="Resource_3isbk"]
-script = ExtResource("8_0e42a")
+[sub_resource type="Resource" id="Resource_s3fxa"]
+script = ExtResource("8_usj4s")
 action_type = 2
-action = SubResource("Resource_2wjul")
+action = SubResource("Resource_n3uil")
 
-[sub_resource type="Resource" id="Resource_je0hq"]
-script = ExtResource("11_ovnpu")
+[sub_resource type="Resource" id="Resource_uryvw"]
+script = ExtResource("9_5oj5d")
 time = 1.0
 
-[sub_resource type="Resource" id="Resource_067cu"]
-script = ExtResource("8_0e42a")
+[sub_resource type="Resource" id="Resource_us8nd"]
+script = ExtResource("8_usj4s")
 action_type = 1
-action = SubResource("Resource_je0hq")
+action = SubResource("Resource_uryvw")
 
-[sub_resource type="Resource" id="Resource_ea145"]
-script = ExtResource("7_fuki3")
+[sub_resource type="Resource" id="Resource_jrpvg"]
+script = ExtResource("7_mrsbo")
 cutscene_name = "cutscene_01"
-frames = Array[ExtResource("8_0e42a")]([SubResource("Resource_o4hon"), SubResource("Resource_767xp"), SubResource("Resource_018kg"), SubResource("Resource_8ltel"), SubResource("Resource_3isbk"), SubResource("Resource_067cu")])
+frames = Array[ExtResource("8_usj4s")]([SubResource("Resource_bld24"), SubResource("Resource_buwau"), SubResource("Resource_f2kx8"), SubResource("Resource_x663c"), SubResource("Resource_s3fxa"), SubResource("Resource_us8nd")])
 
-[sub_resource type="Resource" id="Resource_thtu6"]
-script = ExtResource("10_rcems")
+[sub_resource type="Resource" id="Resource_44y1w"]
+script = ExtResource("10_r20nj")
 animation_name = "03_after_sesh_unfixed_position"
 
-[sub_resource type="Resource" id="Resource_jnp3s"]
-script = ExtResource("8_0e42a")
+[sub_resource type="Resource" id="Resource_d2qxj"]
+script = ExtResource("8_usj4s")
 action_type = 2
-action = SubResource("Resource_thtu6")
+action = SubResource("Resource_44y1w")
 
-[sub_resource type="Resource" id="Resource_8rovj"]
-script = ExtResource("11_ovnpu")
+[sub_resource type="Resource" id="Resource_3fgcf"]
+script = ExtResource("9_5oj5d")
 time = 1.0
 
-[sub_resource type="Resource" id="Resource_i6un1"]
-script = ExtResource("8_0e42a")
+[sub_resource type="Resource" id="Resource_mawif"]
+script = ExtResource("8_usj4s")
 action_type = 1
-action = SubResource("Resource_8rovj")
+action = SubResource("Resource_3fgcf")
 
-[sub_resource type="Resource" id="Resource_2e5ri"]
-script = ExtResource("12_3xny8")
+[sub_resource type="Resource" id="Resource_64tey"]
+script = ExtResource("11_h1owr")
 dialogue_id = "Entering the Therapist room 2"
 
-[sub_resource type="Resource" id="Resource_hamg6"]
-script = ExtResource("8_0e42a")
+[sub_resource type="Resource" id="Resource_50ssw"]
+script = ExtResource("8_usj4s")
 action_type = 3
-action = SubResource("Resource_2e5ri")
+action = SubResource("Resource_64tey")
 
-[sub_resource type="Resource" id="Resource_tjvju"]
-script = ExtResource("11_ovnpu")
+[sub_resource type="Resource" id="Resource_b2jn8"]
+script = ExtResource("9_5oj5d")
 time = 2.0
 
-[sub_resource type="Resource" id="Resource_11yrm"]
-script = ExtResource("8_0e42a")
+[sub_resource type="Resource" id="Resource_ddhxb"]
+script = ExtResource("8_usj4s")
 action_type = 1
-action = SubResource("Resource_tjvju")
+action = SubResource("Resource_b2jn8")
 
-[sub_resource type="Resource" id="Resource_82srg"]
-script = ExtResource("12_3xny8")
-dialogue_id = "Entering the Therapist room 3"
-
-[sub_resource type="Resource" id="Resource_bu1f1"]
-script = ExtResource("8_0e42a")
-action_type = 3
-action = SubResource("Resource_82srg")
-
-[sub_resource type="Resource" id="Resource_143l0"]
-script = ExtResource("11_ovnpu")
-time = 2.0
-
-[sub_resource type="Resource" id="Resource_xrelm"]
-script = ExtResource("8_0e42a")
-action_type = 1
-action = SubResource("Resource_143l0")
-
-[sub_resource type="Resource" id="Resource_ohdn3"]
-script = ExtResource("12_3xny8")
+[sub_resource type="Resource" id="Resource_5x8mb"]
+script = ExtResource("11_h1owr")
 dialogue_id = "Entering the Therapist room 4"
 
-[sub_resource type="Resource" id="Resource_1dv7p"]
-script = ExtResource("8_0e42a")
+[sub_resource type="Resource" id="Resource_avx1d"]
+script = ExtResource("8_usj4s")
 action_type = 3
-action = SubResource("Resource_ohdn3")
+action = SubResource("Resource_5x8mb")
 
-[sub_resource type="Resource" id="Resource_fe1h1"]
-script = ExtResource("7_fuki3")
+[sub_resource type="Resource" id="Resource_okuh4"]
+script = ExtResource("7_mrsbo")
 cutscene_name = "cutscene_02"
-frames = Array[ExtResource("8_0e42a")]([SubResource("Resource_jnp3s"), SubResource("Resource_i6un1"), SubResource("Resource_hamg6"), SubResource("Resource_11yrm"), SubResource("Resource_bu1f1"), SubResource("Resource_xrelm"), SubResource("Resource_1dv7p")])
+frames = Array[ExtResource("8_usj4s")]([SubResource("Resource_d2qxj"), SubResource("Resource_mawif"), SubResource("Resource_50ssw"), SubResource("Resource_ddhxb"), SubResource("Resource_avx1d")])
 
-[sub_resource type="Resource" id="Resource_h8k1w"]
-script = ExtResource("10_rcems")
+[sub_resource type="Resource" id="Resource_r2yd0"]
+script = ExtResource("10_r20nj")
 animation_name = "03_after_sesh"
 
-[sub_resource type="Resource" id="Resource_8dymp"]
-script = ExtResource("8_0e42a")
+[sub_resource type="Resource" id="Resource_61rau"]
+script = ExtResource("8_usj4s")
 action_type = 2
-action = SubResource("Resource_h8k1w")
+action = SubResource("Resource_r2yd0")
 
-[sub_resource type="Resource" id="Resource_8lcs7"]
-script = ExtResource("11_ovnpu")
+[sub_resource type="Resource" id="Resource_0u7ig"]
+script = ExtResource("9_5oj5d")
 time = 1.0
 
-[sub_resource type="Resource" id="Resource_31cwg"]
-script = ExtResource("8_0e42a")
+[sub_resource type="Resource" id="Resource_6wtkl"]
+script = ExtResource("8_usj4s")
 action_type = 1
-action = SubResource("Resource_8lcs7")
+action = SubResource("Resource_0u7ig")
 
-[sub_resource type="Resource" id="Resource_qbgmv"]
-script = ExtResource("12_3xny8")
+[sub_resource type="Resource" id="Resource_ka4hl"]
+script = ExtResource("11_h1owr")
 dialogue_id = "Entering the Therapist room 5"
 
-[sub_resource type="Resource" id="Resource_x1dul"]
-script = ExtResource("8_0e42a")
+[sub_resource type="Resource" id="Resource_3ejpi"]
+script = ExtResource("8_usj4s")
 action_type = 3
-action = SubResource("Resource_qbgmv")
+action = SubResource("Resource_ka4hl")
 
-[sub_resource type="Resource" id="Resource_f3phw"]
-script = ExtResource("10_rcems")
+[sub_resource type="Resource" id="Resource_cqug7"]
+script = ExtResource("10_r20nj")
 animation_name = "04_therapist_exiting"
 
-[sub_resource type="Resource" id="Resource_vwrnp"]
-script = ExtResource("8_0e42a")
+[sub_resource type="Resource" id="Resource_ekco1"]
+script = ExtResource("8_usj4s")
 action_type = 2
-action = SubResource("Resource_f3phw")
+action = SubResource("Resource_cqug7")
 
-[sub_resource type="Resource" id="Resource_060tr"]
-script = ExtResource("11_ovnpu")
+[sub_resource type="Resource" id="Resource_s8cda"]
+script = ExtResource("9_5oj5d")
 time = 1.0
 
-[sub_resource type="Resource" id="Resource_dsr0a"]
-script = ExtResource("8_0e42a")
+[sub_resource type="Resource" id="Resource_f6vbe"]
+script = ExtResource("8_usj4s")
 action_type = 1
-action = SubResource("Resource_060tr")
+action = SubResource("Resource_s8cda")
 
-[sub_resource type="Resource" id="Resource_1mxyc"]
-script = ExtResource("7_fuki3")
+[sub_resource type="Resource" id="Resource_phk3d"]
+script = ExtResource("7_mrsbo")
 cutscene_name = "cutscene_03"
-frames = Array[ExtResource("8_0e42a")]([SubResource("Resource_8dymp"), SubResource("Resource_31cwg"), SubResource("Resource_x1dul"), SubResource("Resource_vwrnp"), SubResource("Resource_dsr0a")])
+frames = Array[ExtResource("8_usj4s")]([SubResource("Resource_61rau"), SubResource("Resource_6wtkl"), SubResource("Resource_3ejpi"), SubResource("Resource_ekco1"), SubResource("Resource_f6vbe")])
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_31s8v"]
 size = Vector2(16, 16)
@@ -535,7 +517,7 @@ unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_v0xek")
 }
-cutscenes = Array[ExtResource("7_fuki3")]([SubResource("Resource_ea145"), SubResource("Resource_fe1h1"), SubResource("Resource_1mxyc")])
+cutscene_items = Array[ExtResource("7_mrsbo")]([SubResource("Resource_jrpvg"), SubResource("Resource_okuh4"), SubResource("Resource_phk3d")])
 
 [node name="DynamicBoundsCamera" parent="." instance=ExtResource("14_j2fhb")]
 unique_name_in_owner = true

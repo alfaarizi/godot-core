@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://riglb1g3fyhe" path="res://presets/maps/prologue/therapy/props/rug.png" id="6_vdgn6"]
 [ext_resource type="Texture2D" uid="uid://483ng5gxr4ox" path="res://presets/maps/prologue/therapy/props/longchair.png" id="7_xy0mq"]
 [ext_resource type="Texture2D" uid="uid://drxssdobh40lh" path="res://presets/maps/prologue/therapy/props/sofa2.png" id="8_yv0p7"]
-[ext_resource type="Shader" path="res://shader/outline_inline_2d.gdshader" id="8_yy8r4"]
+[ext_resource type="Shader" path="res://shaders/outline_inline_2d.gdshader" id="8_yy8r4"]
 [ext_resource type="Texture2D" uid="uid://dgvl8k2ntgqrv" path="res://presets/maps/prologue/therapy/props/mysteryPurple.png" id="13_hjqwp"]
 [ext_resource type="Texture2D" uid="uid://feyvixl2blft" path="res://presets/maps/prologue/therapy/props/mysteryRed.png" id="17_5w0bk"]
 [ext_resource type="Texture2D" uid="uid://b8em3em7xtqwx" path="res://presets/maps/prologue/therapy/props/mysteryYellow.png" id="18_1boyf"]

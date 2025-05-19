@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://8fl1fpgt8df1"]
+
+[ext_resource type="PackedScene" uid="uid://7g6ku12bp3l3" path="res://huds/hud/sidebar/sidebar_tools/inventory_secondary.tscn" id="1_ukxo3"]
+[ext_resource type="PackedScene" uid="uid://b0awanp5ioktg" path="res://huds/hud/sidebar/sidebar_tools/inventory_primary.tscn" id="2_clktn"]
+
+[node name="PlayerInventory" type="HBoxContainer"]
+custom_minimum_size = Vector2(320, 1080)
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -533.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 0
+alignment = 2
+
+[node name="InventorySecondary" parent="." instance=ExtResource("1_ukxo3")]
+layout_mode = 2
+
+[node name="InventoryPrimary" parent="." instance=ExtResource("2_clktn")]
+layout_mode = 2

@@ -35,9 +35,29 @@ window/stretch/aspect="expand"
 
 enabled=PackedStringArray("res://addons/gdLinter/plugin.cfg", "res://addons/gut/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://addons/": "gray",
+"res://assets/": "green",
+"res://autoloads/": "blue",
+"res://characters/": "purple",
+"res://components/": "orange",
+"res://components/cutscene/cutscene_tools/": "gray",
+"res://components/dialogue/dialogue_tools/": "gray",
+"res://huds/": "green",
+"res://huds/hud/sidebar/sidebar_tools/": "gray",
+"res://huds/hud/topbar/topbar_tools/": "gray",
+"res://presets/": "yellow",
+"res://rooms/": "purple",
+"res://shaders/": "red",
+"res://story/": "purple",
+"res://tests/": "pink"
+}
+
 [gui]
 
-theme/custom="res://assets/ui/main_theme.tres"
+theme/custom="res://assets/huds/huds_theme.tres"
 
 [input]
 

@@ -1,0 +1,150 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3q06iuf2h3px"]
+
+[ext_resource type="Script" path="res://huds/hud/topbar/topbar_tools/status_container.gd" id="1_1hi6h"]
+[ext_resource type="Texture2D" uid="uid://d34banwxjvuoo" path="res://assets/huds/hud/c3.png" id="1_efj2y"]
+
+[node name="StatusContainer" type="HBoxContainer"]
+custom_minimum_size = Vector2(480, 45)
+anchors_preset = -1
+anchor_right = 0.25
+anchor_bottom = 0.042
+offset_bottom = -0.360004
+size_flags_vertical = 3
+script = ExtResource("1_1hi6h")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(480, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+expand_mode = 1
+
+[node name="Status1Texture" type="TextureRect" parent="TextureRect"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+anchor_right = 0.094
+offset_right = -0.120003
+offset_bottom = 45.0
+size_flags_horizontal = 3
+texture = ExtResource("1_efj2y")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Status2Texture" type="TextureRect" parent="TextureRect"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+anchor_left = 0.1
+anchor_right = 0.194
+offset_right = -0.120003
+offset_bottom = 45.0
+size_flags_horizontal = 3
+texture = ExtResource("1_efj2y")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Status3Texture" type="TextureRect" parent="TextureRect"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+anchor_left = 0.2
+anchor_right = 0.294
+offset_right = -0.119995
+offset_bottom = 45.0
+size_flags_horizontal = 3
+texture = ExtResource("1_efj2y")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Status4Texture" type="TextureRect" parent="TextureRect"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+anchor_left = 0.3
+anchor_right = 0.394
+offset_right = -0.12001
+offset_bottom = 45.0
+size_flags_horizontal = 3
+texture = ExtResource("1_efj2y")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Status5Texture" type="TextureRect" parent="TextureRect"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+anchor_left = 0.4
+anchor_right = 0.494
+offset_right = -0.12001
+offset_bottom = 45.0
+size_flags_horizontal = 3
+texture = ExtResource("1_efj2y")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Status6Texture" type="TextureRect" parent="TextureRect"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+anchor_left = 0.5
+anchor_right = 0.594
+offset_right = -0.120026
+offset_bottom = 45.0
+size_flags_horizontal = 3
+texture = ExtResource("1_efj2y")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Status7Texture" type="TextureRect" parent="TextureRect"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+anchor_left = 0.6
+anchor_right = 0.694
+offset_right = -0.119995
+offset_bottom = 45.0
+size_flags_horizontal = 3
+texture = ExtResource("1_efj2y")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Status8Texture" type="TextureRect" parent="TextureRect"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+anchor_left = 0.7
+anchor_right = 0.794
+offset_left = -3.05176e-05
+offset_right = -0.120026
+offset_bottom = 45.0
+size_flags_horizontal = 3
+texture = ExtResource("1_efj2y")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Status9Texture" type="TextureRect" parent="TextureRect"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+anchor_left = 0.8
+anchor_right = 0.894
+offset_right = -0.120026
+offset_bottom = 45.0
+size_flags_horizontal = 3
+texture = ExtResource("1_efj2y")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Status10Texture" type="TextureRect" parent="TextureRect"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+anchor_left = 0.9
+anchor_right = 0.994
+offset_left = -3.05176e-05
+offset_right = -0.119995
+offset_bottom = 45.0
+size_flags_horizontal = 3
+texture = ExtResource("1_efj2y")
+expand_mode = 1
+stretch_mode = 4

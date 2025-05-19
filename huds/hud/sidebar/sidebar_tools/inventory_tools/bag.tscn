@@ -1,0 +1,94 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvwwtowclygyg"]
+
+[ext_resource type="PackedScene" uid="uid://c5vis0bpei1ti" path="res://huds/hud/sidebar/sidebar_tools/inventory_tools/slot_primary.tscn" id="1_fh4th"]
+
+[node name="Bag" type="MarginContainer"]
+custom_minimum_size = Vector2(320, 480)
+anchors_preset = -1
+anchor_right = 0.167
+anchor_bottom = 0.444
+offset_right = -0.640015
+offset_bottom = 0.47995
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(320, 480)
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 4
+
+[node name="SlotPrimary1" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary2" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary3" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary4" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary5" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary6" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary7" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary8" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary9" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary10" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary11" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary12" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary13" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary14" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary15" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary16" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary17" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary18" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary19" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary20" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary21" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary22" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary23" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2
+
+[node name="SlotPrimary24" parent="GridContainer" instance=ExtResource("1_fh4th")]
+layout_mode = 2

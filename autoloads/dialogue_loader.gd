@@ -30,7 +30,7 @@ func load_dialogue(file_path: String) -> void:
 			var character_image_path = "res://assets/" + dialogue_item_dict["name"] + ".png"
 			var character = load(character_image_path)
 			var expression = load(character_image_path)
-			var audio = load("res://assets/ui/dialogue/dialogue_item/blah blah.ogg")
+			var audio = load("res://assets/blah blah.ogg")
 
 			for line_idx in dialogue_item_dict["line"].size():
 				var line = dialogue_item_dict["line"][line_idx]
