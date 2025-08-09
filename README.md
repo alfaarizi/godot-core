@@ -3,12 +3,16 @@ InnerAnima is a psychological adventure where a boy becomes trapped in his own m
 ## Preview
 
 <div align="center">
- <img src="preview3.png" alt="Preview 3" height="200"/>
- <img src="preview1.png" alt="Preview 1" height="200"/>
- <img src="preview2.png" alt="Preview 2" height="200"/>
+	<img src="assets/preview1.png" alt="Preview 1" height="200"/>
+	<img src="assets/preview2.png" alt="Preview 2" height="200"/>
 </div>
 
 <div align="center">
- <img src="preview4.png" alt="Preview 4" height="300"/>
- <img src="preview5.png" alt="Preview 5" height="300"/>
+	<img src="assets/preview3.png" alt="Preview 3" height="200"/>
+	<img src="assets/preview4.png" alt="Preview 4" height="200"/>
+</div>
+
+<div align="center">
+	<img src="assets/preview5.png" alt="Preview 5" height="200"/>
+	<img src="assets/preview6.png" alt="Preview 6" height="200"/>
 </div>
