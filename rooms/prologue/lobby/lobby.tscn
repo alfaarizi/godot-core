@@ -9,7 +9,7 @@
 y_sort_enabled = true
 script = ExtResource("1_bx1gp")
 player = NodePath("Player")
-doors = [NodePath("Door1"), NodePath("Door2")]
+doors = [NodePath("Door1"), NodePath("Door2"), NodePath("Door3")]
 
 [node name="LobbyTileMap" parent="." instance=ExtResource("2_wqpll")]
 
@@ -30,3 +30,11 @@ push_dist = 32.0
 path_to_new_scene = "res://rooms/prologue/therapy_room_2/Therapy_room_2.tscn"
 entry_door_name = "therapy_room_2"
 door_key_preconditions = Array[String](["Lobby_Door1"])
+
+[node name="Door3" parent="." instance=ExtResource("4_gavxl")]
+position = Vector2(2235, 358)
+scale = Vector2(2, 1)
+press_required = false
+push_dist = 48.0
+path_to_new_scene = "res://rooms/prologue/prologue_forest_01/Prologue_forest_01.tscn"
+entry_door_name = "lobby"
