@@ -1,3 +1,5 @@
+## About
+
 InnerAnima is a psychological adventure where a boy becomes trapped in his own mind after a therapy session goes wrong. To escape, he must navigate surreal environments, solve puzzles, and confront his fears, uncovering hidden truths along the way. Will he find his way out, or remain lost forever?
 
 ## Preview
